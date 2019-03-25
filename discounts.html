@@ -1,67 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="sass/style.css" />
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
 
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container page__intro">
-      <h1>Discounts</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="sass/style.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container page__intro">
+    <h1>Discounts</h1>
+  </div>
+
+  <div class="container">
+    <div class="row search__wrapper">
+      <form action="">
+        <div class="col-md-2 search__wrapper--instance">
+          <label for="search_discountpercent">Discount %</label>
+          <select class="form-control" name="search_discount" id="search_discountpercent"></select>
+        </div>
+        <div class="col-md-4 search__wrapper--instance">
+          <label for="search_country">Country</label>
+          <select class="form-control" name="search_country" id="search_discountpercent"></select>
+        </div>
+        <div class="col-md-4 search__wrapper--instance">
+          <label for="search_city">City</label>
+          <input class="form-control" type="text" id="search_city" />
+        </div>
+        <div class="col-md-2 search__wrapper--instance">
+          <label class="hidden" for="search_btn">Search</label>
+          <button id="search_btn" class="form-control">
+            <i class="fas fa-paper-plane"></i> Search
+          </button>
+        </div>
+      </form>
     </div>
 
-    <div class="container">
-      <div class="row search__wrapper">
-        <form action="">
-          <div class="col-sm-2 search__wrapper--instance">
-            <label for="search_discountpercent">Discount %</label>
-            <select
-              class="form-control"
-              name="search_discount"
-              id="search_discountpercent"
-            ></select>
-          </div>
-          <div class="col-sm-4 search__wrapper--instance">
-            <label for="search_country">Country</label>
-            <select
-              class="form-control"
-              name="search_country"
-              id="search_discountpercent"
-            ></select>
-          </div>
-          <div class="col-sm-4 search__wrapper--instance">
-            <label for="search_city">City</label>
-            <input class="form-control" type="text" id="search_city" />
-          </div>
-          <div class="col-sm-2 search__wrapper--instance">
-            <button id="search" class="form-control">
-              <i class="fas fa-paper-plane"></i> Search
-            </button>
-          </div>
-        </form>
-      </div>
+    <hr />
+    <div id="discount__feed">
 
-      <hr />
-
-      <div class="row discount__wrapper">
+      <!-- <div class="row discount__wrapper">
         <div class="col-sm-3 discount__wrapper--image">
-          <img
-            src="https://placeimg.com/550/300/nature"
-            alt="Discount preview"
-          />
+          <img src="https://placeimg.com/550/300/people" alt="Discount preview" />
         </div>
         <div class="col-sm-9 discount__header">
           <div class="discount__header--prices">
@@ -74,9 +60,8 @@
             <p>
               Jazyková škola HEUREKA nabízí slevu 5% na individuální výuku
               anglického jazyka pro probíhá v učebnách jazykové školy na ulici
-              Divadelní 3. Těšíme se na vás... (<a href="#"
-                >http://www.jazykova-skola-heureka.cz/individualni-kurzy/</a
-              >)
+              Divadelní 3. Těšíme se na vás... (<a
+                href="#">http://www.jazykova-skola-heureka.cz/individualni-kurzy/</a>)
             </p>
             <table>
               <tr>
@@ -110,119 +95,89 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <hr />
 
-      <div class="row discount__wrapper">
-        <div class="col-sm-3 discount__wrapper--image">
-          <img
-            src="https://placeimg.com/550/300/nature"
-            alt="Discount preview"
-          />
-        </div>
-        <div class="col-sm-9 discount__header">
-          <div class="discount__header--prices">
-            <span class="percent-percent">20%</span>
-            <span class="price-new">204 CZK</span>
-            <span class="price-old">3200 CZK</span>
-          </div>
-          <div class="discount__header--content">
-            <h4>Sleva na individuální výuku angličtiny 8 x 60 minut</h4>
-            <p>
-              Jazyková škola HEUREKA nabízí slevu 5% na individuální výuku
-              anglického jazyka pro probíhá v učebnách jazykové školy na ulici
-              Divadelní 3. Těšíme se na vás...
-              (http://www.jazykova-skola-heureka.cz/individualni-kurzy/)
-            </p>
-            <table>
-              <tr>
-                <td>City</td>
-                <td>Brno</td>
-              </tr>
-              <tr>
-                <td>Country</td>
-                <td>CZ</td>
-              </tr>
-              <tr>
-                <td>Country</td>
-                <td>CZ</td>
-              </tr>
-              <tr>
-                <td>Country</td>
-                <td>CZ</td>
-              </tr>
-              <tr>
-                <td>Country</td>
-                <td>CZ</td>
-              </tr>
-            </table>
-          </div>
-          <div class="discount__buttons">
-            <button class="discount_btn--see-more btn-secondary">
-              <i class="fas fa-angle-down"></i> See more details
-            </button>
-            <button class="discount_btn--claim btn-primary">
-              Claim (100 credits)
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <!-- MODAL -->
-    <div class="modal__wrapper">
-      <div class="modal__content modal__closed--content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="modal__func--close text-right">
-                <i class="fas fa-times modal__close"></i>
-              </div>
 
-              <h1 class="text-center">Claim discount</h1>
-              <!-- <p>discount instructions</p> -->
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal__wrapper">
+    <div class="modal__content modal__closed--content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="modal__func--close text-right">
+              <i class="fas fa-times modal__close"></i>
             </div>
-            <form action="#" class="detailed-form">
-              <div class="col-md-12 search__wrapper--instance">
-                <label for="search_city">Jmeno</label>
-                <input class="form-control" type="text" name="name" />
-              </div>
-              <div class="col-md-6 search__wrapper--instance">
-                <label for="search_city">Email</label>
-                <input class="form-control" type="email" name="email" />
-              </div>
-              <div class="col-md-6 search__wrapper--instance">
-                <label for="search_city">Telefon</label>
-                <input class="form-control" type="tel" name="phone" />
-              </div>
-              <div class="clearfix"></div>
 
-              <div class="discount__preview ">
-                <div class="discount__preview--percent">15%</div>
-                <div class="discount__preview--content">
-                  <h3>Sleva na bla bla blaasdhasvbdoa  asdasda sas sdsad</h3>
-                  <div class="credits-view"><object class="credits-icon" data="img/credits-icon.svg" type="image/svg+xml"></object>100 credits</div>
-                  <div class="price-view">3040 CZK</div>
-                  <div class="before-view">3200 CZK</div>
-                </div>
+            <h1 class="text-center">Claim discount</h1>
+            <p class="text-center">How to claim this discount:</p>
+            <div class="discount__instructions">
+              <div class="discount__instructions--each">
+                <object class="discount__instructions--img" data="img/discount-instructions-1.svg"
+                  type="image/svg+xml"></object>
+                <p>Confirm your contact details in the form below</p>
               </div>
-
-              <div class="col-md-12 search__wrapper--instance">
-                <button name="submit" class="btn-lime w-100">
-                  Send discount request <i class="fas fa-angle-right"></i>
-                </button>
+              <div class="discount__instructions--each">
+                <object class="discount__instructions--img" data="img/discount-instructions-2.svg"
+                  type="image/svg+xml"></object>
+                <p>Wait for email instructions to pay</p>
               </div>
-            </form>
+              <div class="discount__instructions--each">
+                <object class="discount__instructions--img" data="img/discount-instructions-3.svg"
+                  type="image/svg+xml"></object>
+                <p>Enjoy!</p>
+              </div>
+            </div>
           </div>
+          <form action="#" class="detailed-form">
+            <div class="col-md-12 search__wrapper--instance">
+              <label for="search_city">Jmeno</label>
+              <input class="form-control" type="text" name="name" />
+            </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="search_city">Email</label>
+              <input class="form-control" type="email" name="email" />
+            </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="search_city">Telefon</label>
+              <input class="form-control" type="tel" name="phone" />
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="discount__preview ">
+              <div class="discount__preview--percent">15%</div>
+              <div class="discount__preview--content">
+                <h3>Sleva na bla bla blaasdhasvbdoa asdasda sas sdsad</h3>
+                <div class="credits-view"><object class="credits-icon" data="img/credits-icon.svg"
+                    type="image/svg+xml"></object>100 credits</div>
+                <div class="price-view">3040 CZK</div>
+                <div class="before-view">3200 CZK</div>
+              </div>
+            </div>
+
+            <div class="col-md-12 search__wrapper--instance">
+              <button name="submit" class="btn-lime w-100">
+                Send discount request <i class="fas fa-angle-right"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="modal__background modal__closed--behind"></div>
     </div>
-    <!-- /MODAL -->
+    <div class="modal__background modal__closed--behind"></div>
+  </div>
+  <!-- /MODAL -->
 
-    <!-- JS -->
-    <script src="js/discounts.js"></script>
-    <script src="js/forms.js"></script>
-  </body>
+  <!-- JS -->
+  <script src="js/discounts.js"></script>
+  
+  <script src="js/forms.js"></script>
+  <script src="js/discounts-enter.js"></script>
+</body>
+
 </html>
+
