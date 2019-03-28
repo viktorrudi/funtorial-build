@@ -547,7 +547,7 @@ form .active {
   color: #ffc000;
 }
 
-.discount__feed {
+#discount__feed {
   overflow: hidden;
 }
 
@@ -564,6 +564,7 @@ form .active {
   overflow: hidden;
   max-width: 20%;
   position: relative;
+  max-height: 140px;
 }
 
 .discount__wrapper .discount__wrapper--image img {
@@ -674,16 +675,16 @@ form .active {
   padding-right: 30px;
 }
 
-.discount__header .discount__buttons .discount_btn--see-more,
-.discount__header .discount__buttons .discount_btn--claim {
+.discount__header .discount__buttons .discount__btn--see-more,
+.discount__header .discount__buttons .discount__btn--claim {
   font-size: .8rem;
 }
 
-.discount__header .discount__buttons .discount_btn--see-more i {
+.discount__header .discount__buttons .discount__btn--see-more i {
   padding-right: 5px;
 }
 
-.discount__header .discount__buttons .discount_btn--claim {
+.discount__header .discount__buttons .discount__btn--claim {
   float: right;
 }
 
@@ -693,6 +694,7 @@ form .active {
   }
   .discount__wrapper--image {
     max-width: 100% !important;
+    max-height: 100% !important;
     -webkit-box-flex: 0 !important;
         -ms-flex: 0 0 100% !important;
             flex: 0 0 100% !important;
@@ -714,7 +716,7 @@ form .active {
     margin-top: 10px;
     padding: 0;
   }
-  .discount__header .discount__buttons .discount_btn--see-more, .discount__header .discount__buttons .discount_btn--claim {
+  .discount__header .discount__buttons .discount__btn--see-more, .discount__header .discount__buttons .discount__btn--claim {
     width: 100%;
   }
   .discount__header .discount__header--content table {
@@ -864,28 +866,33 @@ form .active {
 }
 
 .discount__instructions {
-  margin: 30px auto;
-  width: 600px;
+  max-width: 570px;
+  margin: 0 auto;
+  position: relative;
+  white-space: nowrap;
 }
 
 .discount__instructions .discount__instructions--each {
-  display: inline-block;
   position: relative;
-  width: 32%;
+  padding: 5px 10px;
+  top: 0;
+  width: 32.8%;
+  display: inline-block;
   vertical-align: top;
+  height: 100%;
+}
+
+.discount__instructions .discount__instructions--each img {
+  position: relative;
+  max-width: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .discount__instructions .discount__instructions--each p {
   text-align: center;
-  padding: 5px;
-}
-
-.discount__instructions .discount__instructions--img {
-  width: 120px;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  white-space: normal;
 }
 
 .category__type--languages .category__name,

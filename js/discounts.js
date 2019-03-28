@@ -1,23 +1,6 @@
-// const storeDiscountObj = function(){
-//  let discountWrappers = Array.from(document.querySelectorAll('.discount__wrapper')); 
-//  discountWrappers.map(discount =>{
-//    let discountImg = discount.childNodes[1],
-//        discountDetails = discount.childNodes[3]
-
-//    let discountProperties = {
-//     discountImage: discountImg.innerHTML,
-//     discountName: discountDetails.childNodes
-
-//    }
-//    console.log(discountProperties.discountName);
-//   // console.log(discount.childNodes);
-//  });
-
-// }
-
 const seeMoreInfo = function (e) {
-  const btnsSeeMore = document.querySelectorAll('.discount_btn--see-more'),
-        btnClaim = document.querySelector('.discount_btn--claim');
+  const btnsSeeMore = document.querySelectorAll('.discount__btn--see-more'),
+        btnClaim = document.querySelector('.discount__btn--claim');
 
   btnArray = Array.from(btnsSeeMore);
   btnArray.map(function (btnSeeMore) {
@@ -45,7 +28,7 @@ const modalFunc = function () {
     contentModal = document.querySelector('.modal__content');
     behindModal = document.querySelector('.modal__background'),
     closeBtn = document.querySelector('.modal__close'),
-    claimBtns = document.querySelectorAll('.discount_btn--claim');
+    claimBtns = document.querySelectorAll('.discount__btn--claim');
 
   const closeModal = function () {
     const close = function () {
@@ -57,17 +40,25 @@ const modalFunc = function () {
     behindModal.addEventListener('click', () => close());
   }
 
-  const openModal = function () {
-    const open = function (e) {
+  const openModal = () => {
+    const open = (e) => {
       contentModal.classList.remove('modal__closed--content');
       behindModal.classList.remove('modal__closed--behind');
-      let discountImage = e.path[3].childNodes[1].childNodes[1].src;
-      let discountTitle = e.path[2].childNodes[3].childNodes[1].innerHTML;
-      let discountPercent = e.path[2].childNodes[1].childNodes[1].innerHTML;
-      let discountNewPrice = e.path[2].childNodes[1].childNodes[3].innerHTML;
-      let discountOldPrice = e.path[2].childNodes[1].childNodes[5].innerHTML;
-      let discountCredits = e.path[2].childNodes[5]
-      console.log(discountCredits)
+      const discountInfo = JSON.parse(e.srcElement.getAttribute('data-discount-info'));
+
+      const putDiscount = function(selector, value){
+        document.querySelector(selector).innerHTML = discountInfo[value];               
+      }
+
+      // Info picked up from discounts-enter
+      putDiscount('.old-currency-view', 'currency')
+      putDiscount('.new-currency-view', 'currency')
+      putDiscount('.name-view', 'name')
+      putDiscount('.credit-cost', 'creditCost')
+      putDiscount('.price-now', 'priceNew')
+      putDiscount('.price-before', 'priceOld')
+      putDiscount('.percent-view', 'percent')
+          
     }
 
     //Add click event listener to all claim buttons

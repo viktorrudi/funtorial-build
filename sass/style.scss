@@ -552,7 +552,7 @@ form {
 
 ///////////////////////////* DISCOUNTS *///////////////////////////
 
-.discount__feed{
+#discount__feed{
   overflow:hidden;
 }
 .discount__wrapper {
@@ -566,6 +566,7 @@ form {
     overflow: hidden;
     max-width: 20%;
     position: relative;
+    max-height:140px;
     img {
       display: block;
       max-height: 100%;
@@ -678,18 +679,18 @@ form {
     width: 100%;
     padding-right: 30px;
 
-    .discount_btn--see-more,
-    .discount_btn--claim {
+    .discount__btn--see-more,
+    .discount__btn--claim {
       font-size: .8rem;
     }
 
-    .discount_btn--see-more {
+    .discount__btn--see-more {
       i {
         padding-right: 5px;
       }
     }
 
-    .discount_btn--claim {
+    .discount__btn--claim {
       float: right;
     }
   }
@@ -700,6 +701,7 @@ form {
   .discount__wrapper {padding:0 !important;}
   .discount__wrapper--image {
     max-width:100% !important;
+    max-height: 100% !important;
     flex: 0 0 100% !important;
     margin-bottom:5px;
     img {
@@ -718,7 +720,7 @@ form {
       padding:0;
     }
   }
-  .discount__header .discount__buttons .discount_btn--see-more, .discount__header .discount__buttons .discount_btn--claim {
+  .discount__header .discount__buttons .discount__btn--see-more, .discount__header .discount__buttons .discount__btn--claim {
     width:100%;
   }
   .discount__header .discount__header--content table {
@@ -874,24 +876,29 @@ form {
 }
 
 .discount__instructions {
-  margin: 30px auto;
-  width: 600px;
-
-  .discount__instructions--each {
-    display:inline-block;
-    position:relative;
-    width:32%;
-    vertical-align: top;
-    p {
-      text-align:center;
-      padding: 5px;
-    }
-  }
-  .discount__instructions--img {
-    width:120px;
+  max-width:570px;
+  margin: 0 auto;
+  position: relative;
+  white-space: nowrap;
+  .discount__instructions--each{
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    padding:5px 10px;
+    top: 0;
+    width:32.8%;
+    display: inline-block;
+    vertical-align: top;
+    height:100%;
+    img {
+      position: relative;
+      max-width:80%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    p {
+      text-align: center;
+      
+    white-space: normal;
+    }
   }
 }
 
