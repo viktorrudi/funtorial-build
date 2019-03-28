@@ -1,4 +1,5 @@
-var curIndex = 0,
+const frontPage = function(){
+ var curIndex = 0,
  imgDuration = 3000,
  slider = document.querySelector('.heading__slideshow--current'),
  slides = slider.childNodes;
@@ -39,3 +40,4 @@ function slideShow() {
 
 buildSlideShow(imgArray);
 slideShow();
+}
