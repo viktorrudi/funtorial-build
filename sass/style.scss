@@ -124,7 +124,7 @@ h1 {
     padding: 20px 20px;
 
     h1 {
-      color:#fff;
+      color: #fff;
       font-size: 3.2rem;
       line-height: 4rem;
     }
@@ -383,8 +383,9 @@ h1 {
       max-height: 300px;
       overflow: hidden;
       transition: all 0.25s ease-in;
-      max-width:385px;
+      max-width: 385px;
       white-space: nowrap;
+
       &:hover {
         max-height: 600px;
         transition: all ease-in 0.1s;
@@ -503,7 +504,10 @@ form {
 }
 
 form {
-  .hidden {visibility: hidden;}
+  .hidden {
+    visibility: hidden;
+  }
+
   button {
     // margin-top:29px; NEEDS FIX
     background: $ft-blue !important;
@@ -554,21 +558,24 @@ form {
 
 ///////////////////////////* DISCOUNTS *///////////////////////////
 
-#discount__feed{
-  overflow:hidden;
+#discount__feed {
+  overflow: hidden;
 }
+
 .discount__wrapper {
-  min-height:165px;
-  margin-left:15px;
-  padding-left:15px;
-  padding-bottom:20px;
-  margin-bottom:20px;
+  min-height: 165px;
+  margin-left: 15px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   border-bottom: 4px solid $ft-ltgray;
+
   .discount__wrapper--image {
     overflow: hidden;
     max-width: 20%;
     position: relative;
-    max-height:140px;
+    max-height: 140px;
+
     img {
       display: block;
       max-height: 100%;
@@ -582,6 +589,7 @@ form {
 .discount__header {
   max-width: 80% !important;
   flex: 0 0 80% !important;
+
   // max-height: 140px;
   .discount__header--prices {
     position: relative;
@@ -699,32 +707,41 @@ form {
 }
 
 
-@media (max-width:767px){
-  .discount__wrapper {padding:0 !important;}
+@media (max-width:767px) {
+  .discount__wrapper {
+    padding: 0 !important;
+  }
+
   .discount__wrapper--image {
-    max-width:100% !important;
+    max-width: 100% !important;
     max-height: 100% !important;
     flex: 0 0 100% !important;
-    margin-bottom:5px;
+    margin-bottom: 5px;
+
     img {
       position: relative !important;
       transform: unset !important;
-      right:0 !important;
+      right: 0 !important;
       width: 100%;
-      max-height:100% !important;
+      max-height: 100% !important;
     }
   }
-  .discount__header{
+
+  .discount__header {
     max-width: 100% !important;
+
     .discount__buttons {
       position: relative;
       margin-top: 10px;
-      padding:0;
+      padding: 0;
     }
   }
-  .discount__header .discount__buttons .discount__btn--see-more, .discount__header .discount__buttons .discount__btn--claim {
-    width:100%;
+
+  .discount__header .discount__buttons .discount__btn--see-more,
+  .discount__header .discount__buttons .discount__btn--claim {
+    width: 100%;
   }
+
   .discount__header .discount__header--content table {
     margin: 20px 0;
   }
@@ -747,14 +764,16 @@ form {
   border-top-left-radius: 1rem;
   z-index: 10;
   transition: all .5s ease-in-out;
-  bottom:0;
-  overflow-y:scroll;
-  top:100px;
+  bottom: 0;
+  overflow-y: scroll;
+  top: 100px;
+
   .modal__func--close {
     position: relative;
     top: 5px;
     color: $ft-midgray;
     font-size: 1.4rem;
+
     i {
       transition: all .1s ease-in;
 
@@ -878,28 +897,31 @@ form {
 }
 
 .discount__instructions {
-  max-width:570px;
+  max-width: 570px;
   margin: 0 auto;
   position: relative;
   white-space: nowrap;
-  .discount__instructions--each{
+
+  .discount__instructions--each {
     position: relative;
-    padding:5px 10px;
+    padding: 5px 10px;
     top: 0;
-    width:32.8%;
+    width: 32.8%;
     display: inline-block;
     vertical-align: top;
-    height:100%;
+    height: 100%;
+
     img {
       position: relative;
-      max-width:80%;
+      max-width: 80%;
       left: 50%;
       transform: translateX(-50%);
     }
+
     p {
       text-align: center;
-      
-    white-space: normal;
+
+      white-space: normal;
     }
   }
 }
@@ -970,18 +992,19 @@ form {
     overflow: hidden;
     padding-bottom: 20px;
 
-    &:not(.wrapper__collapsed){
+    &:not(.wrapper__collapsed) {
       transition: all 1s ease-in;
     }
 
     .category__items--fade-overlay {
       content: '';
-      background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .7) 90%, rgba(255, 255, 255, .4) 100%);
+      background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .8) 50%, rgba(255, 255, 255, .0) 100%);
       position: absolute;
-      height: 33px;
+      height: 45px;
       width: 100%;
       bottom: 0;
       pointer-events: none;
+      z-index: 5;
     }
 
     .category__items--extend-btn {
@@ -1008,24 +1031,84 @@ form {
   }
 
   .category__item {
+    position: relative;
     width: 22%;
-    margin: 5px 10px;
-    height: 35px;
+    margin: 8px 10px;
     overflow: hidden; // One line category items
     cursor: pointer;
-    // background: $ft-ltgray;
-    // padding: 10px; line-height:1rem;
 
     a {
       display: block;
       color: $ft-gray;
       font-size: 1.1rem;
-      text-overflow: ellipsis; // One line category items
-      white-space: nowrap; // One line category items
-      overflow: hidden; // One line category items
 
       &:hover {
         text-decoration: none;
+      }
+
+      p {
+        display: inline-block;
+        position: absolute;
+        margin: 0;
+        padding-left: 5px;
+
+        // TODO - not working (consider putting it back to (a) and removing p tag
+        // text-overflow: ellipsis; // One line category items
+        // white-space: nowrap; // One line category items
+        // overflow: hidden; // One line category items
+
+      }
+
+      .category__item--icon {
+        position: relative;
+        display: inline-block;
+        background: $ft-ltgray;
+        overflow: hidden;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        border: 2px solid $ft-ltgray;
+        box-sizing: content-box;
+
+        object {
+          position: absolute;
+          right: 50%;
+          width: 40px;
+          transform: translate(50%, 50%);
+          bottom: 50%;
+        }
+      }
+
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .categories {
+    box-sizing: content-box;
+
+    .category {
+
+      // .wrapper__collapsed {max-height: 100%;}
+      .category__name {
+        text-align: left;
+      }
+
+      .category__description {
+        text-align: left;
+      }
+
+      .category__item {
+        width: 45%;
+
+        .category__item--icon {
+          width: 30px;
+          height: 30px;
+
+          object {
+            width: 60px;
+          }
+        }
       }
     }
   }

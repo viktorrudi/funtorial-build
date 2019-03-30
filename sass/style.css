@@ -719,7 +719,8 @@ form .active {
     margin-top: 10px;
     padding: 0;
   }
-  .discount__header .discount__buttons .discount__btn--see-more, .discount__header .discount__buttons .discount__btn--claim {
+  .discount__header .discount__buttons .discount__btn--see-more,
+  .discount__header .discount__buttons .discount__btn--claim {
     width: 100%;
   }
   .discount__header .discount__header--content table {
@@ -963,13 +964,14 @@ form .active {
 
 .category .category__items--wrapper .category__items--fade-overlay {
   content: '';
-  background-image: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(90%, rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.4)));
-  background-image: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0.7) 90%, rgba(255, 255, 255, 0.4) 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
-  height: 33px;
+  height: 45px;
   width: 100%;
   bottom: 0;
   pointer-events: none;
+  z-index: 5;
 }
 
 .category .category__items--wrapper .category__items--extend-btn {
@@ -994,9 +996,9 @@ form .active {
 }
 
 .category .category__item {
+  position: relative;
   width: 22%;
-  margin: 5px 10px;
-  height: 35px;
+  margin: 8px 10px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -1005,12 +1007,61 @@ form .active {
   display: block;
   color: #7f7f7f;
   font-size: 1.1rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .category .category__item a:hover {
   text-decoration: none;
+}
+
+.category .category__item a p {
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  padding-left: 5px;
+}
+
+.category .category__item a .category__item--icon {
+  position: relative;
+  display: inline-block;
+  background: #efefef;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 2px solid #efefef;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.category .category__item a .category__item--icon object {
+  position: absolute;
+  right: 50%;
+  width: 40px;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  bottom: 50%;
+}
+
+@media (max-width: 767px) {
+  .categories {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+  .categories .category .category__name {
+    text-align: left;
+  }
+  .categories .category .category__description {
+    text-align: left;
+  }
+  .categories .category .category__item {
+    width: 45%;
+  }
+  .categories .category .category__item .category__item--icon {
+    width: 30px;
+    height: 30px;
+  }
+  .categories .category .category__item .category__item--icon object {
+    width: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
