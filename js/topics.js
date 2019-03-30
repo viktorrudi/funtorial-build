@@ -28,11 +28,26 @@ const toggleOnClick = () => {
 }
 
 const countTopics = () => {
- let categories = Array.from(document.querySelectorAll('.category'));
- for (let i = 0; i < categories.length; i++) {
-  categories[i].childNodes[1].childNodes[3].childNodes[1].innerHTML 
-  = categories[i].childNodes[3].childElementCount - 2
+ const topic = {
+  languages(){
+   const allTopics = Array.from(document.querySelectorAll('#category__feed--lang .category__item'))
+   const displayCounter = document.querySelector('.category__type--languages .topic__counter')
+   displayCounter.innerHTML = allTopics.length
+  },
+  schoolTopics(){
+   const allTopics = Array.from(document.querySelectorAll('#category__feed--school .category__item'))
+   const displayCounter = document.querySelector('.category__type--school .topic__counter')
+   displayCounter.innerHTML = allTopics.length
+  },
+  quizzes(){
+   const allTopics = Array.from(document.querySelectorAll('#category__feed--quiz .category__item'))
+   const displayCounter = document.querySelector('.category__type--quiz .topic__counter')
+   displayCounter.innerHTML = allTopics.length
+  }
  }
+ topic.languages()
+ topic.schoolTopics()
+ topic.quizzes()
 }
 
 closeAll() // Initially closes all categories

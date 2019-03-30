@@ -127,6 +127,7 @@ h1 {
 }
 
 .heading .heading__hello h1 {
+  color: #fff;
   font-size: 3.2rem;
   line-height: 4rem;
 }
@@ -374,7 +375,6 @@ h1 {
 }
 
 .step .step__topics .step___topics-box {
-  position: absolute;
   background: #fff;
   padding: 20px 15px;
   margin-top: 10px;
@@ -383,6 +383,8 @@ h1 {
   overflow: hidden;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
+  max-width: 385px;
+  white-space: nowrap;
 }
 
 .step .step__topics .step___topics-box:hover {
@@ -407,6 +409,7 @@ h1 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white));
   background-image: linear-gradient(to bottom, transparent, white);
   z-index: 4;
+  pointer-events: none;
 }
 
 .step .step__topics .step___topics-box i {
