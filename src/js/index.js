@@ -2,4 +2,4 @@
 import {frontPage} from './front';
 
 //SCSS
-import '../sass/style.scss';
+import '../sass/index.scss';
