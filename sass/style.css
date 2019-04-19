@@ -38,6 +38,10 @@
   }
 }
 
+.nav-profile.dropdown {
+  padding: 0 !important;
+}
+
 .yellow-text {
   color: #ffc000;
 }
@@ -1229,6 +1233,26 @@ nav .navbar-brand .navbar-logo {
   }
 }
 
+nav .dropdown-menu {
+  top: 60px;
+  background: #efefef;
+  border: none;
+  padding: 0;
+  border-radius: .8rem !important;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.2);
+  min-width: 230px;
+}
+
+nav .vertical-line {
+  width: 1px;
+  height: 30px;
+  background: #fff;
+  display: block;
+  margin: 1.3rem 10px;
+}
+
 nav .dropdown-lang .flag-wrapper {
   bottom: 50%;
   -webkit-transform: translateY(50%);
@@ -1252,27 +1276,17 @@ nav .dropdown-lang .flag-wrapper .navbar-flag-selected {
   border-radius: 50px;
 }
 
-nav .dropdown-lang .dropdown-menu {
-  right: 0 !important;
-  top: 100%;
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
-}
-
-nav .dropdown-lang .dropdown-menu .dropdown-item {
+nav .dropdown-lang .dropdown-item {
   position: relative;
   padding: 0.5rem 1rem 0.5rem 3rem;
   white-space: normal;
 }
 
-nav .dropdown-lang .dropdown-menu .dropdown-item .flag-wrapper {
+nav .dropdown-lang .dropdown-item .flag-wrapper {
   left: 15px;
 }
 
-nav .dropdown-lang .dropdown-menu .dropdown-item .flag-wrapper .navbar-flag-dropdown {
+nav .dropdown-lang .dropdown-item .flag-wrapper .navbar-flag-dropdown {
   max-height: 100%;
   right: 50%;
   -webkit-transform: translateX(50%);
@@ -1347,6 +1361,50 @@ nav .nav-profile .nav-link .profile-container .profile-picture:after {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 6px solid #fff;
+}
+
+nav .nav-profile .dropdown__profile-container {
+  position: relative;
+  padding: 0px;
+  text-transform: initial;
+}
+
+nav .nav-profile .dropdown__profile-container .dropdown__profile--main {
+  padding: 10px 0px;
+}
+
+nav .nav-profile .dropdown__profile-container span, nav .nav-profile .dropdown__profile-container a, nav .nav-profile .dropdown__profile-container .dropdown__profile--logout {
+  font-weight: 400;
+  color: #002060;
+  padding: 3px 20px;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+nav .nav-profile .dropdown__profile-container span i, nav .nav-profile .dropdown__profile-container a i, nav .nav-profile .dropdown__profile-container .dropdown__profile--logout i {
+  color: #aaaaaa;
+  float: right;
+  padding-top: 4px;
+}
+
+nav .nav-profile .dropdown__profile-container span {
+  font-size: 1.2rem;
+  background: #ffc000;
+  cursor: default;
+}
+
+nav .nav-profile .dropdown__profile-container a:active {
+  background: #fff;
+}
+
+nav .nav-profile .dropdown__profile-container .dropdown__profile--logout {
+  background: #e2e2e2;
+  padding: 6px 20px;
+}
+
+nav .nav-profile .dropdown__profile-container .dropdown__profile--logout:hover {
+  color: #fff;
+  background: #ff0066;
 }
 
 nav .navbar-toggler {
