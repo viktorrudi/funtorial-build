@@ -1309,6 +1309,10 @@ nav {
 						border-radius: 50px;
 					}
 				}
+				&:active {
+					color: $ft-blue;
+					background: #fff;
+				}
 			}
 		
 	}

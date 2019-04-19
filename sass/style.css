@@ -1297,6 +1297,11 @@ nav .dropdown-lang .dropdown-item .flag-wrapper .navbar-flag-dropdown {
   border-radius: 50px;
 }
 
+nav .dropdown-lang .dropdown-item:active {
+  color: #002060;
+  background: #fff;
+}
+
 nav .nav-credits .nav-link {
   background: unset;
   position: relative;
