@@ -164,6 +164,10 @@ h1 {
   position: absolute;
   top: 0;
   opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
 
 .heading .heading__slideshow .heading__slideshow--current .fadeIn {
@@ -191,8 +195,14 @@ h1 {
   color: #fff;
 }
 
+@media (max-width: 1000px) {
+  .heading__hello h1 {
+    font-size: 2.5rem !important;
+    line-height: 2.5rem !important;
+  }
+}
+
 .step__two {
-  margin-top: 470px !important;
   /*  NEEDS A FIX! CHECK WHERE STEP__ONE IS */
 }
 
@@ -367,7 +377,10 @@ h1 {
   /* Flag/topic icon */
 }
 
-.step .step__topics .topic span {
+.step .step__topics .topic .step__topics--image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   bottom: 1px;
   width: 20px;
@@ -389,6 +402,7 @@ h1 {
   transition: all 0.25s ease-in;
   max-width: 385px;
   white-space: nowrap;
+  width: 33%;
 }
 
 .step .step__topics .step___topics-box:hover {
@@ -435,10 +449,42 @@ h1 {
   font-size: 0.8rem;
 }
 
+.step .step__topics .step___topics-box a {
+  color: #7f7f7f;
+  -webkit-transition: color .1s ease-in;
+  transition: color .1s ease-in;
+}
+
+.step .step__topics .step___topics-box a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  .step__topics-selection span {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .step___topics-box h2 {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 767px) {
+  .step__topics-selection span {
+    display: inline-block !important;
+  }
   .step__topics {
     position: relative !important;
     margin-bottom: 80px !important;
+  }
+  .step__topics .step___topics-box {
+    padding: 10px !important;
+    width: unset !important;
+    max-width: 100% !important;
+    margin: 0 auto;
   }
   .step__two {
     margin-top: unset !important;
@@ -560,7 +606,6 @@ form .active {
 
 .discount__wrapper {
   min-height: 165px;
-  margin-left: 15px;
   padding-left: 15px;
   padding-bottom: 20px;
   margin-bottom: 20px;
@@ -581,6 +626,10 @@ form .active {
   right: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+}
+
+.discount__wrapper:last-child {
+  border-bottom: none;
 }
 
 .discount__header {
@@ -698,6 +747,7 @@ form .active {
 @media (max-width: 767px) {
   .discount__wrapper {
     padding: 0 !important;
+    border-bottom: none;
   }
   .discount__wrapper--image {
     max-width: 100% !important;
@@ -717,6 +767,9 @@ form .active {
   }
   .discount__header {
     max-width: 100% !important;
+    -webkit-box-flex: unset !important;
+        -ms-flex: unset !important;
+            flex: unset !important;
   }
   .discount__header .discount__buttons {
     position: relative;

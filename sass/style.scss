@@ -153,12 +153,14 @@ h1 {
 			position: relative;
 			width: 100%;
 			height: 100%;
-
 			img {
 				transition: opacity 1.5s;
 				position: absolute;
 				top: 0;
 				opacity: 0;
+				transform: translate(-50%, -50%);
+				left: 50%;
+				top:50%;
 			}
 
 			.fadeIn {
@@ -186,8 +188,15 @@ h1 {
 	}
 }
 
+@media (max-width: 1000px) {
+	.heading__hello h1 {
+		font-size: 2.5rem !important;
+		line-height: 2.5rem !important;
+	}
+}
+
 .step__two {
-	margin-top: 470px !important;
+	// margin-top: 470px !important;
 
 	/*  NEEDS A FIX! CHECK WHERE STEP__ONE IS */
 	.step__intro {
@@ -363,7 +372,10 @@ h1 {
 			color: $ft-gray;
 
 			/* Flag/topic icon */
-			span {
+			.step__topics--image {
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
 				position: relative;
 				bottom: 1px;
 				width: 20px;
@@ -385,6 +397,7 @@ h1 {
 			transition: all 0.25s ease-in;
 			max-width: 385px;
 			white-space: nowrap;
+			width: 33%;
 
 			&:hover {
 				max-height: 600px;
@@ -424,14 +437,47 @@ h1 {
 				color: $ft-gray;
 				font-size: 0.8rem;
 			}
+			// Topic link
+			a {
+				color: $ft-gray;
+				transition: color .1s ease-in;
+				&:hover {
+					color: #000;
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }
 
+@media (max-width:992px) {
+	// Icons
+	.step__topics-selection span {
+		display: none !important;
+	}
+}
+
+@media (max-width:1200px) {
+	.step___topics-box h2 {
+		font-size: 1.5rem;
+	}
+}
+
 @media (max-width: 767px) {
+	// Icons
+	.step__topics-selection span {
+		display: inline-block !important;
+	}
+
 	.step__topics {
 		position: relative !important;
 		margin-bottom: 80px !important;
+		.step___topics-box {
+			padding: 10px !important;
+			width: unset !important;
+			max-width: 100% !important;
+			margin: 0 auto;
+		}
 	}
 
 	.step__two {
@@ -557,7 +603,6 @@ form {
 
 .discount__wrapper {
 	min-height: 165px;
-	margin-left: 15px;
 	padding-left: 15px;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
@@ -576,6 +621,9 @@ form {
 			right: 50%;
 			transform: translateX(50%);
 		}
+	}
+	&:last-child {
+		border-bottom: none;
 	}
 }
 
@@ -699,6 +747,7 @@ form {
 @media (max-width: 767px) {
 	.discount__wrapper {
 		padding: 0 !important;
+		border-bottom:none;
 	}
 
 	.discount__wrapper--image {
@@ -718,6 +767,7 @@ form {
 
 	.discount__header {
 		max-width: 100% !important;
+		flex: unset !important;
 
 		.discount__buttons {
 			position: relative;
@@ -859,9 +909,6 @@ form {
 			.credits-icon {
 				padding-right: 2px;
 				width: 15px;
-				// svg {
-				//   // fill:$ft-lime; - can't target svg
-				// }
 			}
 		}
 
