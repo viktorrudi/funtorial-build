@@ -13,12 +13,8 @@ const seeMoreInfo = function (e) {
 
 
     btnSeeMore.addEventListener('click', function (e) {
-      console.log(e);
       // Closest content box in relation to the button clicked
-      // TODO: Fix with a closest() or similar function to make it work in FF
-      const discountContent = e.path[2].childNodes[3];
-      // const discountText = e.path[2].childNodes[3].querySelector('p')
-      // const discountTable = e.path[2].childNodes[3].querySelector('table')
+      const discountContent = btnSeeMore.parentElement.parentElement.querySelector('.discount__header--content')
 
       // When closing discount list
       if (discountContent.classList.contains('extended')) {
