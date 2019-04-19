@@ -2,15 +2,12 @@
 
 // TODO: Set up one script for text phrases
 
-const seeMoreInfo = function (e) {
+const seeMoreInfo = function () {
   const btnsSeeMore = document.querySelectorAll('.discount__btn--see-more')
   // const btnClaim = document.querySelector('.discount__btn--claim');
 
-  const btnArray = Array.from(btnsSeeMore);
+  const btnArray = Array.from(btnsSeeMore)
   btnArray.map(function (btnSeeMore) {
-
-    // Firefox fix
-
 
     btnSeeMore.addEventListener('click', function (e) {
       // Closest content box in relation to the button clicked
@@ -26,8 +23,8 @@ const seeMoreInfo = function (e) {
         discountContent.classList.add('extended');
         btnSeeMore.innerHTML = '<i class="fas fa-angle-up"></i> See less details';
       }
-    });
-  });
+    })
+  })
 }
 
 const modalFunc = function () {
