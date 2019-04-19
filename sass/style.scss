@@ -1,3 +1,5 @@
+
+
 $ft-blue: #002060;
 $ft-ltblue: #558ed5;
 $ft-yellow: #ffc000;
@@ -1482,5 +1484,13 @@ nav {
 			float: right;
 			text-align: right;
 		}
+	}
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS styles go here */
+	.discount__header .discount__buttons {
+		position: relative;
 	}
 }
