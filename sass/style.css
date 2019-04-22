@@ -69,6 +69,26 @@ h1 {
   color: #002060;
 }
 
+.tooltip-inner {
+  background-color: #002060 !important;
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+  border-right-color: #002060 !important;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+  border-left-color: #002060 !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+  border-bottom-color: #002060 !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+  border-top-color: #002060 !important;
+}
+
 .btn-primary:hover,
 .btn-secondary:hover,
 .btn-lime:hover {
@@ -1100,10 +1120,6 @@ form .active {
 }
 
 @media (max-width: 767px) {
-  .categories {
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
-  }
   .categories .category .category__name {
     text-align: left;
   }
@@ -1119,6 +1135,9 @@ form .active {
   }
   .categories .category .category__item .category__item--icon object {
     width: 60px;
+  }
+  .categories .category .category__items--extend-btn {
+    border-radius: 0;
   }
 }
 
@@ -1483,6 +1502,15 @@ nav .navbar-toggler .navbar-toggler-icon {
     float: right;
     text-align: right;
   }
+}
+
+.form-register .btn-register {
+  margin-top: 10px;
+}
+
+.register__actions--login {
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

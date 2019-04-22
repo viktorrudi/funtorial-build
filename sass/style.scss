@@ -73,6 +73,25 @@ h1 {
 	color: $ft-blue;
 }
 
+//////////// Bootstrap edits /////////////
+
+// Tooltip
+.tooltip-inner {
+	background-color: $ft-blue !important;
+}
+.tooltip.bs-tooltip-right .arrow:before {
+	border-right-color: $ft-blue !important;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+	border-left-color: $ft-blue !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+	border-bottom-color: $ft-blue !important;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+	border-top-color: $ft-blue !important;
+}
+
 //Buttons
 .btn-primary:hover,
 .btn-secondary:hover,
@@ -1118,7 +1137,7 @@ form {
 
 @media (max-width: 767px) {
 	.categories {
-		box-sizing: content-box;
+		// box-sizing: content-box;
 
 		.category {
 			// .wrapper__collapsed {max-height: 100%;}
@@ -1141,6 +1160,9 @@ form {
 						width: 60px;
 					}
 				}
+			}
+			.category__items--extend-btn {
+				border-radius: 0;
 			}
 		}
 	}
@@ -1487,7 +1509,20 @@ nav {
 	}
 }
 
+//////////////// FORMS //////////////////
 
+// Registering
+.form-register .btn-register {
+	margin-top:10px;
+}
+
+.register__actions--login {
+	text-decoration: underline;
+	font-weight: 500;
+}
+
+
+// IE FIX
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	/* IE10+ CSS styles go here */
 	.discount__header .discount__buttons {

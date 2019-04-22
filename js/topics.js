@@ -10,15 +10,22 @@ const addExtendButton = () => {
        topicExtendBtn.appendChild(topicExtendBtnArrow);
 
   const topicWrappers = Array.from(document.querySelectorAll('.category__items--wrapper'))
- topicWrappers.map(topicWrapper => {
+ 
+      // testing
+      // console.log(topicWrappers);
+
+  topicWrappers.map(topicWrapper => {
 
   //Temporarely setting height to find out if div is overflowing
   topicWrapper.style.height = '135px'
 
+  // testing
+//   console.log(topicWrapper.scrollHeight);
+
   // If wrapper is overflowing - show buttons
-  if (topicWrapper.scrollHeight > topicWrapper.clientHeight || topicWrapper.scrollWidth > topicWrapper.clientWidth) {
-   topicWrapper.appendChild(topicExtendBtnFade)
-   topicWrapper.appendChild(topicExtendBtn)
+  if (topicWrapper.scrollHeight > topicWrapper.clientHeight) {
+   topicWrapper.appendChild(topicExtendBtnFade.cloneNode(true))
+   topicWrapper.appendChild(topicExtendBtn.cloneNode(true))
    console.log('overflowing');
   }
 

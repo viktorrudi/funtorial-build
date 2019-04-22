@@ -42,6 +42,7 @@ const modalFunc = function () {
     }
     closeBtn.addEventListener('click', () => close());
     behindModal.addEventListener('click', () => close());
+    return true
   }
 
   const openModal = () => {
@@ -50,6 +51,7 @@ const modalFunc = function () {
       behindModal.classList.remove('modal__closed--behind');
       const discountInfo = JSON.parse(e.srcElement.getAttribute('data-discount-info'));
 
+      // Helper function for below actions
       const putDiscount = function (selector, value) {
         document.querySelector(selector).innerHTML = discountInfo[value];
       }
@@ -62,7 +64,7 @@ const modalFunc = function () {
       putDiscount('.price-now', 'priceNew')
       putDiscount('.price-before', 'priceOld')
       putDiscount('.percent-view', 'percent')
-
+      return true
     }
 
     //Add click event listener to all claim buttons
