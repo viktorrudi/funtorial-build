@@ -17,7 +17,7 @@ class Topic {
 
   const topicWrapper = document.createElement('div');
   topicWrapper.setAttribute('class', 'category__item');
-  let toFeed = ``;
+  let toFeed = '';
   toFeed += `
   <a data-topic-id="${this.id}" href="${this.link}" data-toggle="tooltip" data-placement="top" title="${this.fullTitle}">
     <span class="category__item--icon">

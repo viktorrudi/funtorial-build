@@ -976,12 +976,27 @@ form .active {
   white-space: normal;
 }
 
+.categories .category__items--see-more {
+  color: #fff;
+  float: right;
+  border-radius: 2rem;
+  padding: 5px 25px;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+.categories .category__items--see-more:hover {
+  color: #fff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .category__type--languages .category__name,
 .category__type--languages .category__item a:hover {
   color: #f9af73;
 }
 
-.category__type--languages .category__items--extend-btn {
+.category__type--languages .category__items--extend-btn, .category__type--languages .category__items--see-more {
   background: #f9af73;
 }
 
@@ -990,7 +1005,7 @@ form .active {
   color: #31859c;
 }
 
-.category__type--school .category__items--extend-btn {
+.category__type--school .category__items--extend-btn, .category__type--school .category__items--see-more {
   background: #31859c;
 }
 
@@ -999,7 +1014,7 @@ form .active {
   color: #8266a3;
 }
 
-.category__type--quiz .category__items--extend-btn {
+.category__type--quiz .category__items--extend-btn, .category__type--quiz .category__items--see-more {
   background: #8266a3;
 }
 
@@ -1120,6 +1135,10 @@ form .active {
 }
 
 @media (max-width: 767px) {
+  .categories .category__items--see-more {
+    float: none;
+    margin-bottom: 10px;
+  }
   .categories .category .category__name {
     text-align: left;
   }
