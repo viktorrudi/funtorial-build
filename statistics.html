@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="sass/style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page__intro">
+        <h1>Your stats</h1>
+        <p class="text-center">
+          On this page you will find how well you have preformed in your quest
+          on becoming a smarter individual with the help of Funtorial
+        </p>
+      </div>
+
+      <div class="stats__general">
+        <h5 class="stats__heading--general">General stats</h5>
+        <div class="stats__general-wrapper">
+          <div class="stats__general--container">
+            <h1 class="stats__general--stat">42</h1>
+            <p class="stats__general--description">Days since signup</p>
+          </div>
+          <div class="stats__general--container">
+            <h1 class="stats__general--stat">23</h1>
+            <p class="stats__general--description">Discounts claimed</p>
+          </div>
+          <div class="stats__general--container">
+            <h1 class="stats__general--stat">6423</h1>
+            <p class="stats__general--description">
+              Lifetime credits earned
+            </p>
+          </div>
+          <div class="stats__general--container">
+            <h1 class="stats__general--stat">24%</h1>
+            <p class="stats__general--description">Average success ratio</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats__categories">
+        <div class="stats__category-languages">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="stats__category--heading-title">x langs</th>
+                <th class="stats__category--heading-icon">
+                  <i class="fas fa-graduation-cap stat__color--skill"></i>
+                </th>
+                <th class="stats__category--heading-icon">
+                  <i class="far fa-clock stat__color--time-spent"></i>
+                </th>
+                <th class="stats__category--heading-icon">
+                  <i class="far fa-laugh stat__color--correct"></i>
+                </th>
+                <th class="stats__category--heading-icon">
+                  <i class="far fa-frown stat__color--incorrect"></i>
+                </th>
+                <th class="stats__category--heading-icon">
+                  <i class="fas fa-chart-pie stat__color--ratio"></i>
+                </th>
+                <th class="stats__category--heading-icon">
+                  <object
+                    data="img/credits-icon-gold.svg"
+                    type="image/svg+xml"
+                  ></object>
+                </th>
+                <th class="stats__category--heading-icon">
+                  <!-- Empty space???? -->
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stats__main">
+                <th class="stat__type--category">
+                  <object data="img/flags/ae.svg" type="image/svg+xml"></object>
+                  <h3>English</h3>
+                </th>
+                <td class="stat__type--skill">
+                  <h3 class="stats__stat stat-skill">B1</h3>
+                  <p class="stats__description">Your skill level</p>
+                </td>
+                <td class="stat__type--time-spent">
+                  <h3 class="stats__stat">2h 33 min</h3>
+                  <p class="stats__description">Time spent on subject</p>
+                </td>
+                <td class="stat__type--correct">
+                  <h3 class="stats__stat">200</h3>
+                  <p class="stats__description">Correct answers</p>
+                </td>
+                <td class="stat__type--incorrect">
+                  <h3 class="stats__stat">50</h3>
+                  <p class="stats__description">Incorrect answers</p>
+                </td>
+                <td class="stat__type--ratio">
+                  <h3 class="stats__stat">25%</h3>
+                  <p class="stats__description">Success ratio</p>
+                </td>
+                <td class="stat__type--total-credits">
+                  <h3 class="stats__stat">523</h3>
+                  <p class="stats__description">Total credits earned</p>
+                </td>
+                <td class="stat__type--more">
+                  <i class="fas fa-ellipsis-v"></i>
+                </td>
+              </tr>
+              <tr class="stats__extra">
+                <td>test1</td>
+                <td>test2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
