@@ -54,7 +54,7 @@
       <div class="stats__categories">
         <div class="stats__category-languages">
           <table class="table">
-            <thead>
+            <thead class="stats__identifiers">
               <tr>
                 <th class="stats__category--heading-title">x langs</th>
                 <th class="stats__category--heading-icon">
@@ -78,23 +78,26 @@
                     type="image/svg+xml"
                   ></object>
                 </th>
-                <th class="stats__category--heading-icon">
+                <th class="stats__category--heading-icon stats__category--more">
                   <!-- Empty space???? -->
                 </th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="stats__main">
-                <th class="stat__type--category">
-                  <object data="img/flags/ae.svg" type="image/svg+xml"></object>
-                  <h3>English</h3>
+            <tbody class="stats__main">
+              <tr>
+                <th class="stat__type--category stat__type--heading">
+                  <!-- <object data="img/flags/ae.svg" type="image/svg+xml"></object> -->
+                  <h3>
+                    English and this is a very long sentence if you catch my
+                    long asd sad
+                  </h3>
                 </th>
                 <td class="stat__type--skill">
-                  <h3 class="stats__stat stat-skill">B1</h3>
+                  <h3 class="stats__stat">B1</h3>
                   <p class="stats__description">Your skill level</p>
                 </td>
                 <td class="stat__type--time-spent">
-                  <h3 class="stats__stat">2h 33 min</h3>
+                  <h3 class="stats__stat">23h 22m</h3>
                   <p class="stats__description">Time spent on subject</p>
                 </td>
                 <td class="stat__type--correct">
@@ -117,10 +120,10 @@
                   <i class="fas fa-ellipsis-v"></i>
                 </td>
               </tr>
-              <tr class="stats__extra">
+              <!-- <tr class="stats__extra">
                 <td>test1</td>
                 <td>test2</td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>

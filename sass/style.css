@@ -1586,8 +1586,138 @@ nav .navbar-toggler .navbar-toggler-icon {
   border: none;
 }
 
+.stats__categories table .stats__identifiers .stats__category--heading-title {
+  padding-left: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
 .stats__categories table .stats__main th,
 .stats__categories table .stats__main td {
   border: none;
+}
+
+.stats__categories table .stats__main tr {
+  background: #f0f5fb;
+}
+
+.stats__categories table .stats__main td .stats__stat {
+  font-size: 1.3rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.stats__categories table .stats__main td .stats__description {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.stats__categories table .stats__main .stat__type--heading,
+.stats__categories table .stats__main .stat__type--more {
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+.stats__categories table .stats__main .stat__type--heading h3,
+.stats__categories table .stats__main .stat__type--more h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.stats__categories table .stats__main .stat__type--more {
+  text-align: center;
+  -webkit-transition: background 0.1s ease-in;
+  transition: background 0.1s ease-in;
+}
+
+.stats__categories table .stats__main .stat__type--more:hover {
+  cursor: pointer;
+  background: #e4edf8;
+}
+
+.stats__categories table .stats__main .stat__type--more i {
+  font-size: 1.7rem;
+  color: #7f7f7f;
+}
+
+.stats__identifiers .stats__category--heading-icon {
+  width: 12%;
+}
+
+.stats__identifiers .stats__category--more {
+  width: 5%;
+}
+
+.stats__category-languages .stats__category--heading-title {
+  color: #f9af73;
+}
+
+.stats__category-school-topics .stats__category--heading-title {
+  color: #31859c;
+}
+
+.stats__category-quizzes .stats__category--heading-title {
+  color: #8266a3;
+}
+
+.stats__main h3,
+.stats__main p {
+  color: #fff;
+}
+
+.stats__main .stat__type--heading h3 {
+  color: #535353;
+}
+
+.stats__identifiers .stat__color--skill {
+  color: #535353;
+}
+
+.stats__identifiers .stat__color--time-spent {
+  color: #558ed5;
+}
+
+.stats__identifiers .stat__color--correct {
+  color: #04d138;
+}
+
+.stats__identifiers .stat__color--incorrect {
+  color: #ff0066;
+}
+
+.stats__identifiers .stat__color--ratio {
+  color: #002060;
+}
+
+.stat__type--skill {
+  background: #535353;
+}
+
+.stat__type--time-spent {
+  background: #558ed5;
+}
+
+.stat__type--correct {
+  background: #04d138;
+}
+
+.stat__type--incorrect {
+  background: #ff0066;
+}
+
+.stat__type--ratio {
+  background: #002060;
+}
+
+.stat__type--total-credits {
+  background: #ffc000;
+}
+
+.stat__type--total-credits h3,
+.stat__type--total-credits p {
+  color: #535353;
 }
 /*# sourceMappingURL=style.css.map */
