@@ -509,8 +509,8 @@ h1 {
 
 .step .step__topics .step___topics-box a {
   color: #7f7f7f;
-  -webkit-transition: color 0.1s ease-in;
-  transition: color 0.1s ease-in;
+  -webkit-transition: color .1s ease-in;
+  transition: color .1s ease-in;
 }
 
 .step .step__topics .step___topics-box a:hover {
@@ -1348,7 +1348,7 @@ nav .dropdown-menu {
   background: #efefef;
   border: none;
   padding: 0;
-  border-radius: 0.8rem !important;
+  border-radius: .8rem !important;
   overflow: hidden;
   -webkit-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.2);
@@ -1488,19 +1488,15 @@ nav .nav-profile .dropdown__profile-container .dropdown__profile--main {
   padding: 10px 0px;
 }
 
-nav .nav-profile .dropdown__profile-container span,
-nav .nav-profile .dropdown__profile-container a,
-nav .nav-profile .dropdown__profile-container .dropdown__profile--logout {
+nav .nav-profile .dropdown__profile-container span, nav .nav-profile .dropdown__profile-container a, nav .nav-profile .dropdown__profile-container .dropdown__profile--logout {
   font-weight: 400;
   color: #002060;
   padding: 3px 20px;
-  -webkit-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
 }
 
-nav .nav-profile .dropdown__profile-container span i,
-nav .nav-profile .dropdown__profile-container a i,
-nav .nav-profile .dropdown__profile-container .dropdown__profile--logout i {
+nav .nav-profile .dropdown__profile-container span i, nav .nav-profile .dropdown__profile-container a i, nav .nav-profile .dropdown__profile-container .dropdown__profile--logout i {
   color: #aaaaaa;
   float: right;
   padding-top: 4px;
