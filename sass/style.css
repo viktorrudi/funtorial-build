@@ -69,6 +69,43 @@ h1 {
   color: #002060;
 }
 
+.exercise__end .table {
+  background: #efefef;
+  margin: .5rem 0;
+}
+
+.exercise__end .table td {
+  border: none;
+  padding: .5rem .75rem;
+}
+
+.exercise__end .table .table-heading {
+  color: #002060;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.exercise__end .table .table-description {
+  color: #002060;
+}
+
+.breadcrumb {
+  background-image: none !important;
+}
+
+.breadcrumb .breadcrumb-item.active {
+  color: #002060;
+}
+
+.breadcrumb .breadcrumb-item:before {
+  content: unset;
+}
+
+.breadcrumb .breadcrumb-item a {
+  color: #7f7f7f;
+  background: #efefef;
+}
+
 .tooltip-inner {
   background-color: #002060 !important;
 }
@@ -101,11 +138,12 @@ h1 {
 .btn-primary,
 .btn-secondary,
 .btn-lime {
+  border-radius: 0;
   padding: 10px 30px;
   -webkit-transition: all ease-in 0.1s;
   transition: all ease-in 0.1s;
   border: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .btn-primary:focus,
@@ -285,7 +323,7 @@ h1 {
   position: absolute;
   text-align: center;
   padding-top: 3px;
-  font-weight: 500;
+  font-weight: 600;
   background: #ffc000;
   width: 30px;
   height: 30px;
@@ -532,7 +570,7 @@ h1 {
 .second-cta .second-cta__btn {
   position: relative;
   border: 4px solid #002060;
-  font-weight: 500;
+  font-weight: 600;
   margin: 25px 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -579,7 +617,7 @@ form .hidden {
 form button {
   background: #002060 !important;
   color: #fff !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   border-radius: 0;
 }
 
@@ -607,7 +645,7 @@ form label {
   font-size: 0.9rem;
   text-transform: uppercase;
   color: #7f7f7f;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.3rem;
   white-space: nowrap;
 }
@@ -673,11 +711,11 @@ form .active {
   padding: 1px 10px 5px 10px;
   background: #04d138;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .discount__header .discount__header--prices .price-new {
-  font-weight: 500;
+  font-weight: 600;
   color: #04d138;
   margin-left: 7px;
 }
@@ -723,7 +761,7 @@ form .active {
   width: 200px;
   text-transform: uppercase;
   color: #7f7f7f;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.3rem;
 }
 
@@ -881,7 +919,7 @@ form .active {
 .discount__preview .discount__preview--percent {
   position: relative;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   max-width: 100px;
   max-height: 100px;
   display: inline-block;
@@ -923,7 +961,7 @@ form .active {
 
 .discount__preview .discount__preview--content .credits-view {
   color: #04d138;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .discount__preview .discount__preview--content .credits-view .credits-icon {
@@ -1160,7 +1198,7 @@ form .active {
 .reader__wrapper a {
   -webkit-transition: all ease-in 0.1s;
   transition: all ease-in 0.1s;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .reader__wrapper a:hover {
@@ -1285,7 +1323,7 @@ nav .dropdown .dropdown-toggle:hover {
   nav .nav-item {
     display: block;
     background: #001847;
-    font-weight: 500;
+    font-weight: 600;
   }
   nav .navbar-text {
     width: 100%;
@@ -1383,7 +1421,7 @@ nav .nav-credits .credit-container {
   background: #ffc000;
   padding: 5px 15px;
   color: #002060;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   border-radius: 2rem;
   -webkit-transition: all 0.1s ease-in;
@@ -1418,7 +1456,7 @@ nav .nav-profile .nav-link .profile-container .profile-picture {
   border: 2px solid #fff;
   padding: 5px 15px;
   color: #002060;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   border-radius: 2rem;
   -webkit-transition: all 0.1s ease-in;
@@ -1514,7 +1552,48 @@ nav .navbar-toggler .navbar-toggler-icon {
 
 .register__actions--login {
   text-decoration: underline;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.exercise__end {
+  margin-top: 20px;
+}
+
+.exercise__end .exercise__end--heading {
+  color: #04d138;
+}
+
+.exercise__end .exercise__end--motivate {
+  color: #7f7f7f;
+}
+
+.exercise__end .icon__piggie {
+  width: 150px;
+}
+
+.exercise__end .exercise__end--credits .exercise__end--credits-wrapper {
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.exercise__end .exercise__end--credits .exercise__end--credits-wrapper h5 {
+  color: #002060;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.exercise__end .exercise__end--credits .exercise__end--credits-wrapper .icon__credit--counter {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #ffc000;
+  line-height: 2.2rem;
+  margin-left: 5px;
+}
+
+.exercise__end .exercise__end--credits .icon__credit {
+  width: 40px;
+  vertical-align: top;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
