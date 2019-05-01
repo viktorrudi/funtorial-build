@@ -21,7 +21,6 @@ class CategoryStatistic {
 
   otherStatistics() {
     // Input is an array
-    console.log(this.otherStats.length);
 
     let output = `
       <div class='list-group'>
@@ -138,7 +137,6 @@ class CategoryStatistic {
     }
 
     const statistics = this.mainStatistics();
-    console.log(statistics);
     selectorToUse.appendChild(statistics);
   }
 }
@@ -173,12 +171,245 @@ new CategoryStatistic({
     }
   ]
 }).build();
+new CategoryStatistic({
+  id: 1,
+  category: "language",
+  title: "English",
+  fullTitle: "Example",
+  image: "img/flags/gb.svg",
+  mainStats: {
+    skillLevel: "A1",
+    timeSpent: "22h 15m",
+    correctAnswers: 5,
+    incorrectAnswers: 15,
+    successRatio: "15%",
+    totalCredits: 523
+  },
+  otherStats: [
+    {
+      stat: 52,
+      description: "CUSTOM STAT"
+    },
+    {
+      stat: 22,
+      description: "CUsdfsdfSTOM STAT"
+    },
+    {
+      stat: 5082,
+      description: "CUSTOM STAasvT"
+    }
+  ]
+}).build();
+new CategoryStatistic({
+  id: 1,
+  category: "language",
+  title: "English",
+  fullTitle: "Example",
+  image: "img/flags/gb.svg",
+  mainStats: {
+    skillLevel: "A1",
+    timeSpent: "22h 15m",
+    correctAnswers: 5,
+    incorrectAnswers: 15,
+    successRatio: "15%",
+    totalCredits: 523
+  },
+  otherStats: [
+    {
+      stat: 52,
+      description: "CUSTOM STAT"
+    },
+    {
+      stat: 22,
+      description: "CUsdfsdfSTOM STAT"
+    },
+    {
+      stat: 5082,
+      description: "CUSTOM STAasvT"
+    }
+  ]
+}).build();
+new CategoryStatistic({
+  id: 1,
+  category: "language",
+  title: "English",
+  fullTitle: "Example",
+  image: "img/flags/gb.svg",
+  mainStats: {
+    skillLevel: "A1",
+    timeSpent: "22h 15m",
+    correctAnswers: 5,
+    incorrectAnswers: 15,
+    successRatio: "15%",
+    totalCredits: 523
+  },
+  otherStats: [
+    {
+      stat: 52,
+      description: "CUSTOM STAT"
+    },
+    {
+      stat: 22,
+      description: "CUsdfsdfSTOM STAT"
+    },
+    {
+      stat: 5082,
+      description: "CUSTOM STAasvT"
+    }
+  ]
+}).build();
+new CategoryStatistic({
+  id: 1,
+  category: "language",
+  title: "American English",
+  fullTitle: "Example",
+  image: "img/flags/gb.svg",
+  mainStats: {
+    skillLevel: "A1",
+    timeSpent: "22h 15m",
+    correctAnswers: 5,
+    incorrectAnswers: 15,
+    successRatio: "15%",
+    totalCredits: 523
+  },
+  otherStats: [
+    {
+      stat: 52,
+      description: "CUSTOM STAT"
+    },
+    {
+      stat: 22,
+      description: "CUsdfsdfSTOM STAT"
+    },
+    {
+      stat: 5082,
+      description: "CUSTOM STAasvT"
+    }
+  ]
+}).build();
 
 new CategoryStatistic({
   id: 1,
-  category: "quiz",
-  title: "Some quiz",
+  category: "language",
+  title: "English",
   fullTitle: "Example",
+  image: "img/flags/gb.svg",
+  mainStats: {
+    skillLevel: "A1",
+    timeSpent: "22h 15m",
+    correctAnswers: 5,
+    incorrectAnswers: 15,
+    successRatio: "15%",
+    totalCredits: 523
+  },
+  otherStats: [
+    {
+      stat: 52,
+      description: "CUSTOM STAT"
+    },
+    {
+      stat: 22,
+      description: "CUsdfsdfSTOM STAT"
+    },
+    {
+      stat: 5082,
+      description: "CUSTOM STAasvT"
+    }
+  ]
+}).build();
+new CategoryStatistic({
+  id: 1,
+  category: "quiz",
+  title: "English",
+  fullTitle: "Example",
+  image: "img/flags/gb.svg",
+  mainStats: {
+    skillLevel: "A1",
+    timeSpent: "22h 15m",
+    correctAnswers: 5,
+    incorrectAnswers: 15,
+    successRatio: "15%",
+    totalCredits: 523
+  },
+  otherStats: [
+    {
+      stat: 52,
+      description: "CUSTOM STAT"
+    },
+    {
+      stat: 22,
+      description: "CUsdfsdfSTOM STAT"
+    },
+    {
+      stat: 5082,
+      description: "CUSTOM STAasvT"
+    }
+  ]
+}).build();
+new CategoryStatistic({
+  id: 1,
+  category: "quiz",
+  title: "English",
+  fullTitle: "Example",
+  image: "img/flags/gb.svg",
+  mainStats: {
+    skillLevel: "A1",
+    timeSpent: "22h 15m",
+    correctAnswers: 5,
+    incorrectAnswers: 15,
+    successRatio: "15%",
+    totalCredits: 523
+  },
+  otherStats: [
+    {
+      stat: 52,
+      description: "CUSTOM STAT"
+    },
+    {
+      stat: 22,
+      description: "CUsdfsdfSTOM STAT"
+    },
+    {
+      stat: 5082,
+      description: "CUSTOM STAasvT"
+    }
+  ]
+}).build();
+new CategoryStatistic({
+  id: 1,
+  category: "quiz",
+  title: "English",
+  fullTitle: "Example",
+  image: "img/flags/gb.svg",
+  mainStats: {
+    skillLevel: "A1",
+    timeSpent: "22h 15m",
+    correctAnswers: 5,
+    incorrectAnswers: 15,
+    successRatio: "15%",
+    totalCredits: 523
+  },
+  otherStats: [
+    {
+      stat: 52,
+      description: "CUSTOM STAT"
+    },
+    {
+      stat: 22,
+      description: "CUsdfsdfSTOM STAT"
+    },
+    {
+      stat: 5082,
+      description: "CUSTOM STAasvT"
+    }
+  ]
+}).build();
+new CategoryStatistic({
+  id: 1,
+  category: "quiz",
+  title: "English",
+  fullTitle: "Example",
+  image: "img/flags/gb.svg",
   mainStats: {
     skillLevel: "A1",
     timeSpent: "22h 15m",

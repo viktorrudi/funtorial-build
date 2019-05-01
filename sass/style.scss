@@ -1668,6 +1668,10 @@ nav {
 // Category statistics (below) - general
 .stats__categories--feed {
   margin-top: 50px;
+  // & > div {
+  //   overflow-x: scroll;
+  //   width: 100%;
+  // }
   table {
     color: unset;
     margin-top: 50px;
@@ -1764,6 +1768,7 @@ nav {
         }
         td {
           padding: 0.3rem;
+          text-align: center;
         }
       }
     }
@@ -1785,6 +1790,11 @@ nav {
   }
   .stats__category--more {
     width: 5%;
+  }
+}
+@media (max-width: 991px) {
+  .stats__categories--feed table .stats__main .stat__type--more {
+    padding: 20px !important;
   }
 }
 
@@ -1863,5 +1873,43 @@ nav {
   h3,
   p {
     color: $stats-gray;
+  }
+}
+
+@media (max-width: 767px) {
+  .stats__general {
+    .stats__general--container {
+      padding: 10px !important;
+      .stats__general--stat {
+        font-size: 2rem;
+      }
+      .stats__general--description {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .stats__categories--feed > div {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .stat__row--see-more td {
+    text-align: left !important;
+    padding: 15px !important;
+  }
+  .stats__categories--feed table .stats__main .stat__type--heading {
+    padding: 10px;
+    h3 {
+      padding: 0 !important;
+    }
+    .stat__icon-wrapper {
+      position: relative;
+      transform: unset;
+      width: 20px;
+      height: 20px;
+      .stat__icon--flag {
+        height: 20px;
+      }
+    }
   }
 }

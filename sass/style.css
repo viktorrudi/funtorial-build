@@ -1786,6 +1786,7 @@ nav .navbar-toggler .navbar-toggler-icon {
 
 .stats__categories--feed table .stats__main .stat__row--see-more td {
   padding: 0.3rem;
+  text-align: center;
 }
 
 .stats__identifiers .stats__category--heading-icon {
@@ -1804,6 +1805,12 @@ nav .navbar-toggler .navbar-toggler-icon {
 
 .stats__identifiers .stats__category--more {
   width: 5%;
+}
+
+@media (max-width: 991px) {
+  .stats__categories--feed table .stats__main .stat__type--more {
+    padding: 20px !important;
+  }
 }
 
 .stats__category-languages .stats__category--heading-title {
@@ -1887,5 +1894,41 @@ nav .navbar-toggler .navbar-toggler-icon {
 .stat__type--total-credits h3,
 .stat__type--total-credits p {
   color: #535353;
+}
+
+@media (max-width: 767px) {
+  .stats__general .stats__general--container {
+    padding: 10px !important;
+  }
+  .stats__general .stats__general--container .stats__general--stat {
+    font-size: 2rem;
+  }
+  .stats__general .stats__general--container .stats__general--description {
+    font-size: 1rem;
+  }
+  .stats__categories--feed > div {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .stat__row--see-more td {
+    text-align: left !important;
+    padding: 15px !important;
+  }
+  .stats__categories--feed table .stats__main .stat__type--heading {
+    padding: 10px;
+  }
+  .stats__categories--feed table .stats__main .stat__type--heading h3 {
+    padding: 0 !important;
+  }
+  .stats__categories--feed table .stats__main .stat__type--heading .stat__icon-wrapper {
+    position: relative;
+    -webkit-transform: unset;
+            transform: unset;
+    width: 20px;
+    height: 20px;
+  }
+  .stats__categories--feed table .stats__main .stat__type--heading .stat__icon-wrapper .stat__icon--flag {
+    height: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
