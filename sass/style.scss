@@ -346,8 +346,7 @@ h1 {
     border-radius: 20px;
     color: #fff;
     font-size: 1.3rem;
-    box-shadow: 0 0 0 1px #fff, 0 0 0 3px $ft-yellow, 0 0 0 6px #fff,
-      0 0 0 9px lighten($ft-yellow, 35%);
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px $ft-yellow, 0 0 0 6px #fff, 0 0 0 9px lighten($ft-yellow, 35%);
   }
 
   h3 {
@@ -954,7 +953,7 @@ form {
 
     // Percent arrow
     &:after {
-      content: " ";
+      content: ' ';
       background: #fff;
       padding: 10px;
       position: absolute;
@@ -1040,49 +1039,71 @@ form {
 
 ////////////// Category section //////////////
 
-.categories .category__items--see-more {
-	color: #fff;
-	float:right;
-	border-radius: 2rem;
-	padding: 5px 25px;
-	transition: all .1s ease-in;
-	&:hover {
-		color: #fff;
-		transform: scale(1.1); 
-	}
+.categories {
+  .category__feed--none-selected {
+    display: none;
+    p {
+      margin-bottom: 5px;
+    }
+    a {
+      color: $ft-gray;
+      border-bottom: 1px solid $ft-gray;
+      &:hover {
+        color: $ft-blue;
+        text-decoration: none;
+      }
+    }
+  }
+  .category__items--see-more {
+    color: #fff;
+    float: right;
+    border-radius: 2rem;
+    padding: 5px 25px;
+    transition: all 0.1s ease-in;
+    &:hover {
+      color: #fff;
+      transform: scale(1.1);
+    }
+  }
 }
 
 .category__type--languages {
-	.category__name,
-	.category__item a:hover {
-		color: $topic-lang;
-	}
+  .category__name,
+  .category__item a:hover {
+    color: $topic-lang;
+  }
 
-	.category__items--extend-btn, .category__items--see-more {
-		background: $topic-lang;
-	}
+  .category__items--extend-btn,
+  .category__items--see-more,
+  .category__item--icon {
+    background: $topic-lang;
+  }
 }
 
 .category__type--school {
-	.category__name,
-	.category__item a:hover {
-		color: $topic-school;
-	}
+  .category__name,
+  .category__item a:hover {
+    color: $topic-school;
+  }
 
-	.category__items--extend-btn, .category__items--see-more {
-		background: $topic-school;
-	}
+  .category__items--extend-btn,
+  .category__items--see-more,
+  .category__item--icon {
+    background: $topic-school;
+  }
 }
 
 .category__type--quiz {
-	.category__name,
-	.category__item a:hover {
-		color: $topic-quizzes;
-	}
+  .category__name,
+  .category__item a:hover {
+    color: $topic-quizzes;
+  }
 
-	.category__items--extend-btn, .category__items--see-more {
-		background: $topic-quizzes;
-	}
+  .category__items--extend-btn,
+  .category__items--see-more,
+  .category__item--icon {
+    background: $topic-quizzes;
+  }
 }
 
 .category {
@@ -1116,7 +1137,7 @@ form {
     }
 
     .category__items--fade-overlay {
-      content: "";
+      content: '';
       background-image: linear-gradient(
         to top,
         rgba(255, 255, 255, 1) 0%,
@@ -1171,21 +1192,21 @@ form {
       }
 
       p {
-        display: inline-block;
         position: absolute;
         margin: 0;
         padding-left: 5px;
+        width: 150px;
 
-        // TODO - not working (consider putting it back to (a) and removing p tag
-        // text-overflow: ellipsis; // One line category items
-        // white-space: nowrap; // One line category items
-        // overflow: hidden; // One line category items
+        // FIXME - not working (consider putting it back to (a) and removing p tag
+        display: inline-block;
+        text-overflow: ellipsis; // One line category items
+        white-space: nowrap; // One line category items
+        overflow: hidden; // One line category items
       }
 
       .category__item--icon {
         position: relative;
         display: inline-block;
-        background: $ft-ltgray;
         overflow: hidden;
         width: 20px;
         height: 20px;
@@ -1206,39 +1227,39 @@ form {
 }
 
 @media (max-width: 767px) {
-	.categories {
-		// box-sizing: content-box;
-		.category__items--see-more {
-			float: none;
-			margin-bottom:10px;
-		}
-		.category {
-			// .wrapper__collapsed {max-height: 100%;}
-			.category__name {
-				text-align: left;
-			}
+  .categories {
+    // box-sizing: content-box;
+    .category__items--see-more {
+      float: none;
+      margin-bottom: 10px;
+    }
+    .category {
+      // .wrapper__collapsed {max-height: 100%;}
+      .category__name {
+        text-align: left;
+      }
 
-			.category__description {
-				text-align: left;
-			}
+      .category__description {
+        text-align: left;
+      }
 
-			.category__item {
-				width: 45%;
+      .category__item {
+        width: 45%;
 
-				.category__item--icon {
-					width: 30px;
-					height: 30px;
+        .category__item--icon {
+          width: 30px;
+          height: 30px;
 
-					object {
-						width: 60px;
-					}
-				}
-			}
-			.category__items--extend-btn {
-				border-radius: 0;
-			}
-		}
-	}
+          object {
+            width: 60px;
+          }
+        }
+      }
+      .category__items--extend-btn {
+        border-radius: 0;
+      }
+    }
+  }
 }
 
 //////////////// Text pages (reader) //////////////
@@ -1498,7 +1519,7 @@ nav {
       .profile-container {
         .profile-picture {
           position: relative;
-          background-image: url("https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=80&d=retro&r=pg");
+          background-image: url('https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=80&d=retro&r=pg');
           background-size: contain;
           border: 2px solid #fff;
           padding: 5px 15px;
@@ -1509,7 +1530,7 @@ nav {
           transition: all 0.1s ease-in;
           right: 5px;
           &:after {
-            content: "";
+            content: '';
             position: absolute;
             right: -15px;
             top: 50%;

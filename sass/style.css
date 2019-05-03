@@ -943,7 +943,7 @@ form .active {
 }
 
 .discount__preview .discount__preview--percent:after {
-  content: " ";
+  content: ' ';
   background: #fff;
   padding: 10px;
   position: absolute;
@@ -1026,13 +1026,31 @@ form .active {
   white-space: normal;
 }
 
+.categories .category__feed--none-selected {
+  display: none;
+}
+
+.categories .category__feed--none-selected p {
+  margin-bottom: 5px;
+}
+
+.categories .category__feed--none-selected a {
+  color: #7f7f7f;
+  border-bottom: 1px solid #7f7f7f;
+}
+
+.categories .category__feed--none-selected a:hover {
+  color: #002060;
+  text-decoration: none;
+}
+
 .categories .category__items--see-more {
   color: #fff;
   float: right;
   border-radius: 2rem;
   padding: 5px 25px;
-  -webkit-transition: all .1s ease-in;
-  transition: all .1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .categories .category__items--see-more:hover {
@@ -1046,7 +1064,9 @@ form .active {
   color: #f9af73;
 }
 
-.category__type--languages .category__items--extend-btn, .category__type--languages .category__items--see-more {
+.category__type--languages .category__items--extend-btn,
+.category__type--languages .category__items--see-more,
+.category__type--languages .category__item--icon {
   background: #f9af73;
 }
 
@@ -1055,7 +1075,9 @@ form .active {
   color: #31859c;
 }
 
-.category__type--school .category__items--extend-btn, .category__type--school .category__items--see-more {
+.category__type--school .category__items--extend-btn,
+.category__type--school .category__items--see-more,
+.category__type--school .category__item--icon {
   background: #31859c;
 }
 
@@ -1064,7 +1086,9 @@ form .active {
   color: #8266a3;
 }
 
-.category__type--quiz .category__items--extend-btn, .category__type--quiz .category__items--see-more {
+.category__type--quiz .category__items--extend-btn,
+.category__type--quiz .category__items--see-more,
+.category__type--quiz .category__item--icon {
   background: #8266a3;
 }
 
@@ -1105,7 +1129,7 @@ form .active {
 }
 
 .category .category__items--wrapper .category__items--fade-overlay {
-  content: "";
+  content: '';
   background-image: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
@@ -1156,16 +1180,19 @@ form .active {
 }
 
 .category .category__item a p {
-  display: inline-block;
   position: absolute;
   margin: 0;
   padding-left: 5px;
+  width: 150px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .category .category__item a .category__item--icon {
   position: relative;
   display: inline-block;
-  background: #efefef;
   overflow: hidden;
   width: 20px;
   height: 20px;
@@ -1496,7 +1523,7 @@ nav .nav-profile .nav-link .profile-container .profile-picture {
 }
 
 nav .nav-profile .nav-link .profile-container .profile-picture:after {
-  content: "";
+  content: '';
   position: absolute;
   right: -15px;
   top: 50%;
