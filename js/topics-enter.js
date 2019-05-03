@@ -1,13 +1,20 @@
 class Topic {
   constructor(obj) {
     this.id = obj.id;
+    this.chosen = obj.chosen;
     this.title = obj.title;
     this.fullTitle = obj.fullTitle || '';
     this.category = obj.category;
-    this.icon = obj.icon || '';
+    this.icon = obj.icon;
     this.link = obj.link;
   }
   build() {
+    // Sorts out to only display exercises which are set to chosen and on the right page
+    if (!document.querySelector('.selection__new-topics') && this.chosen === false) {
+      return;
+    }
+
+    // Initialize variable for which block to put the exercise into. Logic in if-clause
     let selectorToUse;
 
     if (this.category == 'language') {
@@ -23,21 +30,24 @@ class Topic {
     const topicWrapper = document.createElement('div');
     topicWrapper.setAttribute('class', 'category__item');
 
+    // If no flag is in object, dont add it, which will use the language color for the icon
     let icon = '';
     if (this.icon) {
       icon = `<object data="${this.icon}" type="image/svg+xml"></object>`;
     }
 
+    // Output setup
     let toFeed = ``;
     toFeed += `
-  <a data-topic-id="${this.id}" href="${this.link}" data-toggle="tooltip" data-placement="top" title="${
-      this.fullTitle
-    }">
-    <span class="category__item--icon">
-      ${icon}
-    </span>
-    <p>${this.title}</p>
-  </a>
+    <a data-topic-id="${this.id}" 
+    href="${this.link}" 
+    data-toggle="tooltip" 
+    data-placement="top" title="${this.fullTitle}">
+      <span class="category__item--icon">
+        ${icon}
+      </span>
+      <p>${this.title}</p>
+    </a>
   `;
     topicWrapper.innerHTML = toFeed;
     selectorToUse.appendChild(topicWrapper);
@@ -47,6 +57,7 @@ class Topic {
 for (let i = 0; i < 5; i++) {
   new Topic({
     id: 1,
+    chosen: false,
     title: 'English',
     fullTitle: 'American English',
     category: 'language',
@@ -55,19 +66,19 @@ for (let i = 0; i < 5; i++) {
   }).build();
 }
 
-for (let i = 0; i < 10; i++) {
-  new Topic({
-    id: 3,
-    title: 'Test',
-    category: 'quiz',
-    // icon: "img/flags/cz.svg",
-    link: '#',
-  }).build();
-}
+new Topic({
+  id: 3,
+  chosen: true,
+  title: 'Test',
+  category: 'quiz',
+  // icon: "img/flags/cz.svg",
+  link: '#',
+}).build();
 
 for (let i = 0; i < 1; i++) {
   new Topic({
     id: 4,
+    chosen: false,
     title: 'Wonderful topic with a long name',
     fullTitle: 'Wonderful topic with a long name',
     category: 'school-topic',
