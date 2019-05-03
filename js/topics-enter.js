@@ -38,6 +38,7 @@ class Topic {
 
     // Output setup
     let toFeed = ``;
+    /* html */
     toFeed += `
     <a data-topic-id="${this.id}" 
     href="${this.link}" 

@@ -27,6 +27,7 @@ class SelectedLanguage {
     const item = this.dropdownToggle();
 
     // Insert HTML of the selected language. This is displayed in the navbar on load
+    /* html */
     item.innerHTML = `<span class='flag-wrapper'>
         <object class='navbar-flag-selected' data='${this.image}' type='image/svg+xml'></object>
     </span>

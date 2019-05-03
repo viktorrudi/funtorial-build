@@ -28,6 +28,7 @@ class Topic {
     const topic = this.topic();
 
     // Insert HTML of the selected language. This is displayed in the navbar on load
+    /* html */
     topic.innerHTML = `<a href="${this.link}" data-toggle="tooltip" data-placement="top" title="${this.fullTitle}">
       <span class="step__topics--image" style="background-image: url('${this.image}')"></span>
       ${this.title}</a>`;

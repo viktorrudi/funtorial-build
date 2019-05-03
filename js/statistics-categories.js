@@ -27,6 +27,7 @@ class CategoryStatistic {
     `;
 
     for (let i = 0; i < this.otherStats.length; i++) {
+      /* html */
       output += `
       <span class='list-group-item list-group-item-action flex-column align-items-start'>
         <div class='d-flex w-100 justify-content-between'>
@@ -48,6 +49,7 @@ class CategoryStatistic {
     let statRow = document.createElement('tr');
     statRow.setAttribute('class', 'stat__row');
 
+    /* html */
     let th = `
     <th class="stat__type--category stat__type--heading">
       <span class="stat__icon-wrapper">
@@ -55,6 +57,7 @@ class CategoryStatistic {
 
     // If image is set, use it. If not, use category color
     if (this.image) {
+      /* html */
       th += `
         <object
           class="stat__icon--flag"
@@ -64,12 +67,15 @@ class CategoryStatistic {
       `;
     }
 
+    /* html */
     th += `
+    
       </span>
       <h3>${this.title}</h3>
     </th>
     `;
 
+    /* html */
     statRow.innerHTML = `
       ${th}
       <td class="stat__type--skill">
