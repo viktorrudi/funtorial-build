@@ -410,6 +410,9 @@ h1 {
 }
 
 .step .step__topics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   margin-bottom: 310px;
   margin-top: 20px;
@@ -459,6 +462,9 @@ h1 {
 }
 
 .step .step__topics .step___topics-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background: #fff;
   padding: 20px 15px;
   margin-top: 10px;
@@ -610,8 +616,22 @@ h1 {
   }
 }
 
-form {
+.form-discounts {
   width: 100%;
+  max-width: 100%;
+}
+
+.form-discounts select {
+  border-radius: 0 !important;
+}
+
+.form-discounts button {
+  margin: 0;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 form .hidden {
@@ -1621,11 +1641,15 @@ nav .navbar-toggler .navbar-toggler-icon {
   }
 }
 
-.form-register .btn-register {
+.btn-formsubmit {
   margin-top: 10px;
 }
 
-.register__actions--login {
+.register__actions--wrapper {
+  margin-top: 10px;
+}
+
+.register__actions--wrapper .register__actions--login {
   text-decoration: underline;
   font-weight: 600;
 }

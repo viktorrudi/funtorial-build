@@ -413,6 +413,7 @@ h1 {
   }
 
   .step__topics {
+    display: flex; //TODO: Only set this for desktop
     position: absolute;
     margin-bottom: 310px;
     margin-top: 20px;
@@ -458,6 +459,7 @@ h1 {
     }
 
     .step___topics-box {
+      flex: 1;
       background: #fff;
       padding: 20px 15px;
       margin-top: 10px;
@@ -608,9 +610,19 @@ h1 {
 }
 
 ///////////////////////////* Search *///////////////////////////
-
-form {
+.form-discounts {
   width: 100%;
+  max-width: 100%;
+  select {
+    border-radius: 0 !important;
+  }
+  button {
+    margin: 0;
+  }
+}
+form {
+  max-width: 800px;
+  margin: 0 auto;
   .hidden {
     visibility: hidden;
   }
@@ -1607,14 +1619,16 @@ nav {
 
 //////////////// FORMS //////////////////
 
-// Registering
-.form-register .btn-register {
+.btn-formsubmit {
   margin-top: 10px;
 }
 
-.register__actions--login {
-  text-decoration: underline;
-  font-weight: 600;
+.register__actions--wrapper {
+  margin-top: 10px;
+  .register__actions--login {
+    text-decoration: underline;
+    font-weight: 600;
+  }
 }
 
 /////////////////// EXERCISES /////////////////

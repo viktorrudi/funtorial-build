@@ -9,7 +9,7 @@ class FrontpageTopic {
     this.title = obj.title;
     this.fullTitle = obj.fullTitle || '';
     this.link = obj.link;
-    this.icon = obj.icon || '<span></span>';
+    this.icon = obj.icon || '';
   }
 
   topic() {
