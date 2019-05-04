@@ -1,3 +1,6 @@
+'use strict';
+
+import data from './insert_data/available_exercises.js';
 class Topic {
   constructor(obj) {
     this.id = obj.id;
@@ -54,35 +57,7 @@ class Topic {
     selectorToUse.appendChild(topicWrapper);
   }
 }
-
-for (let i = 0; i < 5; i++) {
-  new Topic({
-    id: 1,
-    chosen: false,
-    title: 'English',
-    fullTitle: 'American English',
-    category: 'language',
-    icon: 'img/flags/gb.svg',
-    link: '#',
-  }).build();
-}
-
-new Topic({
-  id: 3,
-  chosen: true,
-  title: 'Test',
-  category: 'quiz',
-  // icon: "img/flags/cz.svg",
-  link: '#',
-}).build();
-
-for (let i = 0; i < 1; i++) {
-  new Topic({
-    id: 4,
-    chosen: false,
-    title: 'Wonderful topic with a long name',
-    fullTitle: 'Wonderful topic with a long name',
-    category: 'school-topic',
-    link: '#',
-  }).build();
-}
+// Inserts each exercise into the page
+data.forEach(exercise => {
+  new Topic(exercise).build();
+});

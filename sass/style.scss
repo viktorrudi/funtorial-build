@@ -18,12 +18,6 @@ $topic-lang: #f9af73;
 $topic-school: #31859c;
 $topic-quizzes: #8266a3;
 
-// Mixins
-
-// @mixin element-color($color) {
-//   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="@{color}" width="17" height="17" viewBox="0 0 17.2 17.2"><path d="M8.6 0C3.9 0 0 3.9 0 8.6c0 4.7 3.9 8.6 8.6 8.6 4.8 0 8.6-3.9 8.6-8.6C17.2 3.9 13.4 0 8.6 0zM11.7 7.2l-1.5-0.2c0.1-0.5 0-0.9-0.2-1.2 -0.2-0.3-0.5-0.5-0.9-0.6C8.8 5.1 8.5 5.2 8.3 5.4c-0.2 0.2-0.4 0.5-0.4 0.8 -0.1 0.3 0 0.6 0.2 0.9 0.2 0.2 0.5 0.5 1.1 0.8 0.8 0.4 1.4 0.9 1.7 1.3 0.4 0.5 0.5 1 0.4 1.7 -0.1 0.7-0.4 1.2-0.9 1.6 -0.5 0.3-1.1 0.5-1.8 0.5l-0.2 1.2 -1-0.1 0.2-1.2c-0.7-0.2-1.3-0.5-1.6-1 -0.4-0.5-0.5-1.2-0.4-2l0 0 1.4 0.2c-0.1 0.6 0 1 0.2 1.3 0.2 0.3 0.6 0.5 1 0.5 0.4 0.1 0.8 0 1.1-0.2 0.3-0.2 0.4-0.5 0.5-0.8 0-0.3 0-0.6-0.2-0.9 -0.2-0.3-0.5-0.5-1-0.8C7.7 8.7 7.1 8.3 6.8 7.8 6.4 7.3 6.3 6.7 6.4 6c0.1-0.7 0.4-1.2 0.8-1.5 0.5-0.4 1.1-0.5 1.8-0.5l0.2-1.3 1 0.1L9.9 4.1c0.7 0.2 1.2 0.6 1.5 1.1C11.7 5.8 11.8 6.4 11.7 7.2z"/></svg>  ');
-// }
-
 @keyframes popViewIn {
   from {
     opacity: 0;
@@ -47,8 +41,6 @@ $topic-quizzes: #8266a3;
 }
 
 //Common
-
-// TODO: Add fadein for all objects
 
 .nav-profile.dropdown {
   padding: 0 !important;
@@ -188,6 +180,8 @@ h1 {
   color: #fff;
 }
 
+/////// FRONT PAGE ///////////
+
 .heading--wrapper {
   background: #efefef;
   border-bottom: 3px solid $ft-blue;
@@ -275,9 +269,6 @@ h1 {
 }
 
 .step__two {
-  // margin-top: 470px !important;
-
-  /*  NEEDS A FIX! CHECK WHERE STEP__ONE IS */
   .step__intro {
     margin-top: 50px;
 
@@ -321,6 +312,7 @@ h1 {
 
 .step__one {
   margin-top: 80px;
+  width: 100%;
 
   .step__intro--number {
     left: -47px;
@@ -475,7 +467,7 @@ h1 {
       transition: all 0.25s ease-in;
       max-width: 385px;
       white-space: nowrap;
-      width: 33%;
+      min-width: 33%;
 
       &:hover {
         max-height: 600px;
@@ -552,7 +544,7 @@ h1 {
     margin-bottom: 80px !important;
     .step___topics-box {
       padding: 10px !important;
-      width: unset !important;
+      min-width: unset !important;
       max-width: 100% !important;
       margin: 0 auto;
     }
@@ -606,32 +598,37 @@ h1 {
   }
 }
 
+// Safari fix
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .step___topics-box--fade {
+      background-image: unset !important;
+    }
+  }
+}
+
 ///////////////////////////* Search *///////////////////////////
 
 form {
   width: 100%;
-}
-
-.search__wrapper--instance {
-  float: left;
-}
-
-.detailed-form {
-  margin: 0 auto;
-  max-width: 600px;
-
-  .search__wrapper--instance {
-    margin-bottom: 10px;
-  }
-}
-
-form {
   .hidden {
     visibility: hidden;
   }
 
+  .search__wrapper--instance {
+    float: left;
+  }
+
+  .detailed-form {
+    margin: 0 auto;
+    max-width: 600px;
+
+    .search__wrapper--instance {
+      margin-bottom: 10px;
+    }
+  }
+
   button {
-    // margin-top:29px; NEEDS FIX
     background: $ft-blue !important;
     color: #fff !important;
     font-weight: 600 !important;
@@ -864,6 +861,14 @@ form {
   }
 }
 
+// IE FIX
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .discount__header .discount__buttons {
+    position: relative;
+  }
+}
+
 ////////////// MODAL ///////////////////////
 
 // Opened modals
@@ -882,7 +887,10 @@ form {
   bottom: 0;
   overflow-y: scroll;
   top: 100px;
-
+  form {
+    width: auto;
+    margin: 0 auto;
+  }
   .modal__func--close {
     position: relative;
     top: 5px;
@@ -933,7 +941,6 @@ form {
 
 .discount__preview {
   background: #fff;
-  // clear:both;
   border: 1px dashed $ft-midgray;
   max-height: 90px;
   margin: 15px;
@@ -1197,7 +1204,6 @@ form {
         padding-left: 5px;
         width: 150px;
 
-        // FIXME - not working (consider putting it back to (a) and removing p tag
         display: inline-block;
         text-overflow: ellipsis; // One line category items
         white-space: nowrap; // One line category items
@@ -1228,13 +1234,11 @@ form {
 
 @media (max-width: 767px) {
   .categories {
-    // box-sizing: content-box;
     .category__items--see-more {
       float: none;
       margin-bottom: 10px;
     }
     .category {
-      // .wrapper__collapsed {max-height: 100%;}
       .category__name {
         text-align: left;
       }
@@ -1487,10 +1491,8 @@ nav {
     .nav-link {
       background: unset;
       position: relative;
-      // padding: 1.75rem 1.1rem !important;
     }
     .credit-container {
-      // height: 100%;
       background: $ft-yellow;
       padding: 5px 15px;
       color: $ft-blue;
@@ -1617,8 +1619,6 @@ nav {
 
 /////////////////// EXERCISES /////////////////
 .exercise__end {
-  // REMOVE REMOVE REMOVE REMOVE REMOVE REMOVE REMOVE REMOVE REMOVE REMOVE REMOVE REMOVE REMOVE
-  margin-top: 20px;
   .exercise__end--heading {
     color: $ft-lime;
   }
@@ -1650,14 +1650,6 @@ nav {
       width: 40px;
       vertical-align: top;
     }
-  }
-}
-
-// IE FIX
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS styles go here */
-  .discount__header .discount__buttons {
-    position: relative;
   }
 }
 

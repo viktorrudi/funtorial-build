@@ -1,10 +1,15 @@
+'use strict';
+
+import dataSelected from './insert_data/language_selected.js';
+import dataAvailable from './insert_data/languages_available.js';
+
 class SelectedLanguage {
   constructor(obj) {
     this.id = obj.id;
     this.name = obj.name;
     this.link = obj.link;
     this.countryCode = obj.countryCode;
-    this.image = obj.image;
+    this.icon = obj.icon;
   }
 
   dropdownToggle() {
@@ -29,7 +34,7 @@ class SelectedLanguage {
     // Insert HTML of the selected language. This is displayed in the navbar on load
     /* html */
     item.innerHTML = `<span class='flag-wrapper'>
-        <object class='navbar-flag-selected' data='${this.image}' type='image/svg+xml'></object>
+        <object class='navbar-flag-selected' data='${this.icon}' type='image/svg+xml'></object>
     </span>
     ${this.name}`;
 
@@ -66,7 +71,7 @@ class Language extends SelectedLanguage {
 
     const item = this.dropdownItem();
     item.innerHTML = `<span class='flag-wrapper'>
-        <object class='navbar-flag-selected' data='${this.image}' type='image/svg+xml'></object>
+        <object class='navbar-flag-selected' data='${this.icon}' type='image/svg+xml'></object>
     </span>
     ${this.name}`;
 
@@ -74,34 +79,12 @@ class Language extends SelectedLanguage {
   }
 }
 
-new SelectedLanguage({
-  id: 1,
-  name: 'Norsk',
-  link: '#',
-  countryCode: 'no',
-  image: 'img/flags/no.svg',
-}).build();
+// Inserts the selected language
+dataSelected.forEach(selectedLanguage => {
+  new SelectedLanguage(selectedLanguage).build();
+});
 
-new Language({
-  id: 2,
-  name: 'test',
-  link: '#',
-  countryCode: 'te',
-  image: 'img/flags/no.svg',
-}).build();
-
-new Language({
-  id: 3,
-  name: 'test',
-  link: '#',
-  countryCode: 'te',
-  image: 'img/flags/no.svg',
-}).build();
-
-new Language({
-  id: 4,
-  name: 'test',
-  link: '#',
-  countryCode: 'te',
-  image: 'img/flags/no.svg',
-}).build();
+// Inserts all available languages
+dataAvailable.forEach(language => {
+  new Language(language).build();
+});

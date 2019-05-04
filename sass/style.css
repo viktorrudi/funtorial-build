@@ -272,10 +272,6 @@ h1 {
   }
 }
 
-.step__two {
-  /*  NEEDS A FIX! CHECK WHERE STEP__ONE IS */
-}
-
 .step__two .step__intro {
   margin-top: 50px;
 }
@@ -318,6 +314,7 @@ h1 {
 
 .step__one {
   margin-top: 80px;
+  width: 100%;
 }
 
 .step__one .step__intro--number {
@@ -472,7 +469,7 @@ h1 {
   transition: all 0.25s ease-in;
   max-width: 385px;
   white-space: nowrap;
-  width: 33%;
+  min-width: 33%;
 }
 
 .step .step__topics .step___topics-box:hover {
@@ -552,7 +549,7 @@ h1 {
   }
   .step__topics .step___topics-box {
     padding: 10px !important;
-    width: unset !important;
+    min-width: unset !important;
     max-width: 100% !important;
     margin: 0 auto;
   }
@@ -605,25 +602,33 @@ h1 {
           transform: translateX(-50%) scale(1.04);
 }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .step___topics-box--fade {
+      background-image: unset !important;
+    }
+  }
+}
+
 form {
   width: 100%;
 }
 
-.search__wrapper--instance {
+form .hidden {
+  visibility: hidden;
+}
+
+form .search__wrapper--instance {
   float: left;
 }
 
-.detailed-form {
+form .detailed-form {
   margin: 0 auto;
   max-width: 600px;
 }
 
-.detailed-form .search__wrapper--instance {
+form .detailed-form .search__wrapper--instance {
   margin-bottom: 10px;
-}
-
-form .hidden {
-  visibility: hidden;
 }
 
 form button {
@@ -855,6 +860,13 @@ form .active {
   }
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .discount__header .discount__buttons {
+    position: relative;
+  }
+}
+
 .modal__content {
   background: #fff;
   max-width: 1000px;
@@ -872,6 +884,11 @@ form .active {
   bottom: 0;
   overflow-y: scroll;
   top: 100px;
+}
+
+.modal__content form {
+  width: auto;
+  margin: 0 auto;
 }
 
 .modal__content .modal__func--close {
@@ -1613,10 +1630,6 @@ nav .navbar-toggler .navbar-toggler-icon {
   font-weight: 600;
 }
 
-.exercise__end {
-  margin-top: 20px;
-}
-
 .exercise__end .exercise__end--heading {
   color: #04d138;
 }
@@ -1652,13 +1665,6 @@ nav .navbar-toggler .navbar-toggler-icon {
 .exercise__end .exercise__end--credits .icon__credit {
   width: 40px;
   vertical-align: top;
-}
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS styles go here */
-  .discount__header .discount__buttons {
-    position: relative;
-  }
 }
 
 .stats__general .stats__heading--general {

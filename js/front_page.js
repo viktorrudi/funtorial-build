@@ -50,26 +50,34 @@ function frontPageFunctions() {
     const step1HeightGet = document.querySelector('.step__topics').offsetHeight;
     const step2Container = document.querySelector('.step__two');
     step2Container.style.marginTop = `${step1HeightGet + 80}px`;
-    console.log(step2Container.style.marginTop);
   }
-
-  // ** TODO: Import front page topics here **
 
   function topicCounter() {
     // Inserts number of how many topics are available on the front page
     // TODO: Needs to be updated with actual number from database
-    const languagesCount = document.querySelector('.step__topics-feed--languages').childElementCount;
-    const schoolCount = document.querySelector('.step__topics-feed--school-topics').childElementCount;
-    const quizzesCount = document.querySelector('.step__topics-feed--quizzes').childElementCount;
+    const languagesCount = document.querySelector('.step__topics-feed--language').childElementCount;
+    const schoolCount = document.querySelector('.step__topics-feed--school-topic').childElementCount;
+    const quizzesCount = document.querySelector('.step__topics-feed--quiz').childElementCount;
 
     document.querySelector('.step___topics-counter--languages').innerHTML = languagesCount;
     document.querySelector('.step___topics-counter--school-topics').innerHTML = schoolCount;
     document.querySelector('.step___topics-counter--quizzes').innerHTML = quizzesCount;
   }
 
+  function hideIfEmpty() {
+    const categoryHolders = Array.from(document.querySelectorAll('.step___topics-box .step__topics-selection .row'));
+    categoryHolders.map(category => {
+      if (category.childElementCount === 0) {
+        const wrapper = category.parentElement.parentElement;
+        wrapper.style.display = 'none';
+      }
+    });
+  }
+
   slideShow();
   topicCounter();
   setStep1Height();
+  hideIfEmpty();
 }
 
 frontPageFunctions();
