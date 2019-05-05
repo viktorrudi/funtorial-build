@@ -1,7 +1,6 @@
 'use strict';
 
 import data from './insert_data/discounts.js';
-console.log(data);
 
 class Discount {
   constructor(obj) {
@@ -15,12 +14,42 @@ class Discount {
     this.currency = obj.currency;
     this.creditCost = obj.creditCost;
     this.extra = obj.extra; //Array of extra information
-    this.obj = obj; // Total object
+    this.obj = obj; // Total object - used to insert into button which will be forwarded to modal on click
   }
+
+  extraInformation() {
+    let output = `
+      <table>
+    `;
+
+    for (let i = 0; i < this.extra.length; i++) {
+      /* html */
+      output += `
+      <tr> 
+        <td>${this.extra[i].what}</td> 
+        <td>${this.extra[i].info}</td> 
+      </tr> 
+      `;
+    }
+
+    output += `
+      </table>
+    `;
+    return output;
+  }
+
   build() {
     const discountFeed = document.querySelector('#discount__feed');
     const discountWrapper = document.createElement('div');
     discountWrapper.setAttribute('class', 'row discount__wrapper');
+
+    const extraInfo = this.extraInformation();
+
+    // Check if image is added. If not, use placeholder
+    if (!this.img) {
+      this.img = '/img/discount-placeholder.png';
+    }
+
     /* html */
     discountWrapper.innerHTML = `<div class='col-sm-3 discount__wrapper--image'> 
            <img src='${this.img}' alt='Discount' /> 
@@ -36,40 +65,7 @@ class Discount {
              <p> 
                ${this.description} 
              </p> 
-             <table> 
-               <tr> 
-                 <td>City</td> 
-                 <td>${this.extra.city}</td> 
-               </tr> 
-               <tr> 
-                 <td>Country</td> 
-                 <td>${this.extra.country}</td> 
-               </tr> 
-               <tr> 
-                 <td>Valid from</td> 
-                 <td>${this.extra.validFrom}</td> 
-               </tr> 
-               <tr> 
-                 <td>Valid until</td> 
-                 <td>${this.extra.validUntil}</td> 
-               </tr> 
-               <tr> 
-                 <td>Provider</td> 
-                 <td>${this.extra.provider}</td> 
-               </tr> 
-               <tr> 
-                 <td>Email</td> 
-                 <td>${this.extra.email}</td> 
-               </tr> 
-               <tr> 
-                 <td>Phone</td> 
-                 <td>${this.extra.phone}</td> 
-               </tr>
-               <tr> 
-                 <td>Address</td> 
-                 <td>${this.extra.address}</td> 
-               </tr>
-             </table> 
+             ${extraInfo}
            </div> 
            <div class='discount__buttons'> 
              <button class='discount__btn--see-more btn-secondary'> 

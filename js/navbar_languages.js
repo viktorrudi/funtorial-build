@@ -18,7 +18,9 @@ class SelectedLanguage {
     dropdownToggle.setAttribute('class', 'btn dropdown-toggle');
     dropdownToggle.setAttribute('href', this.link);
     dropdownToggle.setAttribute('id', this.id);
-    dropdownToggle.setAttribute('data-country-code', this.countryCode);
+    if (this.countryCode) {
+      dropdownToggle.setAttribute('data-country-code', this.countryCode);
+    }
     dropdownToggle.setAttribute('data-toggle', 'dropdown');
     dropdownToggle.setAttribute('data-target', 'dropdown__languages');
     return dropdownToggle;
@@ -62,7 +64,9 @@ class Language extends SelectedLanguage {
     dropdownItem.setAttribute('class', 'dropdown-item');
     dropdownItem.setAttribute('href', this.link);
     dropdownItem.setAttribute('id', this.id);
-    dropdownItem.setAttribute('data-country-code', this.countryCode);
+    if (this.countryCode) {
+      dropdownItem.setAttribute('data-country-code', this.countryCode);
+    }
     return dropdownItem;
   }
 

@@ -4,13 +4,13 @@ export default [
     category: 'language',
     title: 'English',
     fullTitle: 'Example',
-    image: 'img/flags/gb.svg',
+    icon: 'img/flags/gb.svg',
     mainStats: {
       skillLevel: 'A1',
       timeSpent: '22h 15m',
       correctAnswers: 5,
       incorrectAnswers: 15,
-      successRatio: '15%',
+      successRatio: 15,
       totalCredits: 523,
     },
     otherStats: [
@@ -29,17 +29,17 @@ export default [
     ],
   },
   {
-    id: 1,
+    id: 2,
     category: 'quiz',
     title: 'English',
     fullTitle: 'Example',
-    image: 'img/flags/gb.svg',
+    icon: 'img/flags/gb.svg',
     mainStats: {
       skillLevel: 'A1',
       timeSpent: '22h 15m',
       correctAnswers: 5,
       incorrectAnswers: 15,
-      successRatio: '15%',
+      successRatio: 15,
       totalCredits: 523,
     },
     otherStats: [
@@ -58,17 +58,17 @@ export default [
     ],
   },
   {
-    id: 1,
+    id: 3,
     category: 'school-topic',
     title: 'English',
     fullTitle: 'Example',
-    image: 'img/flags/gb.svg',
+    icon: 'img/flags/gb.svg',
     mainStats: {
       skillLevel: 'A1',
       timeSpent: '22h 15m',
       correctAnswers: 5,
       incorrectAnswers: 15,
-      successRatio: '15%',
+      successRatio: 15,
       totalCredits: 523,
     },
     otherStats: [

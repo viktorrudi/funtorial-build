@@ -8,7 +8,7 @@ class CategoryStatistic {
     this.category = obj.category;
     this.title = obj.title;
     this.fullTitle = obj.fullTitle || '';
-    this.image = obj.image;
+    this.icon = obj.icon;
     this.mainStats = obj.mainStats;
     // mainStats.skillLevel
     // mainStats.timeSpent
@@ -58,12 +58,12 @@ class CategoryStatistic {
     `;
 
     // If image is set, use it. If not, use category color
-    if (this.image) {
+    if (this.icon) {
       /* html */
       th += `
         <object
           class="stat__icon--flag"
-          data="${this.image}"
+          data="${this.icon}"
           type="image/svg+xml"
         ></object>
       `;
@@ -97,7 +97,7 @@ class CategoryStatistic {
           <p class="stats__description">Incorrect answers</p>
       </td>
       <td class="stat__type--ratio">
-          <h3 class="stats__stat">${this.mainStats.successRatio}</h3>
+          <h3 class="stats__stat">${this.mainStats.successRatio}%</h3>
           <p class="stats__description">Success ratio</p>
       </td>
       <td class="stat__type--total-credits">

@@ -4,12 +4,12 @@ export default [
     chosen: true,
     category: 'language',
     title: 'English',
-    fullTitle: 'English',
+    fullTitle: 'American English',
     link: '#',
     icon: 'img/flags/gb.svg',
   },
   {
-    id: 1,
+    id: 2,
     chosen: true,
     category: 'language',
     title: 'German',
@@ -18,7 +18,7 @@ export default [
     icon: 'img/flags/de.svg',
   },
   {
-    id: 1,
+    id: 3,
     chosen: true,
     category: 'language',
     title: 'Danish',
@@ -27,7 +27,7 @@ export default [
     icon: 'img/flags/dk.svg',
   },
   {
-    id: 1,
+    id: 4,
     chosen: true,
     category: 'language',
     title: 'French',
@@ -45,7 +45,7 @@ export default [
     icon: 'img/flags/se.svg',
   },
   {
-    id: 1,
+    id: 5,
     chosen: true,
     category: 'language',
     title: 'Norwegian',
@@ -54,7 +54,7 @@ export default [
     icon: 'img/flags/no.svg',
   },
   {
-    id: 1,
+    id: 6,
     chosen: true,
     category: 'language',
     title: 'Dutch',
@@ -63,7 +63,7 @@ export default [
     icon: 'img/flags/nl.svg',
   },
   {
-    id: 1,
+    id: 7,
     chosen: true,
     category: 'language',
     title: 'Japanese',
@@ -72,7 +72,7 @@ export default [
     icon: 'img/flags/jp.svg',
   },
   {
-    id: 1,
+    id: 8,
     chosen: true,
     category: 'language',
     title: 'Mandarin',
@@ -81,7 +81,7 @@ export default [
     icon: 'img/flags/cn.svg',
   },
   {
-    id: 1,
+    id: 9,
     chosen: true,
     category: 'language',
     title: 'Spanish',
@@ -91,7 +91,7 @@ export default [
   },
 
   {
-    id: 1,
+    id: 10,
     chosen: false,
     category: 'school-topic',
     title: 'Biochemistry',
@@ -99,7 +99,7 @@ export default [
     link: '#',
   },
   {
-    id: 1,
+    id: 11,
     chosen: true,
     category: 'school-topic',
     title: 'Czech',
@@ -107,7 +107,7 @@ export default [
     link: '#',
   },
   {
-    id: 1,
+    id: 12,
     chosen: false,
     category: 'school-topic',
     title: 'History',
@@ -115,7 +115,7 @@ export default [
     link: '#',
   },
   {
-    id: 1,
+    id: 13,
     chosen: true,
     category: 'school-topic',
     title: 'Math',
@@ -123,7 +123,7 @@ export default [
     link: '#',
   },
   {
-    id: 1,
+    id: 14,
     chosen: true,
     category: 'school-topic',
     title: 'Biology',
@@ -131,7 +131,7 @@ export default [
     link: '#',
   },
   {
-    id: 1,
+    id: 15,
     chosen: false,
     category: 'school-topic',
     title: 'Psycholgy',
@@ -140,7 +140,7 @@ export default [
   },
 
   {
-    id: 1,
+    id: 16,
     chosen: false,
     category: 'quiz',
     title: 'A good quiz',
@@ -148,7 +148,7 @@ export default [
     link: '#',
   },
   {
-    id: 1,
+    id: 17,
     chosen: false,
     category: 'quiz',
     title: 'American history',
@@ -156,7 +156,7 @@ export default [
     link: '#',
   },
   {
-    id: 1,
+    id: 18,
     chosen: false,
     category: 'quiz',
     title: 'Spanish history',
@@ -164,7 +164,7 @@ export default [
     link: '#',
   },
   {
-    id: 1,
+    id: 19,
     chosen: false,
     category: 'quiz',
     title: 'TV Shows',
@@ -172,7 +172,7 @@ export default [
     link: '#',
   },
   {
-    id: 1,
+    id: 20,
     chosen: false,
     category: 'quiz',
     title: 'Czech presidents',
@@ -180,7 +180,7 @@ export default [
     link: '#',
   },
   {
-    id: 1,
+    id: 21,
     chosen: false,
     category: 'quiz',
     title: 'Difficult quiz',
