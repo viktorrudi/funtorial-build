@@ -148,7 +148,7 @@ export default [
   {
     id: 6,
     category: 'school-topic',
-    title: 'Biochemistry<br><small style="color:orange;">(vysoka nizka pokrocilost)</small>',
+    title: 'Biochemistry',
     fullTitle: 'Biochemistry',
     mainStats: {
       skillLevel: '23%',
