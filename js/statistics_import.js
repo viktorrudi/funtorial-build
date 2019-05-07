@@ -82,7 +82,7 @@ class CategoryStatistic {
       ${th}
       <td class="stat__type--skill">
           <h3 class="stats__stat">${this.mainStats.skillLevel}</h3>
-          <p class="stats__description">Your skill level</p>
+          <p class="stats__description">Completion status</p>
       </td>
       <td class="stat__type--time-spent">
           <h3 class="stats__stat">${this.mainStats.timeSpent}</h3>

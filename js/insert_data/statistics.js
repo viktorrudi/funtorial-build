@@ -2,11 +2,11 @@ export default [
   {
     id: 1,
     category: 'language',
-    title: 'English',
+    title: 'English (A1)',
     fullTitle: 'Example',
     icon: 'img/flags/gb.svg',
     mainStats: {
-      skillLevel: 'A1',
+      skillLevel: '42%',
       timeSpent: '23m',
       correctAnswers: 5,
       incorrectAnswers: 15,
@@ -31,11 +31,11 @@ export default [
   {
     id: 2,
     category: 'language',
-    title: 'German',
+    title: 'English (A2)',
     fullTitle: 'German',
-    icon: 'img/flags/de.svg',
+    icon: 'img/flags/gb.svg',
     mainStats: {
-      skillLevel: 'B2',
+      skillLevel: '12%',
       timeSpent: '2min',
       correctAnswers: 5,
       incorrectAnswers: 15,
@@ -148,10 +148,10 @@ export default [
   {
     id: 6,
     category: 'school-topic',
-    title: 'Biochemistry',
+    title: 'Biochemistry<br><small style="color:orange;">(vysoka nizka pokrocilost)</small>',
     fullTitle: 'Biochemistry',
     mainStats: {
-      skillLevel: 'EXPERT',
+      skillLevel: '23%',
       timeSpent: '15 min',
       correctAnswers: 90,
       incorrectAnswers: 245,

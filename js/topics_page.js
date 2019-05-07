@@ -13,6 +13,10 @@ function topicFunctions() {
 
     const topicWrappers = Array.from(document.querySelectorAll('.category__items--wrapper'));
 
+    topicExtendBtn.addEventListener('click', e => {
+      // TODO: Toggle overlay on click
+    });
+
     topicWrappers.map(topicWrapper => {
       //Temporarely setting height to find out if div is overflowing
       topicWrapper.style.height = '135px';
