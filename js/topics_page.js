@@ -13,13 +13,9 @@ function topicFunctions() {
 
     const topicWrappers = Array.from(document.querySelectorAll('.category__items--wrapper'));
 
-    topicExtendBtn.addEventListener('click', e => {
-      // TODO: Toggle overlay on click
-    });
-
     topicWrappers.map(topicWrapper => {
       //Temporarely setting height to find out if div is overflowing
-      topicWrapper.style.height = '135px';
+      topicWrapper.style.height = '158px';
 
       // If wrapper is overflowing - show buttons
       if (topicWrapper.scrollHeight > topicWrapper.clientHeight) {
@@ -44,6 +40,8 @@ function topicFunctions() {
     buttons.map(button => {
       button.addEventListener('click', e => {
         closeCat(e);
+        const parent = e.target.parentElement
+        parent.querySelector('.category__items--fade-overlay').classList.toggle('hidden')
       });
     });
 

@@ -38,6 +38,13 @@
   }
 }
 
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
 .nav-profile.dropdown {
   padding: 0 !important;
 }
@@ -634,10 +641,6 @@ form {
   margin: 0 auto;
 }
 
-form .hidden {
-  visibility: hidden;
-}
-
 form .search__wrapper--instance {
   float: left;
 }
@@ -1175,6 +1178,7 @@ form .active {
   bottom: 0;
   pointer-events: none;
   z-index: 5;
+  opacity: 1;
 }
 
 .category .category__items--wrapper .category__items--extend-btn {

@@ -42,6 +42,12 @@ $topic-quizzes: #8266a3;
 
 //Common
 
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .1s ease-in;
+}
+
 .nav-profile.dropdown {
   padding: 0 !important;
 }
@@ -623,9 +629,6 @@ h1 {
 form {
   max-width: 800px;
   margin: 0 auto;
-  .hidden {
-    visibility: hidden;
-  }
 
   .search__wrapper--instance {
     float: left;
@@ -1169,6 +1172,7 @@ form {
       bottom: 0;
       pointer-events: none;
       z-index: 5;
+      opacity: 1;
     }
 
     .category__items--extend-btn {
