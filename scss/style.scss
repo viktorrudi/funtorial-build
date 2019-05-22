@@ -369,7 +369,7 @@ h1 {
       color: $topic-lang;
     }
 
-    button {
+    .step__topics-box--see-all {
       background: $topic-lang;
     }
 
@@ -389,7 +389,7 @@ h1 {
       color: $topic-school;
     }
 
-    button {
+    .step__topics-box--see-all {
       background: $topic-school;
     }
 
@@ -409,7 +409,7 @@ h1 {
       color: $topic-quizzes;
     }
 
-    button {
+    .step__topics-box--see-all {
       background: $topic-quizzes;
     }
 
@@ -430,15 +430,18 @@ h1 {
     margin-top: 20px;
     z-index: 4;
 
-    button {
+    .step__topics-box--see-all {
+      display: block;
+      align-items: flex-start;
+      text-align: center;
       position: relative;
       width: 100%;
       border: none;
       padding: 10px 0;
-      color: #fff;
+      color: #fff !important;
       cursor: pointer;
       z-index: 4;
-      transition: all ease-in 0.1s;
+      transition: all ease-in 0.1s !important;
 
       &:hover {
         transform: translateY(-5px);
@@ -469,7 +472,7 @@ h1 {
       }
     }
 
-    .step___topics-box {
+    .step__topics-box {
       flex: 1;
       background: #fff;
       padding: 20px 15px;
@@ -490,7 +493,7 @@ h1 {
         transform: scale(1.03);
       }
 
-      .step___topics-box--fade {
+      .step__topics-box--fade {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -541,7 +544,7 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-  .step___topics-box h2 {
+  .step__topics-box h2 {
     font-size: 1.5rem;
   }
 }
@@ -555,7 +558,7 @@ h1 {
   .step__topics {
     position: relative !important;
     margin-bottom: 80px !important;
-    .step___topics-box {
+    .step__topics-box {
       padding: 10px !important;
       min-width: unset !important;
       max-width: 100% !important;
@@ -597,14 +600,14 @@ h1 {
     transform: translateX(-50%);
     background: $ft-blue;
     padding: 13px 35px;
-    color: #fff;
+    color: #fff !important;
     border-radius: 30px;
     font-size: 1.2rem;
     backface-visibility: hidden;
     transition: all ease-in 0.1s;
 
     &:hover {
-      color: $ft-blue;
+      color: $ft-blue !important;
       background: $ft-ltgray;
       transform: translateX(-50%) scale(1.04);
     }
@@ -614,7 +617,7 @@ h1 {
 // Safari fix
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
-    .step___topics-box--fade {
+    .step__topics-box--fade {
       background-image: unset !important;
     }
   }

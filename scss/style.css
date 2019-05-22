@@ -371,7 +371,7 @@ h1 {
   color: #f9af73;
 }
 
-.step .topic-languages button {
+.step .topic-languages .step__topics-box--see-all {
   background: #f9af73;
 }
 
@@ -389,7 +389,7 @@ h1 {
   color: #31859c;
 }
 
-.step .topic-school button {
+.step .topic-school .step__topics-box--see-all {
   background: #31859c;
 }
 
@@ -407,7 +407,7 @@ h1 {
   color: #8266a3;
 }
 
-.step .topic-quizzes button {
+.step .topic-quizzes .step__topics-box--see-all {
   background: #8266a3;
 }
 
@@ -430,19 +430,24 @@ h1 {
   z-index: 4;
 }
 
-.step .step__topics button {
+.step .step__topics .step__topics-box--see-all {
+  display: block;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: center;
   position: relative;
   width: 100%;
   border: none;
   padding: 10px 0;
-  color: #fff;
+  color: #fff !important;
   cursor: pointer;
   z-index: 4;
-  -webkit-transition: all ease-in 0.1s;
-  transition: all ease-in 0.1s;
+  -webkit-transition: all ease-in 0.1s !important;
+  transition: all ease-in 0.1s !important;
 }
 
-.step .step__topics button:hover {
+.step .step__topics .step__topics-box--see-all:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-box-shadow: 0 5px 0px 0px #d8d8d8;
@@ -472,7 +477,7 @@ h1 {
   margin-right: 5px;
 }
 
-.step .step__topics .step___topics-box {
+.step .step__topics .step__topics-box {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -489,7 +494,7 @@ h1 {
   min-width: 33%;
 }
 
-.step .step__topics .step___topics-box:hover {
+.step .step__topics .step__topics-box:hover {
   max-height: 600px;
   -webkit-transition: all ease-in 0.1s;
   transition: all ease-in 0.1s;
@@ -500,7 +505,7 @@ h1 {
           transform: scale(1.03);
 }
 
-.step .step__topics .step___topics-box .step___topics-box--fade {
+.step .step__topics .step__topics-box .step__topics-box--fade {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -514,7 +519,7 @@ h1 {
   pointer-events: none;
 }
 
-.step .step__topics .step___topics-box i {
+.step .step__topics .step__topics-box i {
   font-size: 2.5rem;
   position: relative;
   left: 50%;
@@ -522,24 +527,24 @@ h1 {
           transform: translateX(-50%);
 }
 
-.step .step__topics .step___topics-box h2 {
+.step .step__topics .step__topics-box h2 {
   text-align: center;
   text-transform: uppercase;
 }
 
-.step .step__topics .step___topics-box p {
+.step .step__topics .step__topics-box p {
   text-align: center;
   color: #7f7f7f;
   font-size: 0.8rem;
 }
 
-.step .step__topics .step___topics-box a {
+.step .step__topics .step__topics-box a {
   color: #7f7f7f;
   -webkit-transition: color 0.1s ease-in;
   transition: color 0.1s ease-in;
 }
 
-.step .step__topics .step___topics-box a:hover {
+.step .step__topics .step__topics-box a:hover {
   color: #000;
   text-decoration: none;
 }
@@ -551,7 +556,7 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-  .step___topics-box h2 {
+  .step__topics-box h2 {
     font-size: 1.5rem;
   }
 }
@@ -564,7 +569,7 @@ h1 {
     position: relative !important;
     margin-bottom: 80px !important;
   }
-  .step__topics .step___topics-box {
+  .step__topics .step__topics-box {
     padding: 10px !important;
     min-width: unset !important;
     max-width: 100% !important;
@@ -603,7 +608,7 @@ h1 {
           transform: translateX(-50%);
   background: #002060;
   padding: 13px 35px;
-  color: #fff;
+  color: #fff !important;
   border-radius: 30px;
   font-size: 1.2rem;
   -webkit-backface-visibility: hidden;
@@ -613,7 +618,7 @@ h1 {
 }
 
 .second-cta .second-cta__btn:hover {
-  color: #002060;
+  color: #002060 !important;
   background: #efefef;
   -webkit-transform: translateX(-50%) scale(1.04);
           transform: translateX(-50%) scale(1.04);
@@ -621,7 +626,7 @@ h1 {
 
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
-    .step___topics-box--fade {
+    .step__topics-box--fade {
       background-image: unset !important;
     }
   }

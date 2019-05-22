@@ -14,20 +14,22 @@
       <div class="container">
         <div class="row heading">
           <div class="col-md-12">
-            <!-- Heading123 -->
+            <!-- Heading -->
             <div class="row">
               <div class="col-md-12 heading__content">
                 <div class="row">
                   <div class="col-md-6 heading__hello">
                     <h1>Have fun,<br />learn languages,<br />get discounts!</h1>
                     <p>
-                      Funtorial is an onilne learning platform where you can complete language courses and earn credits
-                      to get amazing deals.
+                      Funtorial is an onilne learning platform where you can complete language
+                      courses and earn credits to get amazing deals.
                     </p>
-                    <button class="btn heading__btn--cta">
+                    <!-- Link login/register  -->
+                    <a href="#" class="btn heading__btn--cta">
                       Start learning!
-                    </button>
+                    </a>
                   </div>
+                  <!-- Images dynamically loaded in. Picks up images from img folder. Will update them later. -->
                   <div class="col-md-6 heading__slideshow">
                     <div class="heading__slideshow--current"></div>
                   </div>
@@ -45,55 +47,118 @@
         <div id="step1" class="col-sm-12 step__one">
           <!-- Step 1 - heading -->
           <div class="row">
-            <div class="col-sm-12 step___intro">
+            <div class="col-sm-12 step__intro">
               <h1 class="text-center">What do you want to learn first?</h1>
 
-              <h3 class="text-center"><span class="step__intro--number">1</span>Choose a topic to get started</h3>
+              <h3 class="text-center">
+                <span class="step__intro--number">1</span>Choose a topic to get started
+              </h3>
             </div>
           </div>
 
-          <!-- Step 1 - select topics -->
+          <!-- Step 1 - select category -->
           <div class="row step__topics step__one">
-            <!-- Topic 1 -->
-            <div class="step___topics-box topic-languages">
-              <div class="step___topics-box--fade"></div>
+            <!-- Category 1 - LANGUAGES -->
+            <div class="step__topics-box topic-languages">
+              <div class="step__topics-box--fade"></div>
               <i class="fas fa-book-open"></i>
+              <!-- Category heading -->
               <h2>Languages</h2>
-              <p>Pick between one of our <strong class="step___topics-counter--languages"></strong> languages</p>
+              <!-- The counter is created in js/front_page.js, and pushed to the <strong> below -->
+              <p>
+                Pick between one of our
+                <strong class="step__topics-counter--languages"></strong> languages
+              </p>
               <div class="step__topics-selection">
                 <div class="row step__topics-feed--language">
-                  <!-- Feed for topics -->
+                  <div class="col-sm-6 topic" id="1">
+                    <!-- Link wrapping the name of the exercise. Also contains tooltip -->
+                    <a
+                      href="#"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      data-original-title="American English (tooltip)"
+                    >
+                      <!-- URL should lead to icon (if available), such as flags in the img/flags folder -->
+                      <span
+                        class="step__topics--image"
+                        style="background-image: url('img/flags/gb.svg')"
+                      ></span>
+                      English
+                    </a>
+                  </div>
                 </div>
               </div>
-              <button>See all languages</button>
+              <!-- Link to topic selection (or login/signup) -->
+              <a href="#" class="step__topics-box--see-all">See all languages</a>
             </div>
 
-            <!-- Topic 2 -->
-            <div class="step___topics-box topic-school">
-              <div class="step___topics-box--fade"></div>
+            <!-- Category 2 - School topics -->
+            <div class="step__topics-box topic-school">
+              <div class="step__topics-box--fade"></div>
               <i class="fas fa-book-open"></i>
+              <!-- Category heading -->
               <h2>School topics</h2>
-              <p>Pick between one of our <strong class="step___topics-counter--school-topics"></strong> languages</p>
+              <!-- The counter is created in js/front_page.js, and pushed to the <strong> below -->
+              <p>
+                Pick between one of our
+                <strong class="step__topics-counter--school-topics"></strong> languages
+              </p>
               <div class="step__topics-selection">
                 <div class="row step__topics-feed--school-topic">
                   <!-- Feed for topics -->
+                  <div class="col-sm-6 topic" id="10">
+                    <!-- Link wrapping the name of the exercise. Also contains tooltip -->
+                    <a
+                      href="#"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title=""
+                      data-original-title="Biochemistry advanced topics (tooltip)"
+                    >
+                      <!-- If no URL is specified for the background image, it will use the color of the category -->
+                      <span class="step__topics--image" style="background-image: url('')"></span>
+                      Biochemistry
+                    </a>
+                  </div>
                 </div>
               </div>
-              <button>See all topics</button>
+              <!-- Link to topic selection (or login/signup) -->
+              <a href="#" class="step__topics-box--see-all">See all topics</a>
             </div>
 
-            <!-- Topic 3 -->
-            <div class="step___topics-box topic-quizzes">
-              <div class="step___topics-box--fade"></div>
+            <!-- Category 3 - Quizzes -->
+            <div class="step__topics-box topic-quizzes">
+              <div class="step__topics-box--fade"></div>
               <i class="fas fa-book-open"></i>
+              <!-- Category heading -->
               <h2>Quizzes</h2>
-              <p>Pick between one of our <strong class="step___topics-counter--quizzes"></strong> languages</p>
+              <!-- The counter is created in js/front_page.js, and pushed to the <strong> below -->
+              <p>
+                Pick between one of our
+                <strong class="step__topics-counter--quizzes"></strong> languages
+              </p>
               <div class="step__topics-selection">
                 <div class="row step__topics-feed--quiz">
                   <!-- Feed for topics -->
+                  <div class="col-sm-6 topic" id="16">
+                    <!-- Link wrapping the name of the exercise. Also contains tooltip -->
+                    <a
+                      href="#"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title=""
+                      data-original-title="Example (tooltip)"
+                    >
+                      <!-- If no URL is specified for the background image, it will use the color of the category -->
+                      <span class="step__topics--image" style="background-image: url('')"></span>
+                      A good quiz
+                    </a>
+                  </div>
                 </div>
               </div>
-              <button>See all quizzes</button>
+              <!-- Link to topic selection (or login/signup) -->
+              <a href="#" class="step__topics-box--see-all">See all quizzes</a>
             </div>
           </div>
         </div>
@@ -108,8 +173,8 @@
               Choose the right answer and earn credits!
             </h1>
             <p>
-              Funtorial is an onilne learning platform where you can complete language courses and earn credits to get
-              amazing deals.
+              Funtorial is an onilne learning platform where you can complete language courses and
+              earn credits to get amazing deals.
             </p>
           </div>
         </div>
@@ -125,7 +190,11 @@
       <!-- Step 3 - choose right answer -->
       <div class="row no-gutters step step__three">
         <div class="col-md-6  step__illustration">
-          <img src="img\front-page-usecreds.svg" class="img-fluid" alt="Choose the right answer and earn credits!" />
+          <img
+            src="img\front-page-usecreds.svg"
+            class="img-fluid"
+            alt="Choose the right answer and earn credits!"
+          />
         </div>
         <div class="col-md-6 step__intro">
           <h1 class="text-right">
@@ -134,8 +203,8 @@
             <span class="yellow-text">70%</span> on awesome stuff!
           </h1>
           <p class="text-right">
-            Funtorial is an onilne learning platform where you can complete language courses and earn credits to get
-            amazing deals.
+            Funtorial is an onilne learning platform where you can complete language courses and
+            earn credits to get amazing deals.
           </p>
         </div>
       </div>
@@ -147,9 +216,10 @@
         <div class="row">
           <div class="col-md-12">
             <h1 class="text-center">What are you waiting for?</h1>
-            <button class="btn second-cta__btn">
-              Pick a topic
-            </button>
+            <!-- Link login/register  -->
+            <a href="#" class="btn second-cta__btn">
+              Get started
+            </a>
           </div>
         </div>
       </div>
@@ -157,8 +227,6 @@
   </body>
 </html>
 
-<!-- TODO: Clear into Webpack -->
-<!-- jQuery/Popper.js to be loaded in Webpack instead -->
 <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -175,5 +243,4 @@
   crossorigin="anonymous"
 ></script>
 <script src="js/utilities.js" type="module"></script>
-<script src="js/front_import.js" type="module"></script>
 <script src="js/front_page.js" type="module"></script>
