@@ -41,8 +41,12 @@
 .hidden {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all .1s ease-in;
-  transition: all .1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+.no-display {
+  display: none !important;
 }
 
 .nav-profile.dropdown {

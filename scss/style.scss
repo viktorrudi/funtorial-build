@@ -45,7 +45,11 @@ $topic-quizzes: #8266a3;
 .hidden {
   opacity: 0;
   visibility: hidden;
-  transition: all .1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+.no-display {
+  display: none !important;
 }
 
 .nav-profile.dropdown {
@@ -344,7 +348,8 @@ h1 {
     border-radius: 20px;
     color: #fff;
     font-size: 1.3rem;
-    box-shadow: 0 0 0 1px #fff, 0 0 0 3px $ft-yellow, 0 0 0 6px #fff, 0 0 0 9px lighten($ft-yellow, 35%);
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px $ft-yellow, 0 0 0 6px #fff,
+      0 0 0 9px lighten($ft-yellow, 35%);
   }
 
   h3 {
