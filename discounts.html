@@ -1,143 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="scss/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
+<div class="container page__intro">
+  <h1>Discounts</h1>
+</div>
 
-    <title>Discounts</title>
-  </head>
-
-  <body>
-    <div class="container page__intro">
-      <h1>Discounts</h1>
-    </div>
-
-    <div class="container">
-      <!-- Search container. I havent set up any functionality for this. -->
-      <div class="row search__wrapper">
-        <form action="" class="detailed-form form-discounts">
-          <div class="col-md-2 search__wrapper--instance">
-            <label for="search_discountpercent">Discount %</label>
-            <select class="form-control" name="search_discount" id="search_discountpercent">
-              <!-- Insert available discount in a list -->
-              <option value="x">x</option>
-            </select>
-          </div>
-          <div class="col-md-4 search__wrapper--instance">
-            <label for="search_country">Country</label>
-            <select class="form-control" name="search_country" id="search_discountpercent">
-              <!-- Insert available countries -->
-              <option value="x">x</option>
-            </select>
-          </div>
-          <div class="col-md-4 search__wrapper--instance">
-            <label for="search_city">City</label>
-            <!-- Input field for the city -->
-            <input class="form-control" type="text" id="search_city" />
-          </div>
-          <div class="col-md-2 search__wrapper--instance">
-            <label class="hidden" for="search_btn">Search</label>
-            <button type="submit" id="search_btn" class="form-control">
-              <i class="fas fa-paper-plane"></i> Search
-            </button>
-          </div>
-        </form>
-        <!-- Search container ending -->
+<div class="container">
+  <!-- Search container. I havent set up any functionality for this. -->
+  <div class="row search__wrapper">
+    <form action="" class="detailed-form form-discounts">
+      <div class="col-md-2 search__wrapper--instance">
+        <label for="search_discountpercent">Discount %</label>
+        <select class="form-control" name="search_discount" id="search_discountpercent">
+          <!-- Insert available discount in a list -->
+          <option value="x">x</option>
+        </select>
       </div>
+      <div class="col-md-4 search__wrapper--instance">
+        <label for="search_country">Country</label>
+        <select class="form-control" name="search_country" id="search_discountpercent">
+          <!-- Insert available countries -->
+          <option value="x">x</option>
+        </select>
+      </div>
+      <div class="col-md-4 search__wrapper--instance">
+        <label for="search_city">City</label>
+        <!-- Input field for the city -->
+        <input class="form-control" type="text" id="search_city" />
+      </div>
+      <div class="col-md-2 search__wrapper--instance">
+        <label class="hidden" for="search_btn">Search</label>
+        <button type="submit" id="search_btn" class="form-control">
+          <i class="fas fa-paper-plane"></i> Search
+        </button>
+      </div>
+    </form>
+    <!-- Search container ending -->
+  </div>
 
-      <hr />
-      <div id="discount__feed">
-        <!-- DISCOUNT ROW STARTING. This is where the loop should start for each discount instance -->
+  <hr />
+  <div id="discount__feed">
+    <!-- DISCOUNT ROW STARTING. This is where the loop should start for each discount instance -->
 
-        <div class="row discount__wrapper">
-          <div class="col-sm-3 discount__wrapper--image">
-            <!-- If no image for discount, use discount-placeholder.png -->
-            <img src="/img/discount-placeholder.png" alt="Discount" />
-          </div>
-          <div class="col-sm-9 discount__header">
-            <div class="discount__header--prices">
-              <!-- Discount percentage -->
-              <span class="percent-percent">15%</span>
-              <!-- Price after discount -->
-              <span class="price-new">10 CZK</span>
-              <!-- Price before discount -->
-              <span class="price-old">20 CZK</span>
-            </div>
-            <div class="discount__header--content">
-              <!-- Discount title -->
-              <h4>Discount title</h4>
-              <!-- Discount description -->
-              <p>
-                Discount description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                voluptates corporis et, numquam molestias incidunt vero ut iste perspiciatis, amet
-                saepe quas non temporibus facilis consectetur veniam cumque voluptatibus voluptatem.
-              </p>
-              <!-- Hidden table which is toggled visible on "See more details" click -->
-              <table>
-                <tbody>
-                  <tr>
-                    <td>City</td>
-                    <td>Brno</td>
-                  </tr>
+    <div class="row discount__wrapper">
+      <div class="col-sm-3 discount__wrapper--image">
+        <!-- If no image for discount, use discount-placeholder.png -->
+        <img src="/img/discount-placeholder.png" alt="Discount" />
+      </div>
+      <div class="col-sm-9 discount__header">
+        <div class="discount__header--prices">
+          <!-- Discount percentage -->
+          <span class="percent-percent">15%</span>
+          <!-- Price after discount -->
+          <span class="price-new">10 CZK</span>
+          <!-- Price before discount -->
+          <span class="price-old">20 CZK</span>
+        </div>
+        <div class="discount__header--content">
+          <!-- Discount title -->
+          <h4>Discount title</h4>
+          <!-- Discount description -->
+          <p>
+            Discount description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+            voluptates corporis et, numquam molestias incidunt vero ut iste perspiciatis, amet saepe
+            quas non temporibus facilis consectetur veniam cumque voluptatibus voluptatem.
+          </p>
+          <!-- Hidden table which is toggled visible on "See more details" click -->
+          <table>
+            <tbody>
+              <tr>
+                <td>City</td>
+                <td>Brno</td>
+              </tr>
 
-                  <tr>
-                    <td>Country</td>
-                    <td>CZ</td>
-                  </tr>
+              <tr>
+                <td>Country</td>
+                <td>CZ</td>
+              </tr>
 
-                  <tr>
-                    <td>Valid from</td>
-                    <td>01.01.2018</td>
-                  </tr>
+              <tr>
+                <td>Valid from</td>
+                <td>01.01.2018</td>
+              </tr>
 
-                  <tr>
-                    <td>Valid to</td>
-                    <td>01.01.2020</td>
-                  </tr>
+              <tr>
+                <td>Valid to</td>
+                <td>01.01.2020</td>
+              </tr>
 
-                  <tr>
-                    <td>Provider</td>
-                    <td>Heureka</td>
-                  </tr>
+              <tr>
+                <td>Provider</td>
+                <td>Heureka</td>
+              </tr>
 
-                  <tr>
-                    <td>E-mail</td>
-                    <td>info@provider.com</td>
-                  </tr>
+              <tr>
+                <td>E-mail</td>
+                <td>info@provider.com</td>
+              </tr>
 
-                  <tr>
-                    <td>Phone number</td>
-                    <td>123 123 123</td>
-                  </tr>
+              <tr>
+                <td>Phone number</td>
+                <td>123 123 123</td>
+              </tr>
 
-                  <tr>
-                    <td>Address</td>
-                    <td>Divalid 3, 232 Wrappi</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="discount__buttons">
-              <!-- Button to extend the view of the table above, along with showing the whole description -->
-              <button class="discount__btn--see-more btn-secondary">
-                <i class="fas fa-angle-down"></i> See more details
-              </button>
-              <!-- Button to open modal, inserting data from discount into data-discount-info, which is used for the modal.
+              <tr>
+                <td>Address</td>
+                <td>Divalid 3, 232 Wrappi</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="discount__buttons">
+          <!-- Button to extend the view of the table above, along with showing the whole description -->
+          <button class="discount__btn--see-more btn-secondary">
+            <i class="fas fa-angle-down"></i> See more details
+          </button>
+          <!-- Button to open modal, inserting data from discount into data-discount-info, which is used for the modal.
                   Message inserted into extra.message goes in a hidden textfield, which should be for the email to the provider.
                   Same goes for the email address.
                   The text inside thee button should contain the credit cost (1050 in this dummy)  -->
-              <button
-                data-discount-id="1"
-                data-discount-info='{
+          <button
+            data-discount-id="1"
+            data-discount-info='{
                   "id":1,
                   "name":"Discount name",
                   "description":"Discount description",
@@ -149,110 +130,108 @@
                   "providerEmail":"info@albert.cz",
                   "providerMessage": "Hi PROVIDER. NAME has requested your discount you offered with us: DISCOUNT NAME."
                 }'
-                class="discount__btn--claim btn-primary"
-              >
-                Claim (1050 credits)
-              </button>
+            class="discount__btn--claim btn-primary"
+          >
+            Claim (1050 credits)
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- DISCOUNT ROW ENDING -->
+  </div>
+</div>
+
+<!-- MODAL which contains discount information on button click -->
+<div class="modal__wrapper">
+  <div class="modal__content modal__closed--content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="modal__func--close text-right">
+            <i class="fas fa-times modal__close"></i>
+          </div>
+
+          <h1 class="text-center">Claim discount</h1>
+          <p class="text-center">How to claim this discount:</p>
+          <div class="discount__instructions">
+            <div class="discount__instructions--each">
+              <img src="img/discount-instructions-1.png" alt="Confirm" />
+              <p>Confirm your contact details in the form below</p>
+            </div>
+            <div class="discount__instructions--each">
+              <img src="img/discount-instructions-2.png" alt="Wait and then pay" />
+              <p>Wait for email instructions to pay</p>
+            </div>
+            <div class="discount__instructions--each">
+              <img src="img/discount-instructions-3.png" alt="Enjoy" />
+              <p>Enjoy the discount!</p>
             </div>
           </div>
         </div>
-        <!-- DISCOUNT ROW ENDING -->
-      </div>
-    </div>
+        <!-- Form starts. Needs email script -->
+        <form action="#" class="detailed-form">
+          <div class="col-md-12 search__wrapper--instance">
+            <label for="search_city">Jmeno</label>
+            <!-- Value should contain users profile name -->
+            <input class="form-control" type="text" name="name" value="user-name" required />
+          </div>
+          <div class="col-md-6 search__wrapper--instance">
+            <label for="search_city">Email</label>
+            <!-- Value should contain users profile email address -->
+            <input class="form-control" type="email" name="email" value="user-email" required />
+          </div>
+          <div class="col-md-6 search__wrapper--instance">
+            <label for="search_city">Telefon</label>
+            <!-- Value should contain users phone number -->
+            <input class="form-control" type="tel" name="phone" value="user-phone" required />
+          </div>
+          <div class="clearfix"></div>
 
-    <!-- MODAL which contains discount information on button click -->
-    <div class="modal__wrapper">
-      <div class="modal__content modal__closed--content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="modal__func--close text-right">
-                <i class="fas fa-times modal__close"></i>
+          <!-- Information below is filled in automatically from data-discount-info  -->
+          <div class="discount__preview">
+            <div class="discount__preview--percent"><span class="percent-view"></span>%</div>
+            <div class="discount__preview--content">
+              <h3 class="name-view"></h3>
+              <div class="credits-view">
+                <object
+                  class="credits-icon"
+                  data="img/credits-icon-green.svg"
+                  type="image/svg+xml"
+                ></object>
+                <span class="credit-cost"></span> credits
               </div>
-
-              <h1 class="text-center">Claim discount</h1>
-              <p class="text-center">How to claim this discount:</p>
-              <div class="discount__instructions">
-                <div class="discount__instructions--each">
-                  <img src="img/discount-instructions-1.png" alt="Confirm" />
-                  <p>Confirm your contact details in the form below</p>
-                </div>
-                <div class="discount__instructions--each">
-                  <img src="img/discount-instructions-2.png" alt="Wait and then pay" />
-                  <p>Wait for email instructions to pay</p>
-                </div>
-                <div class="discount__instructions--each">
-                  <img src="img/discount-instructions-3.png" alt="Enjoy" />
-                  <p>Enjoy the discount!</p>
-                </div>
+              <div class="price-view">
+                <span class="price-now"></span>
+                <span class="new-currency-view"></span>
+              </div>
+              <div class="before-view">
+                <span class="price-before"></span>
+                <span class="old-currency-view"></span>
               </div>
             </div>
-            <!-- Form starts. Needs email script -->
-            <form action="#" class="detailed-form">
-              <div class="col-md-12 search__wrapper--instance">
-                <label for="search_city">Jmeno</label>
-                <!-- Value should contain users profile name -->
-                <input class="form-control" type="text" name="name" value="user-name" required />
-              </div>
-              <div class="col-md-6 search__wrapper--instance">
-                <label for="search_city">Email</label>
-                <!-- Value should contain users profile email address -->
-                <input class="form-control" type="email" name="email" value="user-email" required />
-              </div>
-              <div class="col-md-6 search__wrapper--instance">
-                <label for="search_city">Telefon</label>
-                <!-- Value should contain users phone number -->
-                <input class="form-control" type="tel" name="phone" value="user-phone" required />
-              </div>
-              <div class="clearfix"></div>
-
-              <!-- Information below is filled in automatically from data-discount-info  -->
-              <div class="discount__preview">
-                <div class="discount__preview--percent"><span class="percent-view"></span>%</div>
-                <div class="discount__preview--content">
-                  <h3 class="name-view"></h3>
-                  <div class="credits-view">
-                    <object
-                      class="credits-icon"
-                      data="img/credits-icon-green.svg"
-                      type="image/svg+xml"
-                    ></object>
-                    <span class="credit-cost"></span> credits
-                  </div>
-                  <div class="price-view">
-                    <span class="price-now"></span>
-                    <span class="new-currency-view"></span>
-                  </div>
-                  <div class="before-view">
-                    <span class="price-before"></span>
-                    <span class="old-currency-view"></span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- HIDDEN INPUTS START -->
-              <!-- Message for provider. Picked up from data-discount-info -->
-              <input class="no-display" type="text" name="provider-message" value="" />
-              <!-- Email address for the provider -->
-              <input class="no-display" type="text" name="provider-email" value="" />
-              <!-- HIDDEN INPUTS END -->
-
-              <div class="col-md-12 search__wrapper--instance">
-                <button type="submit" name="submit" class="btn-lime w-100">
-                  Send discount request <i class="fas fa-angle-right"></i>
-                </button>
-              </div>
-            </form>
-            <!-- Form ends -->
           </div>
-        </div>
-      </div>
-      <div class="modal__background modal__closed--behind"></div>
-    </div>
-    <!-- MODAL ending -->
 
-    <!-- JS -->
-    <script src="js/forms.js" type="module"></script>
-    <script src="js/discounts_page.js" type="module"></script>
-  </body>
-</html>
+          <!-- HIDDEN INPUTS START -->
+          <!-- Message for provider. Picked up from data-discount-info -->
+          <input class="no-display" type="text" name="provider-message" value="" />
+          <!-- Email address for the provider -->
+          <input class="no-display" type="text" name="provider-email" value="" />
+          <!-- HIDDEN INPUTS END -->
+
+          <div class="col-md-12 search__wrapper--instance">
+            <button type="submit" name="submit" class="btn-lime w-100">
+              Send discount request <i class="fas fa-angle-right"></i>
+            </button>
+          </div>
+        </form>
+        <!-- Form ends -->
+      </div>
+    </div>
+  </div>
+  <div class="modal__background modal__closed--behind"></div>
+</div>
+<!-- MODAL ending -->
+
+<!-- JS -->
+<script src="js/forms.js" type="module"></script>
+<script src="js/discounts_page.js" type="module"></script>

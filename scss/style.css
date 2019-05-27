@@ -1212,7 +1212,6 @@ form .active {
 }
 
 .category .category__item {
-  position: relative;
   width: 22%;
   margin: 8px 10px;
   overflow: hidden;
