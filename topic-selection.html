@@ -23,41 +23,111 @@
       <div class="row category category__type--languages">
         <div class="col-md-3">
           <h4 class="category__name">Languages</h4>
+          <!-- Counter -->
           <p class="category__description">
-            Pick between one of our <strong class="topic__counter">x</strong> languages
+            Pick between one of our
+            <strong class="topic__counter"> <!-- Automatically acounted and filled --> </strong>
+            languages
           </p>
         </div>
-        <div id="category__feed--lang" class="col-md-9 category__items--wrapper fading">
-          <!-- Feed for language topics -->
+        <div
+          id="category__feed--lang"
+          class="col-md-9 category__items--wrapper fading wrapper__collapsed"
+          style="height: unset;"
+        >
+          <!-- Category item (start) - Languages -->
+          <div class="category__item">
+            <!-- Anchor and tooltip. Tooltip text in "title".  -->
+            <a
+              data-topic-id="1"
+              href="#"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="American English"
+            >
+              <span class="category__item--icon">
+                <!-- Flag file in data. Data attribute or object element is optional -->
+                <object data="img/flags/gb.svg" type="image/svg+xml"></object>
+              </span>
+              <!-- Language -->
+              <p>English</p>
+            </a>
+          </div>
+          <!-- Category item (end) - Languages -->
         </div>
       </div>
 
       <div class="row category category__type--school">
         <div class="col-md-3">
           <h4 class="category__name">School topics</h4>
-          <p class="category__description">Pick between one of our <strong class="topic__counter">x</strong> topics</p>
+          <!-- Counter -->
+          <p class="category__description">
+            Pick between one of our
+            <strong class="topic__counter"> <!-- Automatically acounted and filled --> </strong>
+            topics
+          </p>
         </div>
         <div id="category__feed--school" class="col-md-9 category__items--wrapper">
-          <!-- Feed for school topics -->
+          <div class="category__item">
+            <!-- Anchor and tooltip. Tooltip text in "title".  -->
+            <a
+              data-topic-id="2"
+              href="#"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              data-original-title="American English"
+            >
+              <span class="category__item--icon">
+                <!-- Icon file into "data". Data attribute or object element is optional -->
+                <object data="" type="image/svg+xml"></object>
+              </span>
+              <p>English</p>
+            </a>
+          </div>
         </div>
       </div>
 
       <div class="row category category__type--quiz">
         <div class="col-md-3">
           <h4 class="category__name">Quizzes</h4>
-          <p class="category__description">Pick between one of our <strong class="topic__counter">x</strong> quizzes</p>
+          <!-- Counter -->
+          <p class="category__description">
+            Pick between one of our
+            <strong class="topic__counter"> <!-- Automatically acounted and filled --> </strong>
+            quizzes
+          </p>
         </div>
         <div id="category__feed--quiz" class="col-md-9 category__items--wrapper">
-          <!-- Feed for quiz topics -->
+          <!-- Category item (start) - Quizzes -->
+          <div class="category__item">
+            <!-- Anchor and tooltip. Tooltip text in "title".  -->
+            <a
+              data-topic-id="3"
+              href="#"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Quiz full name / optional name"
+            >
+              <span class="category__item--icon">
+                <!-- Flag file in data. Data attribute or object element is optional -->
+                <object data="img/flags/gb.svg" type="image/svg+xml"></object>
+              </span>
+              <!-- Quiz -->
+              <p>Quiz name</p>
+            </a>
+          </div>
+          <!-- Category item (end) - Languages -->
         </div>
       </div>
     </div>
-    <!-- TODO: Clear into Webpack -->
+
     <!-- jQuery/Popper.js to be loaded in Webpack instead -->
     <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
       integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
@@ -69,7 +139,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/utilities.js"></script>
-    <script src="js/topics_import.js" type="module"></script>
+    <!-- <script src="js/topics_import.js" type="module"></script> -->
     <script src="js/topics_page.js" type="module"></script>
   </body>
 </html>
