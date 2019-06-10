@@ -907,7 +907,7 @@ form .active {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  padding-bottom: 20px;
+  padding: 20px 0;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
   z-index: 10;
