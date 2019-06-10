@@ -1,76 +1,89 @@
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img class="navbar-logo" src="img/ft-logo.png" alt="" />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarContent"
-      aria-controls="navbarContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav mr-auto"></ul>
-      <ul class="nav-right navbar-nav">
-        <li class="nav-register nav-item">
-          <a href="#" class="nav-link">Register</a>
-        </li>
-        <li class="nav-login nav-item">
-          <a href="#" class="nav-link">Login</a>
-        </li>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>X</title>
+    <!-- Main style -->
+    <link rel="stylesheet" href="scss/style.css" />
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- INCLUDE POPPER AND JQUERY HERE -->
+  </head>
 
-        <span class="vertical-line"></span>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img class="navbar-logo" src="img/ft-logo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto"></ul>
+          <ul class="nav-right navbar-nav">
+            <li class="nav-register nav-item">
+              <a href="#" class="nav-link">Register</a>
+            </li>
+            <li class="nav-login nav-item">
+              <a href="#" class="nav-link">Login</a>
+            </li>
 
-        <div class="dropdown show dropdown-lang">
-          <!-- LANGUAGE SELECTION BAR -->
-          <!-- This anchor is for the selected language. Leave # for the anchor -->
-          <a
-            class="btn dropdown-toggle"
-            href="#"
-            id="1"
-            data-country-code="en"
-            data-toggle="dropdown"
-            data-target="dropdown__languages"
-            ><span class="flag-wrapper">
-              <!-- Insert flag link into data -->
-              <object
-                class="navbar-flag-selected"
-                data="./img/flags/gb.svg"
-                type="image/svg+xml"
-              ></object>
-            </span>
-            Selected
-          </a>
+            <span class="vertical-line"></span>
 
-          <!-- Hidden box containing the rest of the available languages -->
-          <div id="dropdown__languages" class="dropdown-menu dropdown-menu-right">
-            <!-- Starting available languages (each anchor). Anchor should lead to language version -->
-            <a class="dropdown-item" href="#" id="1" data-country-code="no">
-              <span class="flag-wrapper">
-                <!-- Insert flag link into data -->
-                <object
-                  class="navbar-flag-selected"
-                  data="./img/flags/no.svg"
-                  type="image/svg+xml"
-                ></object>
-              </span>
-              Available
-            </a>
-            <!-- Ending available languages (anchor) -->
-          </div>
-          <!-- Hidden box ending (for available languages) -->
-          <!-- LANGUAGE SELECTION BAR ENDING -->
+            <div class="dropdown show dropdown-lang">
+              <!-- LANGUAGE SELECTION BAR -->
+              <!-- This anchor is for the selected language. Leave # for the anchor -->
+              <a
+                class="btn dropdown-toggle"
+                href="#"
+                id="1"
+                data-country-code="en"
+                data-toggle="dropdown"
+                data-target="dropdown__languages"
+                ><span class="flag-wrapper">
+                  <!-- Insert flag link into data -->
+                  <object
+                    class="navbar-flag-selected"
+                    data="./img/flags/gb.svg"
+                    type="image/svg+xml"
+                  ></object>
+                </span>
+                English
+              </a>
+
+              <!-- Hidden box containing the rest of the available languages -->
+              <div id="dropdown__languages" class="dropdown-menu dropdown-menu-right">
+                <!-- Starting available languages (each anchor). Anchor should lead to language version -->
+                <a class="dropdown-item" href="#" id="1" data-country-code="no">
+                  <span class="flag-wrapper">
+                    <!-- Insert flag link into data -->
+                    <object
+                      class="navbar-flag-selected"
+                      data="./img/flags/no.svg"
+                      type="image/svg+xml"
+                    ></object>
+                  </span>
+                  Norwegian
+                </a>
+                <!-- Ending available languages (anchor) -->
+              </div>
+              <!-- Hidden box ending (for available languages) -->
+              <!-- LANGUAGE SELECTION BAR ENDING -->
+            </div>
+          </ul>
         </div>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+      </div>
+    </nav>
+  </body>
+</html>
