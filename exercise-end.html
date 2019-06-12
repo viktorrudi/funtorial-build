@@ -1,49 +1,66 @@
-<div class="container exercise__end">
-  <div class="row">
-    <div class="col-md-5">
-      <div class="exercise__end--credits">
-        <object
-          class="icon__piggie"
-          data="img/div_icons/piggie-moneybags.svg"
-          type="image/svg+xml"
-        ></object>
-        <div class="exercise__end--credits-wrapper">
-          <h5>Credits earned</h5>
-          <div class="clearfix"></div>
-          <object
-            class="icon__credit"
-            data="img/credits-icon-gold.svg"
-            type="image/svg+xml"
-          ></object>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>X</title>
+    <!-- Main style -->
+    <link rel="stylesheet" href="scss/style.css" />
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- INCLUDE POPPER AND JQUERY HERE -->
+  </head>
 
-          <span class="icon__credit--counter">5</span>
+  <body>
+    <div class="container exercise__end">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="exercise__end--credits">
+            <object
+              class="icon__piggie"
+              data="img/div_icons/piggie-moneybags.svg"
+              type="image/svg+xml"
+            ></object>
+            <div class="exercise__end--credits-wrapper">
+              <h5>Credits earned</h5>
+              <div class="clearfix"></div>
+              <object
+                class="icon__credit"
+                data="img/credits-icon-gold.svg"
+                type="image/svg+xml"
+              ></object>
+
+              <span class="icon__credit--counter">5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7 ">
+          <h4 class="exercise__end--heading">You're done!</h4>
+          <p class="exercise__end--motivate">But you can do so much better!</p>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td class="table-heading">Exercise</td>
+                <td class="table-description">Exercise name</td>
+              </tr>
+              <tr>
+                <td class="table-heading">Questions</td>
+                <td class="table-description">10</td>
+              </tr>
+              <tr>
+                <td class="table-heading">Correct answers</td>
+                <td class="table-description">5</td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="#" class="btn btn-secondary btn-lg btn-block">More statistics</a>
+          <a href="#" class="btn btn-primary btn-lg btn-block"
+            >Another exercise <i class="fas fa-angle-right"></i
+          ></a>
         </div>
       </div>
     </div>
-
-    <div class="col-md-7 ">
-      <h4 class="exercise__end--heading">You're done!</h4>
-      <p class="exercise__end--motivate">But you can do so much better!</p>
-      <table class="table">
-        <tbody>
-          <tr>
-            <td class="table-heading">Exercise</td>
-            <td class="table-description">Exercise name</td>
-          </tr>
-          <tr>
-            <td class="table-heading">Questions</td>
-            <td class="table-description">10</td>
-          </tr>
-          <tr>
-            <td class="table-heading">Correct answers</td>
-            <td class="table-description">5</td>
-          </tr>
-        </tbody>
-      </table>
-      <a href="#" class="btn btn-secondary btn-lg btn-block">More statistics</a>
-      <a href="#" class="btn btn-primary btn-lg btn-block"
-        >Another exercise <i class="fas fa-angle-right"></i
-      ></a>
-    </div>
-  </div>
-</div>
+  </body>
+</html>

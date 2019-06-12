@@ -1,43 +1,80 @@
-<div class="container">
-  <div class="page__intro">
-    <h1>Contact</h1>
-    <p class="text-center">
-      Máte nějaký dotaz, nápad, připomínku?<br />
-      Našli jste chybu ve cvičeních? Napište nám!
-    </p>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>X</title>
+    <!-- Main style -->
+    <link rel="stylesheet" href="scss/style.css" />
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- INCLUDE POPPER AND JQUERY HERE -->
+  </head>
 
-<div class="container">
-  <div class="row">
-    <form action="#" class="detailed-form">
-      <div class="col-md-12 search__wrapper--instance">
-        <label for="search_city">Jmeno</label>
-        <input class="form-control" type="text" name="name" />
+  <body>
+    <div class="container">
+      <div class="page__intro">
+        <h1>Contact</h1>
+        <p class="text-center">
+          Máte nějaký dotaz, nápad, připomínku?<br />
+          Našli jste chybu ve cvičeních? Napište nám!
+        </p>
       </div>
-      <div class="col-md-6 search__wrapper--instance">
-        <label for="search_city">Email</label>
-        <input class="form-control" type="email" name="email" />
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <form action="#" class="detailed-form">
+          <div class="col-md-12 search__wrapper--instance">
+            <label for="search_city">Jmeno</label>
+            <input class="form-control" type="text" name="name" />
+          </div>
+          <div class="col-md-6 search__wrapper--instance">
+            <label for="search_city">Email</label>
+            <input class="form-control" type="email" name="email" />
+          </div>
+          <div class="col-md-6 search__wrapper--instance">
+            <label for="search_city">Telefon</label>
+            <input class="form-control" type="tel" name="phone" />
+          </div>
+          <div class="col-md-12 search__wrapper--instance">
+            <label for="search_city">Predmet</label>
+            <input class="form-control" type="text" name="topic" />
+          </div>
+          <div class="col-md-12 search__wrapper--instance">
+            <label for="search_city">Zprava</label>
+            <textarea class="form-control" name="message"></textarea>
+          </div>
+          <div class="col-md-12 search__wrapper--instance">
+            <button name="submit" class="btn-primary w-100 btn-formsubmit">
+              <i class="fas fa-paper-plane"></i> Odselat
+            </button>
+          </div>
+        </form>
       </div>
-      <div class="col-md-6 search__wrapper--instance">
-        <label for="search_city">Telefon</label>
-        <input class="form-control" type="tel" name="phone" />
-      </div>
-      <div class="col-md-12 search__wrapper--instance">
-        <label for="search_city">Predmet</label>
-        <input class="form-control" type="text" name="topic" />
-      </div>
-      <div class="col-md-12 search__wrapper--instance">
-        <label for="search_city">Zprava</label>
-        <textarea class="form-control" name="message"></textarea>
-      </div>
-      <div class="col-md-12 search__wrapper--instance">
-        <button name="submit" class="btn-primary w-100 btn-formsubmit">
-          <i class="fas fa-paper-plane"></i> Odselat
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-<!-- JS -->
-<script src="js/forms.js"></script>
+    </div>
+    <!-- JS -->
+    <script>
+      // Forms
+      let updateLabelOnActive = function() {
+        let inputs = Array.from(document.querySelectorAll('form input')),
+          textAreas = Array.from(document.querySelectorAll('form textarea')),
+          selects = Array.from(document.querySelectorAll('form select'))
+
+        let allInputs = inputs.concat(textAreas, selects)
+
+        function toggleClass() {
+          this.previousElementSibling.classList.toggle('active')
+        }
+        for (let i = 0; i < allInputs.length; i++) {
+          let input = allInputs[i]
+          input.addEventListener('focus', toggleClass)
+          input.addEventListener('blur', toggleClass)
+        }
+      }
+
+      updateLabelOnActive()
+    </script>
+  </body>
+</html>
