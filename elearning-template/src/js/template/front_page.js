@@ -7,9 +7,9 @@ function frontPageFunctions() {
       slider = document.querySelector('.heading__slideshow--current'),
       slides = slider.childNodes,
       imgArray = [
-        'img/frontpage-picture1.png',
-        'img/frontpage-picture2.png',
-        'img/frontpage-picture3.png',
+        'img/front_page_slideshow/slide1.png',
+        'img/front_page_slideshow/slide2.png',
+        'img/front_page_slideshow/slide3.png',
       ]
 
     function buildSlideShow(arr) {
@@ -55,18 +55,31 @@ function frontPageFunctions() {
   function topicCounter() {
     // Inserts number of how many topics are available on the front page
     // TODO: Needs to be updated with actual number from database
-    const languagesCount = document.querySelector('.step__topics-feed--language').childElementCount
-    const schoolCount = document.querySelector('.step__topics-feed--school-topic').childElementCount
-    const quizzesCount = document.querySelector('.step__topics-feed--quiz').childElementCount
+    const languagesCount = document.querySelector(
+      '.step__topics-feed--language'
+    ).childElementCount
+    const schoolCount = document.querySelector(
+      '.step__topics-feed--school-topic'
+    ).childElementCount
+    const quizzesCount = document.querySelector('.step__topics-feed--quiz')
+      .childElementCount
 
-    document.querySelector('.step__topics-counter--languages').innerHTML = languagesCount
-    document.querySelector('.step__topics-counter--school-topics').innerHTML = schoolCount
-    document.querySelector('.step__topics-counter--quizzes').innerHTML = quizzesCount
+    document.querySelector(
+      '.step__topics-counter--languages'
+    ).innerHTML = languagesCount
+    document.querySelector(
+      '.step__topics-counter--school-topics'
+    ).innerHTML = schoolCount
+    document.querySelector(
+      '.step__topics-counter--quizzes'
+    ).innerHTML = quizzesCount
   }
 
   function hideIfEmpty() {
     const categoryHolders = Array.from(
-      document.querySelectorAll('.step__topics-box .step__topics-selection .row')
+      document.querySelectorAll(
+        '.step__topics-box .step__topics-selection .row'
+      )
     )
     categoryHolders.map(category => {
       if (category.childElementCount === 0) {
