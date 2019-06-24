@@ -147,114 +147,121 @@
         </div>
       </div>
     </nav>
-
-    <div class="container">
-      <div class="page__intro">
-        <h1>Edit profile</h1>
+    <main>
+      <div class="container">
+        <div class="page__intro">
+          <h1>Edit profile</h1>
+        </div>
       </div>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <form action="#" class="detailed-form">
-          <div class="col-md-12 search__wrapper--instance">
-            <div class="profile-picture">
-              <!-- Placeholder for users profile image -->
-              <img src="./img/discount-placeholder.png" alt="profile picture" />
+      <div class="container">
+        <div class="row">
+          <form action="#" class="detailed-form">
+            <div class="col-md-12 search__wrapper--instance">
+              <div class="profile-picture">
+                <!-- Placeholder for users profile image -->
+                <img
+                  src="./img/discount-placeholder.png"
+                  alt="profile picture"
+                />
+              </div>
+              <div class="profile-picture-button-wrapper">
+                <label for="search_city">Change profile picture</label>
+                <input
+                  type="file"
+                  name="profile-picture"
+                  accept="image/*"
+                  value="test"
+                />
+              </div>
             </div>
-            <div class="profile-picture-button-wrapper">
-              <label for="search_city">Change profile picture</label>
+
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="search_city">First name</label>
               <input
-                type="file"
-                name="profile-picture"
-                accept="image/*"
-                value="test"
+                class="form-control"
+                name="first-name"
+                value="%FIRSTNAME%"
               />
             </div>
-          </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="search_city">Surname</label>
+              <input class="form-control" name="surname" value="%SURNAME%" />
+            </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="search_city">Phone number</label>
+              <input
+                class="form-control"
+                type="tel"
+                name="phone-number"
+                value="%PHONENUMBER%"
+              />
+            </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="gender">Gender</label>
+              <br />
+              <span class="radio-wrapper">
+                <input class="form-control" type="radio" name="gender" /> Male
+              </span>
+              <span class="radio-wrapper">
+                <input class="form-control" type="radio" name="gender" /> Female
+              </span>
+            </div>
 
-          <div class="col-md-6 search__wrapper--instance">
-            <label for="search_city">First name</label>
-            <input class="form-control" name="first-name" value="%FIRSTNAME%" />
-          </div>
-          <div class="col-md-6 search__wrapper--instance">
-            <label for="search_city">Surname</label>
-            <input class="form-control" name="surname" value="%SURNAME%" />
-          </div>
-          <div class="col-md-6 search__wrapper--instance">
-            <label for="search_city">Phone number</label>
-            <input
-              class="form-control"
-              type="tel"
-              name="phone-number"
-              value="%PHONENUMBER%"
-            />
-          </div>
-          <div class="col-md-6 search__wrapper--instance">
-            <label for="gender">Gender</label>
-            <br />
-            <span class="radio-wrapper">
-              <input class="form-control" type="radio" name="gender" /> Male
-            </span>
-            <span class="radio-wrapper">
-              <input class="form-control" type="radio" name="gender" /> Female
-            </span>
-          </div>
+            <div class="col-md-12 search__wrapper--instance">
+              <h3>My Location</h3>
+            </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="search_country">Country</label>
+              <select
+                class="form-control"
+                name="country"
+                id="search_discountpercent"
+              >
+                <!-- Insert available countries -->
+                <option value="x">%COUNTRY%</option>
+                <option value="x">other countries...</option>
+              </select>
+            </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="street">Street</label>
+              <input class="form-control" name="street" value="%STREET%" />
+            </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="zip">ZIP</label>
+              <input class="form-control" type="tel" name="zip" value="%ZIP%" />
+            </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="search_city">City</label>
+              <input class="form-control" name="city" value="%CITY%" />
+            </div>
 
-          <div class="col-md-12 search__wrapper--instance">
-            <h3>My Location</h3>
-          </div>
-          <div class="col-md-6 search__wrapper--instance">
-            <label for="search_country">Country</label>
-            <select
-              class="form-control"
-              name="country"
-              id="search_discountpercent"
-            >
-              <!-- Insert available countries -->
-              <option value="x">%COUNTRY%</option>
-              <option value="x">other countries...</option>
-            </select>
-          </div>
-          <div class="col-md-6 search__wrapper--instance">
-            <label for="street">Street</label>
-            <input class="form-control" name="street" value="%STREET%" />
-          </div>
-          <div class="col-md-6 search__wrapper--instance">
-            <label for="zip">ZIP</label>
-            <input class="form-control" type="tel" name="zip" value="%ZIP%" />
-          </div>
-          <div class="col-md-6 search__wrapper--instance">
-            <label for="search_city">City</label>
-            <input class="form-control" name="city" value="%CITY%" />
-          </div>
+            <div class="col-md-12 search__wrapper--instance">
+              <h3>Login information</h3>
+            </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="street">E-mail</label>
+              <input
+                class="form-control"
+                type="email"
+                name="email"
+                value="%EMAIL%"
+              />
+            </div>
+            <div class="col-md-6 search__wrapper--instance">
+              <label for="zip">PASSWORD</label>
+              <input class="form-control" type="password" name="password" />
+            </div>
 
-          <div class="col-md-12 search__wrapper--instance">
-            <h3>Login information</h3>
-          </div>
-          <div class="col-md-6 search__wrapper--instance">
-            <label for="street">E-mail</label>
-            <input
-              class="form-control"
-              type="email"
-              name="email"
-              value="%EMAIL%"
-            />
-          </div>
-          <div class="col-md-6 search__wrapper--instance">
-            <label for="zip">PASSWORD</label>
-            <input class="form-control" type="password" name="password" />
-          </div>
-
-          <div class="col-md-12 search__wrapper--instance">
-            <button name="submit" class="btn-primary w-100 btn-formsubmit">
-              Save changes
-            </button>
-          </div>
-        </form>
+            <div class="col-md-12 search__wrapper--instance">
+              <button name="submit" class="btn-primary w-100 btn-formsubmit">
+                Save changes
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-
+    </main>
     <div id="footer">
       <div class="container">
         <div class="row">

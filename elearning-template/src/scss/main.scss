@@ -6,6 +6,8 @@
 
 body {
     padding-top: 70px;
+    display: flex;
+    flex-direction: column;
 }
 
 .mejs__mediaelement {
@@ -60,7 +62,7 @@ body {
 
     h1 {
         text-align: center;
-        margin: 50px 0 20px 0;
+        // margin: 50px 0 20px 0;
     }
 
     p {
@@ -2073,17 +2075,20 @@ nav {
     }
 }
 
+html, body{ height:100%; margin:0; }
 
+// Padding around all content (not nav and footer).  Disabled on front page
+main:not(.index) {
+    padding: 50px 0 100px 0;
+}
 
 #footer {
     margin-top: auto;
-    background-color: #535353; // #363636
+    background-color: $footer-color; // #363636
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-top: 70px;
-
     a {
-        color: #fff;
+        color: $white;
     }
 }
 
