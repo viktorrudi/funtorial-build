@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise (end)</title>
+    <title>Exercise (text)</title>
 
     <link
       rel="stylesheet"
@@ -151,7 +151,7 @@
     <main>
       <!-- BREADCRUMBS -->
       <div class="container">
-        <div class="row">
+        <div class="row no-gutters">
           <div class="col-sm-12">
             <nav class="breadcrumbs" aria-label="breadcrumb">
               <ol class="breadcrumb">
@@ -176,7 +176,7 @@
       </div>
       <!-- / BREADCRUMBS -->
 
-      <div class="container exercise exercise__end">
+      <div class="container exercise exercise__instance">
         <!-- Exercise header -->
         <div class="row no-gutters exercise__header">
           <div class="col-md-12 ">
@@ -188,61 +188,64 @@
                   <i class="fas fa-volume-mute"></i>
                 </span>
               </div>
-              <div class="col-md-8"></div>
+              <div class="col-md-8">
+                <span class="exercise__header--instruction">
+                  <h4>Write the answer</h4>
+                </span>
+              </div>
             </div>
           </div>
         </div>
         <!-- / Exercise header -->
 
-        <div class="row">
+        <div class="row exercise__body">
           <div class="col-md-4">
-            <div class="exercise__credits">
-              <object
-                class="icon__piggie"
-                data="img/div_icons/piggie-moneybags.svg"
-                type="image/svg+xml"
-              ></object>
-              <div class="exercise__credits-wrapper">
-                <h5>Credits earned</h5>
-                <div class="clearfix"></div>
-                <object
-                  class="icon__credit"
-                  data="img/credits-icon-gold.svg"
-                  type="image/svg+xml"
-                ></object>
-
-                <span class="icon__credit--counter">5</span>
-              </div>
-            </div>
+            <img
+              class="exercise__body--image"
+              src="img/discount-placeholder.png"
+              alt="Exercise image"
+            />
+            <!-- AUDIO PLUGIN HERE -->
           </div>
 
           <div class="col-md-8">
-            <h4 class="exercise__end--heading">You're done!</h4>
-            <p class="exercise__end--motivate">
-              But you can do so much better!
-            </p>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td class="table-heading">Exercise</td>
-                  <td class="table-description">Exercise name</td>
-                </tr>
-                <tr>
-                  <td class="table-heading">Questions</td>
-                  <td class="table-description">10</td>
-                </tr>
-                <tr>
-                  <td class="table-heading">Correct answers</td>
-                  <td class="table-description">5</td>
-                </tr>
-              </tbody>
-            </table>
-            <a href="#" class="btn btn-secondary btn-lg btn-block"
-              >More statistics</a
-            >
-            <a href="#" class="btn btn-primary btn-lg btn-block"
-              >Another exercise <i class="fas fa-angle-right"></i
-            ></a>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="exercise__body--question question-short">
+                  Word
+                </div>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-sm-12">
+                <div class="exercise__body--option-text-input">
+                  <!-- 
+                  Add disabled and either "answer-correct" or "answer-incorrect" 
+                  to the class depending on the outcome of the exercise (below element)
+                  -->
+                  <form class="exercise-input" action="#">
+                    <input
+                      autofocus
+                      class=""
+                      type="text"
+                      placeholder="Write your answer here..."
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <a class="ajax exercise__body--continue" href="#">
+                  <!-- Remove class "disabled" after exercise is done (below element) -->
+                  <div class="exercise__body--continue-btn">
+                    <!-- Update text to say "Next question" when exercise is over -->
+                    Check answer (Next question)
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
