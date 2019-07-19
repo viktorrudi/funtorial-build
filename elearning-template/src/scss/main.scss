@@ -57,7 +57,7 @@ body {
 }
 
 .page__intro {
-  max-width: 450px;
+  max-width: 500px;
   margin: 0 auto;
 
   h1 {
@@ -351,7 +351,7 @@ h5 {
       margin: 0;
       color: $ft-gray;
 
-      /* Flag/topic icon */
+      /* Flag icon */
       .step__topics--image {
         background-repeat: no-repeat;
         background-position: center;
@@ -364,6 +364,16 @@ h5 {
         border-radius: 10px;
         vertical-align: middle;
         margin-right: 5px;
+      }
+      /* category icon (not flag) */
+      .step__topics--icon {
+        position: relative;
+        top: 6px;
+        pointer-events: none;
+        margin-right: 2px;
+        &.school {
+          fill: red;
+        }
       }
     }
 
@@ -435,6 +445,17 @@ h5 {
         &:hover {
           color: #000;
           text-decoration: none;
+        }
+      }
+      .category-icon {
+        position: relative;
+        height: 60px;
+        object {
+          position: absolute;
+          width: 60px;
+          bottom: 5px;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
     }
@@ -537,7 +558,7 @@ h5 {
   }
 }
 
-form:not(.exercise-input) {
+form:not(.exercise-input, .form-discounts) {
   max-width: 800px;
   margin: 0 auto;
 
