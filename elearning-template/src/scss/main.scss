@@ -2319,6 +2319,66 @@ nav {
   }
 }
 
+//////// CONTRIBUTORS ////////
+
+.contributor__section {
+  .contributor {
+    position: relative;
+    margin: 25px 0;
+    &__visual {
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      &--photo {
+        max-width: 200px;
+        max-height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 auto;
+        border: 3px solid #fff;
+        box-sizing: content-box;
+        box-shadow: 0 20px 45px 5px rgba(0, 0, 0, 0.13);
+        img {
+          display: inline-block;
+          margin: 0 auto;
+          height: 200px;
+          width: auto;
+        }
+      }
+      &--flag {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        border-radius: 50%;
+        right: 5%;
+        bottom: 0%;
+        border: 3px solid #fff;
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.15);
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%) translateX(50%);
+          right: 50%;
+          height: 50px;
+          width: auto;
+        }
+      }
+    }
+    &__name {
+      text-align: center;
+      margin-top: 20px;
+      color: $ft-ltblue;
+    }
+    &__contribution {
+      text-align: center;
+      color: $ft-gray;
+      font-size: 0.9rem;
+    }
+  }
+}
+
 html,
 body {
   height: 100%;
