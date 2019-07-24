@@ -1735,6 +1735,7 @@ nav {
     }
     &--instruction {
       h4 {
+        font-size: 1.4rem;
         text-align: center;
         margin: 0;
       }
@@ -1813,12 +1814,12 @@ nav {
             color: $ft-superltblue;
           }
           &.answer-correct {
-            color: $ft-lime;
-            border: 5px solid $ft-lime;
+            // color: $ft-lime;
+            border: 5px solid $ft-lime !important;
           }
           &.answer-incorrect {
-            color: $ft-red;
-            border: 5px solid $ft-red;
+            // color: $ft-red;
+            border: 5px solid $ft-red !important;
           }
           &:focus {
             // border: none;

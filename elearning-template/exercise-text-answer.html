@@ -218,12 +218,12 @@
             </div>
             <div class="row no-gutters">
               <div class="col-sm-12">
-                <div class="exercise__body--option-text-input">
-                  <!-- 
+                <div class="exercise__body--option-text-input ">
+                  <form class="exercise-input " action="#">
+                    <!-- 
                   Add disabled and either "answer-correct" or "answer-incorrect" 
                   to the class depending on the outcome of the exercise (below element)
-                  -->
-                  <form class="exercise-input" action="#">
+                   -->
                     <input
                       autofocus
                       class=""
@@ -237,10 +237,10 @@
 
             <div class="row">
               <div class="col-sm-12">
+                <!-- Update link once the exercise has been checked -->
                 <a class="ajax exercise__body--continue" href="#">
-                  <!-- Remove class "disabled" after exercise is done (below element) -->
                   <div class="exercise__body--continue-btn">
-                    <!-- Update text to say "Next question" when exercise is over -->
+                    <!-- Update text to say "Next question" when exercise is over. -->
                     Check answer
                   </div>
                 </a>
