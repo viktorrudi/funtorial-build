@@ -19,9 +19,6 @@ function topicFunctions() {
 
       // If wrapper is overflowing - show buttons
       if (topicWrapper.scrollHeight > topicWrapper.clientHeight) {
-        console.log('scrollheight (div content size): ' + topicWrapper.scrollHeight)
-        console.log('clientheight (view size?): ' + topicWrapper.clientHeight)
-
         topicWrapper.appendChild(topicExtendBtnFade.cloneNode(true))
         topicWrapper.appendChild(topicExtendBtn.cloneNode(true))
       }

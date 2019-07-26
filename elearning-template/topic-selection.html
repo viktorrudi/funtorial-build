@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Front page</title>
+    <title>Choose what you want to learn</title>
 
     <link
       rel="stylesheet"
@@ -152,6 +152,7 @@
         <h1>What do you want to learn?</h1>
       </div>
       <div class="container categories selection__new-topics">
+        <!-- Category description: Languages -->
         <div class="row category category__type--languages">
           <div class="col-md-3">
             <h4 class="category__name">Languages</h4>
@@ -164,6 +165,8 @@
               languages
             </p>
           </div>
+
+          <!-- Category items: Languages -->
           <div
             id="category__feed--lang"
             class="col-md-9 category__items--wrapper fading wrapper__collapsed"
@@ -191,6 +194,7 @@
           </div>
         </div>
 
+        <!-- Category description: School topics -->
         <div class="row category category__type--school">
           <div class="col-md-3">
             <h4 class="category__name">School topics</h4>
@@ -203,6 +207,8 @@
               topics
             </p>
           </div>
+
+          <!-- Category items: Quiz -->
           <div
             id="category__feed--school"
             class="col-md-9 category__items--wrapper"
@@ -217,18 +223,21 @@
                 data-placement="top"
                 title="Topic full namee"
               >
-                <span class="category__item--icon">
-                  <!-- Icon file into "data". Data attribute or object element is optional -->
-                  <object data="" type="image/svg+xml"></object>
-                </span>
-                <!-- School topic -->
+                <!-- Icon for school topics -->
+                <object
+                  class="step__topics--icon"
+                  data="./img/div_icons/category/school-topic.svg"
+                  type="image/svg+xml"
+                ></object>
+                <!-- School topic name -->
                 <p>Topic name</p>
               </a>
             </div>
-            <!-- Category item (start) - School topics -->
+            <!-- Category item (end) - School topics -->
           </div>
         </div>
 
+        <!-- Category description: Quiz -->
         <div class="row category category__type--quiz">
           <div class="col-md-3">
             <h4 class="category__name">Quizzes</h4>
@@ -241,6 +250,8 @@
               quizzes
             </p>
           </div>
+
+          <!-- Category items: Quiz -->
           <div
             id="category__feed--quiz"
             class="col-md-9 category__items--wrapper"
@@ -255,10 +266,12 @@
                 data-placement="top"
                 title="Quiz full name"
               >
-                <span class="category__item--icon">
-                  <!-- Flag file in data. Data attribute or object element is optional -->
-                  <object data="" type="image/svg+xml"></object>
-                </span>
+                <!-- Icon for quizzes -->
+                <object
+                  class="step__topics--icon"
+                  data="./img/div_icons/category/quiz.svg"
+                  type="image/svg+xml"
+                ></object>
                 <!-- Quiz -->
                 <p>Quiz name</p>
               </a>

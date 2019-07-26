@@ -378,15 +378,11 @@ h5 {
         vertical-align: middle;
         margin-right: 5px;
       }
-      /* category icon (not flag) */
+      /* category icons for front page */
       .step__topics--icon {
         position: relative;
         top: 6px;
-        pointer-events: none;
         margin-right: 2px;
-        &.school {
-          fill: red;
-        }
       }
     }
 
@@ -1246,6 +1242,9 @@ form:not(.exercise-input, .form-discounts) {
           bottom: 50%;
         }
       }
+      .step__topics--icon {
+        max-height: 25px;
+      }
     }
   }
 }
@@ -1993,7 +1992,8 @@ nav {
           border-radius: 70px;
           transform: translate(-50%, -50%);
 
-          .stat__icon--flag {
+          .stat__icon--flag,
+          .stat__icon--icon {
             position: absolute;
             right: 50%;
             bottom: 50%;
@@ -2090,9 +2090,9 @@ nav {
     color: $topic-school;
   }
 
-  .stat__icon-wrapper {
-    background: $topic-school;
-  }
+  // .stat__icon-wrapper {
+  //   background: $topic-school;
+  // }
 }
 
 .stats__category-quizzes {
@@ -2100,9 +2100,9 @@ nav {
     color: $topic-quizzes;
   }
 
-  .stat__icon-wrapper {
-    background: $topic-quizzes;
-  }
+  // .stat__icon-wrapper {
+  //   background: $topic-quizzes;
+  // }
 }
 
 // Table coloring (skill, time spent, etc...)
