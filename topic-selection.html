@@ -4,271 +4,527 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Discounts</title>
+    <title>Choose what you want to learn</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
     <!-- Main style -->
-    <link rel="stylesheet" href="scss/style.css" />
-    <!-- Bootstrap style -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <!-- INCLUDE POPPER AND JQUERY HERE -->
+    <link rel="stylesheet" href="dist/main.css" />
   </head>
 
   <body>
-    <div class="container page__intro">
-      <h1>What do you want to learn?</h1>
-    </div>
-    <div class="container categories selection__new-topics">
-      <div class="row category category__type--languages">
-        <div class="col-md-3">
-          <h4 class="category__name">Languages</h4>
-          <!-- Counter -->
-          <p class="category__description">
-            Pick between one of our
-            <strong class="topic__counter"> <!-- Automatically acounted and filled --> </strong>
-            languages
-          </p>
-        </div>
-        <div
-          id="category__feed--lang"
-          class="col-md-9 category__items--wrapper fading wrapper__collapsed"
-          style="height: unset;"
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img class="navbar-logo" src="img/ft-logo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <!-- Category item (start) - Languages -->
-          <div class="category__item">
-            <!-- Anchor and tooltip. Tooltip text in "title".  -->
-            <a
-              data-topic-id="1"
-              href="#"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="American English"
-            >
-              <span class="category__item--icon">
-                <!-- Flag file in data. Data attribute or object element is optional -->
-                <object data="img/flags/gb.svg" type="image/svg+xml"></object>
-              </span>
-              <!-- Language -->
-              <p>Language name</p>
-            </a>
-          </div>
-          <!-- Category item (end) - Languages -->
+          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Link 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link 3</a>
+            </li>
+          </ul>
+
+          <ul class="nav-right navbar-nav">
+            <li class="nav-credits nav-item">
+              <div class="nav-link">
+                <span class="credit-container">
+                  <object
+                    class="navbar-credit-icon"
+                    data="img/div_icons/piggie-nav.svg"
+                    type="image/svg+xml"
+                  ></object>
+                  55
+                </span>
+              </div>
+            </li>
+
+            <li class="nav-profile nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link"
+                data-toggle="dropdown"
+                data-target="dropdown__profile"
+              >
+                <span class="profile-container">
+                  <span class="profile-picture"></span>
+                </span>
+              </a>
+              <!-- Hidden dropdown meny for when you click on users profile picture -->
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="dropdown__profile"
+              >
+                <div class="dropdown__profile-container">
+                  <!-- Name of the logged in user -->
+                  <span class="dropdown-item-text">Hi !Name</span>
+                  <div class="dropdown__profile--main">
+                    <a href="#" class="dropdown-item">
+                      Account settings <i class="fas fa-cog"></i>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      My statistics <i class="fas fa-chart-pie"></i>
+                    </a>
+                    <!-- Not created page for yet. Pavel need to make a decision about a potential "my discounts" -->
+                    <a href="#" class="dropdown-item"
+                      >My discounts <i class="fas fa-tag"></i
+                    ></a>
+                  </div>
+                  <!-- Logout link -->
+                  <a href="#" class="dropdown-item dropdown__profile--logout">
+                    Log out <i class="fas fa-sign-out-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Separator -->
+            <span class="vertical-line"></span>
+
+            <div class="dropdown show dropdown-lang">
+              <!-- LANGUAGE SELECTION BAR -->
+              <!-- This anchor is for the selected language. Leave # for the anchor -->
+              <a
+                class="btn dropdown-toggle"
+                href="#"
+                id="1"
+                data-country-code="en"
+                data-toggle="dropdown"
+                data-target="dropdown__languages"
+                ><span class="flag-wrapper">
+                  <!-- Insert flag link into data -->
+                  <object
+                    class="navbar-flag-selected"
+                    data="./img/flags/gb.svg"
+                    type="image/svg+xml"
+                  ></object>
+                </span>
+                English
+              </a>
+
+              <!-- Hidden box containing the rest of the available languages. Requires bootstrap js -->
+              <div
+                id="dropdown__languages"
+                class="dropdown-menu dropdown-menu-right"
+              >
+                <!-- Starting available languages (each anchor). Anchor should lead to language version -->
+                <a class="dropdown-item" href="#" id="1" data-country-code="no">
+                  <span class="flag-wrapper">
+                    <!-- Insert flag link into data -->
+                    <object
+                      class="navbar-flag-selected"
+                      data="./img/flags/no.svg"
+                      type="image/svg+xml"
+                    ></object>
+                  </span>
+                  Norwegian
+                </a>
+                <!-- Ending available languages (anchor) -->
+              </div>
+              <!-- Hidden box ending (for available languages) -->
+              <!-- LANGUAGE SELECTION BAR ENDING -->
+            </div>
+          </ul>
         </div>
       </div>
-
-      <div class="row category category__type--school">
-        <div class="col-md-3">
-          <h4 class="category__name">School topics</h4>
-          <!-- Counter -->
-          <p class="category__description">
-            Pick between one of our
-            <strong class="topic__counter"> <!-- Automatically acounted and filled --> </strong>
-            topics
-          </p>
-        </div>
-        <div id="category__feed--school" class="col-md-9 category__items--wrapper">
-          <!-- Category item (start) - School topics -->
-          <div class="category__item">
-            <!-- Anchor and tooltip. Tooltip text in "title".  -->
-            <a
-              data-topic-id="2"
-              href="#"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Topic full namee"
-            >
-              <span class="category__item--icon">
-                <!-- Icon file into "data". Data attribute or object element is optional -->
-                <object data="" type="image/svg+xml"></object>
-              </span>
-              <!-- School topic -->
-              <p>Topic name</p>
-            </a>
+    </nav>
+    <main>
+      <div class="container page__intro">
+        <h1>What do you want to learn?</h1>
+      </div>
+      <div class="container categories selection__new-topics">
+        <!-- Category description: Languages -->
+        <div class="row category category__type--languages">
+          <div class="col-md-3">
+            <h4 class="category__name">Languages</h4>
+            <!-- Counter -->
+            <p class="category__description">
+              Pick between one of our
+              <strong class="topic__counter">
+                <!-- Automatically acounted and filled -->
+              </strong>
+              languages
+            </p>
           </div>
-          <!-- Category item (start) - School topics -->
+
+          <!-- Category items: Languages -->
+          <div
+            id="category__feed--lang"
+            class="col-md-9 category__items--wrapper fading wrapper__collapsed"
+            style="height: unset;"
+          >
+            <!-- Category item (start) - Languages -->
+            <div class="category__item">
+              <!-- Anchor and tooltip. Tooltip text in "title".  -->
+              <a
+                data-topic-id="1"
+                href="#"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="American English"
+              >
+                <span class="category__item--icon">
+                  <!-- Flag file in data. Data attribute or object element is optional -->
+                  <object data="img/flags/gb.svg" type="image/svg+xml"></object>
+                </span>
+                <!-- Language -->
+                <p>Language name</p>
+              </a>
+            </div>
+            <!-- Category item (end) - Languages -->
+          </div>
+        </div>
+
+        <!-- Category description: School topics -->
+        <div class="row category category__type--school">
+          <div class="col-md-3">
+            <h4 class="category__name">School topics</h4>
+            <!-- Counter -->
+            <p class="category__description">
+              Pick between one of our
+              <strong class="topic__counter">
+                <!-- Automatically acounted and filled -->
+              </strong>
+              topics
+            </p>
+          </div>
+
+          <!-- Category items: Quiz -->
+          <div
+            id="category__feed--school"
+            class="col-md-9 category__items--wrapper"
+          >
+            <!-- Category item (start) - School topics -->
+            <div class="category__item">
+              <!-- Anchor and tooltip. Tooltip text in "title".  -->
+              <a
+                data-topic-id="2"
+                href="#"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Topic full namee"
+              >
+                <!-- Icon for school topics -->
+                <object
+                  class="step__topics--icon"
+                  data="./img/div_icons/category/school-topic.svg"
+                  type="image/svg+xml"
+                ></object>
+                <!-- School topic name -->
+                <p>Topic name</p>
+              </a>
+            </div>
+            <!-- Category item (end) - School topics -->
+          </div>
+        </div>
+
+        <!-- Category description: Quiz -->
+        <div class="row category category__type--quiz">
+          <div class="col-md-3">
+            <h4 class="category__name">Quizzes</h4>
+            <!-- Counter -->
+            <p class="category__description">
+              Pick between one of our
+              <strong class="topic__counter">
+                <!-- Automatically acounted and filled -->
+              </strong>
+              quizzes
+            </p>
+          </div>
+
+          <!-- Category items: Quiz -->
+          <div
+            id="category__feed--quiz"
+            class="col-md-9 category__items--wrapper"
+          >
+            <!-- Category item (start) - Quizzes -->
+            <div class="category__item">
+              <!-- Anchor and tooltip. Tooltip text in "title".  -->
+              <a
+                data-topic-id="3"
+                href="#"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Quiz full name"
+              >
+                <!-- Icon for quizzes -->
+                <object
+                  class="step__topics--icon"
+                  data="./img/div_icons/category/quiz.svg"
+                  type="image/svg+xml"
+                ></object>
+                <!-- Quiz -->
+                <p>Quiz name</p>
+              </a>
+            </div>
+            <!-- Category item (end) - Quizzes -->
+          </div>
         </div>
       </div>
+    </main>
 
-      <div class="row category category__type--quiz">
-        <div class="col-md-3">
-          <h4 class="category__name">Quizzes</h4>
-          <!-- Counter -->
-          <p class="category__description">
-            Pick between one of our
-            <strong class="topic__counter"> <!-- Automatically acounted and filled --> </strong>
-            quizzes
-          </p>
-        </div>
-        <div id="category__feed--quiz" class="col-md-9 category__items--wrapper">
-          <!-- Category item (start) - Quizzes -->
-          <div class="category__item">
-            <!-- Anchor and tooltip. Tooltip text in "title".  -->
-            <a
-              data-topic-id="3"
-              href="#"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Quiz full name"
-            >
-              <span class="category__item--icon">
-                <!-- Flag file in data. Data attribute or object element is optional -->
-                <object data="" type="image/svg+xml"></object>
-              </span>
-              <!-- Quiz -->
-              <p>Quiz name</p>
-            </a>
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="/o-nas">O nás</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/kontakt">Kontakt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nabidnete-slevy">Nabídněte slevy</a>
+              </li>
+            </ul>
           </div>
-          <!-- Category item (end) - Quizzes -->
+          <div class="col-sm-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="/spoluprace">Spolupráce</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/podporte-nas">Podpořte nás</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pravidla">Pravidla použití webu</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a href="#" class="nav-link" target="_blank"
+                  ><i class="fab fa-facebook fa-2x"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" target="_blank"
+                  ><i class="fab fa-twitter-square fa-2x"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/"
+                  ><img
+                    src="img/ft-logo.png"
+                    alt="logo"
+                    class="img-fluid"
+                    width="120"
+                /></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+    <!--/#footer-->
+
+    <div id="small-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <p>
+              <a href="#">Copyright &copy; 2019 funtorial.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/#small-footer-->
 
     <!-- JS -->
+    <script src="dist/bundle.js"></script>
+    <!-- Same script as in topic-selection-chosen.html -->
     <script>
-      // UTILITIES
-      $(function() {
-        $('[data-toggle="tooltip"]').tooltip()
-        $('[data-toggle="popover"]').popover()
-      })
-
-      // TOPICS PAGE
-      function topicFunctions() {
-        const addExtendButton = () => {
-          //Create buttons and fade effect
-          const topicExtendBtnFade = document.createElement('div')
-          const topicExtendBtn = document.createElement('div')
-          const topicExtendBtnArrow = document.createElement('i')
-          topicExtendBtnFade.setAttribute('class', 'category__items--fade-overlay')
-          topicExtendBtn.setAttribute('class', 'category__items--extend-btn')
-          topicExtendBtnArrow.setAttribute('class', 'fas fa-angle-down')
-          topicExtendBtn.appendChild(topicExtendBtnArrow)
-
-          const topicWrappers = Array.from(document.querySelectorAll('.category__items--wrapper'))
-
-          topicWrappers.map(topicWrapper => {
-            //Temporarely setting height to find out if div is overflowing. Max 3 rows for desktop version.
-            topicWrapper.style.height = '161px'
-
-            // If wrapper is overflowing - show buttons
-            if (topicWrapper.scrollHeight > topicWrapper.clientHeight) {
-              console.log('scrollheight (div content size): ' + topicWrapper.scrollHeight)
-              console.log('clientheight (view size?): ' + topicWrapper.clientHeight)
-
-              topicWrapper.appendChild(topicExtendBtnFade.cloneNode(true))
-              topicWrapper.appendChild(topicExtendBtn.cloneNode(true))
-            }
-
-            // Removing temp height set. Going back to only using max-height for animation puropses
-            topicWrapper.style.height = 'unset'
-          })
-        }
-
-        const closeAll = () => {
-          const wrappers = Array.from(document.querySelectorAll('.category__items--wrapper'))
-          wrappers.map(wrapper => {
-            wrapper.classList.add('wrapper__collapsed')
-          })
-        }
-
-        const toggleOnClick = () => {
-          const buttons = Array.from(document.querySelectorAll('.category__items--extend-btn'))
-          buttons.map(button => {
-            button.addEventListener('click', e => {
-              closeCat(e)
-              const parent = e.target.parentElement
-              parent.querySelector('.category__items--fade-overlay').classList.toggle('hidden')
+        function topicFunctions() {
+          const addExtendButton = () => {
+            //Create buttons and fade effect
+            const topicExtendBtnFade = document.createElement('div')
+            const topicExtendBtn = document.createElement('div')
+            const topicExtendBtnArrow = document.createElement('i')
+            topicExtendBtnFade.setAttribute(
+              'class',
+              'category__items--fade-overlay'
+            )
+            topicExtendBtn.setAttribute('class', 'category__items--extend-btn')
+            topicExtendBtnArrow.setAttribute('class', 'fas fa-angle-down')
+            topicExtendBtn.appendChild(topicExtendBtnArrow)
+  
+            const topicWrappers = Array.from(
+              document.querySelectorAll('.category__items--wrapper')
+            )
+  
+            topicWrappers.map(topicWrapper => {
+              //Temporarely setting height to find out if div is overflowing. Max 3 rows for desktop version.
+              topicWrapper.style.height = '161px'
+  
+              // If wrapper is overflowing - show buttons
+              if (topicWrapper.scrollHeight > topicWrapper.clientHeight) {
+                topicWrapper.appendChild(topicExtendBtnFade.cloneNode(true))
+                topicWrapper.appendChild(topicExtendBtn.cloneNode(true))
+              }
+  
+              // Removing temp height set. Going back to only using max-height for animation puropses
+              topicWrapper.style.height = 'unset'
             })
-          })
-
-          const closeCat = e => {
-            //Append wrapper_closed class on click
-            e.path[1].classList.toggle('wrapper__collapsed')
-            let btnArrow = e.path[0].childNodes[0]
-
-            //Rotate arrow if opened
-            if (btnArrow.classList[1] == 'fa-angle-down') {
-              btnArrow.classList = 'fa fa-angle-up'
-            } else {
-              btnArrow.classList = 'fa fa-angle-down'
-            }
           }
-        }
-
-        // Adds number to counter next to category, and hides the entire category if empty
-        const countTopics = () => {
-          if (document.querySelector('.topic__counter')) {
-            const topic = {
-              languages() {
-                const allTopics = Array.from(
-                  document.querySelectorAll('#category__feed--lang .category__item')
-                )
-                const displayCounter = document.querySelector(
-                  '.category__type--languages .topic__counter'
-                )
-                displayCounter.innerHTML = allTopics.length
-
-                if (allTopics.length === 0) {
-                  document.querySelector('.category__type--languages').style.display = 'none'
-                }
-              },
-
-              schoolTopics() {
-                const allTopics = Array.from(
-                  document.querySelectorAll('#category__feed--school .category__item')
-                )
-                const displayCounter = document.querySelector(
-                  '.category__type--school .topic__counter'
-                )
-                displayCounter.innerHTML = allTopics.length
-
-                if (allTopics.length === 0) {
-                  document.querySelector('.category__type--school').style.display = 'none'
-                }
-              },
-
-              quizzes() {
-                const allTopics = Array.from(
-                  document.querySelectorAll('#category__feed--quiz .category__item')
-                )
-                const displayCounter = document.querySelector(
-                  '.category__type--quiz .topic__counter'
-                )
-                displayCounter.innerHTML = allTopics.length
-
-                if (allTopics.length === 0) {
-                  document.querySelector('.category__type--quiz').style.display = 'none'
-                }
-              },
-            }
-            topic.languages()
-            topic.schoolTopics()
-            topic.quizzes()
+  
+          const closeAll = () => {
+            const wrappers = Array.from(
+              document.querySelectorAll('.category__items--wrapper')
+            )
+            wrappers.map(wrapper => {
+              wrapper.classList.add('wrapper__collapsed')
+            })
           }
-        }
-
-        // For topic selection (after chosen excersise in category)
-        const noTopicsSelected = () => {
-          const languagesWrapper = document.querySelector('#category__feed--lang'),
-            schoolTopicWrapper = document.querySelector('#category__feed--school'),
-            quizzesWrapper = document.querySelector('#category__feed--quiz')
-          const wrappers = [languagesWrapper, schoolTopicWrapper, quizzesWrapper]
-
-          wrappers.map(wrapper => {
-            // Only showing message to find another category exercise if its empty
-            if (document.querySelector('.category__feed--none-selected')) {
-              if (wrapper.childElementCount <= 1) {
-                wrapper.querySelector('.category__feed--none-selected').style.display = 'block'
+  
+          const toggleOnClick = () => {
+            const buttons = Array.from(
+              document.querySelectorAll('.category__items--extend-btn')
+            )
+            buttons.map(button => {
+              button.addEventListener('click', e => {
+                closeCat(e)
+                const parent = e.target.parentElement
+                parent
+                  .querySelector('.category__items--fade-overlay')
+                  .classList.toggle('hidden')
+              })
+            })
+  
+            const closeCat = e => {
+              //Append wrapper_closed class on click
+              e.path[1].classList.toggle('wrapper__collapsed')
+              let btnArrow = e.path[0].childNodes[0]
+  
+              //Rotate arrow if opened
+              if (btnArrow.classList[1] == 'fa-angle-down') {
+                btnArrow.classList = 'fa fa-angle-up'
+              } else {
+                btnArrow.classList = 'fa fa-angle-down'
               }
             }
-          })
+          }
+  
+          // Adds number to counter next to category, and hides the entire category if empty
+          const countTopics = () => {
+            if (document.querySelector('.topic__counter')) {
+              const topic = {
+                languages() {
+                  const allTopics = Array.from(
+                    document.querySelectorAll(
+                      '#category__feed--lang .category__item'
+                    )
+                  )
+                  const displayCounter = document.querySelector(
+                    '.category__type--languages .topic__counter'
+                  )
+                  displayCounter.innerHTML = allTopics.length
+  
+                  if (allTopics.length === 0) {
+                    document.querySelector(
+                      '.category__type--languages'
+                    ).style.display = 'none'
+                  }
+                },
+  
+                schoolTopics() {
+                  const allTopics = Array.from(
+                    document.querySelectorAll(
+                      '#category__feed--school .category__item'
+                    )
+                  )
+                  const displayCounter = document.querySelector(
+                    '.category__type--school .topic__counter'
+                  )
+                  displayCounter.innerHTML = allTopics.length
+  
+                  if (allTopics.length === 0) {
+                    document.querySelector(
+                      '.category__type--school'
+                    ).style.display = 'none'
+                  }
+                },
+  
+                quizzes() {
+                  const allTopics = Array.from(
+                    document.querySelectorAll(
+                      '#category__feed--quiz .category__item'
+                    )
+                  )
+                  const displayCounter = document.querySelector(
+                    '.category__type--quiz .topic__counter'
+                  )
+                  displayCounter.innerHTML = allTopics.length
+  
+                  if (allTopics.length === 0) {
+                    document.querySelector(
+                      '.category__type--quiz'
+                    ).style.display = 'none'
+                  }
+                },
+              }
+              topic.languages()
+              topic.schoolTopics()
+              topic.quizzes()
+            }
+          }
+  
+          // For topic selection (after chosen excersise in category)
+          const noTopicsSelected = () => {
+            const languagesWrapper = document.querySelector(
+                '#category__feed--lang'
+              ),
+              schoolTopicWrapper = document.querySelector(
+                '#category__feed--school'
+              ),
+              quizzesWrapper = document.querySelector('#category__feed--quiz')
+            const wrappers = [
+              languagesWrapper,
+              schoolTopicWrapper,
+              quizzesWrapper,
+            ]
+  
+            wrappers.map(wrapper => {
+              // Only showing message to find another category exercise if its empty
+              if (document.querySelector('.category__feed--none-selected')) {
+                if (wrapper.childElementCount <= 1) {
+                  wrapper.querySelector(
+                    '.category__feed--none-selected'
+                  ).style.display = 'block'
+                }
+              }
+            })
+          }
+  
+          addExtendButton() // Creates a button to extend to see more topics if there are more than what the div can contain
+          closeAll() // Initially closes all categories
+          countTopics() //Counts numbers of topics in category and displays it
+          toggleOnClick() // Functionality for opening and closing selection
+          noTopicsSelected() // For topic selection (after chosen excersise in category)
         }
-
-        addExtendButton() // Creates a button to extend to see more topics if there are more than what the div can contain
-        closeAll() // Initially closes all categories
-        countTopics() //Counts numbers of topics in category and displays it
-        toggleOnClick() // Functionality for opening and closing selection
-        noTopicsSelected() // For topic selection (after chosen excersise in category)
-      }
-
-      topicFunctions()
-    </script>
+  
+        topicFunctions()
+      </script>
   </body>
 </html>
