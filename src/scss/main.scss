@@ -1234,12 +1234,14 @@ form:not(.exercise-input, .form-discounts) {
         border: 2px solid $ft-ltgray;
         box-sizing: content-box;
 
-        object {
+        img {
           position: absolute;
           right: 50%;
           width: 40px;
           transform: translate(50%, 50%);
           bottom: 50%;
+          max-height: 100%;
+          max-width: 100%;
         }
       }
       .step__topics--icon {
@@ -1272,7 +1274,7 @@ form:not(.exercise-input, .form-discounts) {
           width: 30px;
           height: 30px;
 
-          object {
+          img {
             width: 60px;
           }
         }
@@ -1517,8 +1519,8 @@ nav {
         right: 50%;
         transform: translateX(50%);
         position: absolute;
-        width: 50px;
-        height: 50px;
+        // width: 50px;
+        // height: 50px;
         border-radius: 50px;
       }
     }
