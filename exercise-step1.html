@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise name</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <!-- Main style -->
+    <link rel="stylesheet" href="dist/main.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img class="navbar-logo" src="img/ft-logo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto"></ul>
+          <ul class="nav-right navbar-nav">
+            <li class="nav-register nav-item">
+              <a href="#" class="nav-link">Register</a>
+            </li>
+            <li class="nav-login nav-item">
+              <a href="#" class="nav-link">Login</a>
+            </li>
+
+            <span class="vertical-line"></span>
+
+            <div class="dropdown show dropdown-lang">
+              <!-- LANGUAGE SELECTION BAR -->
+              <!-- This anchor is for the selected language. Leave # for the anchor -->
+              <a
+                class="btn dropdown-toggle"
+                href="#"
+                id="1"
+                data-country-code="en"
+                data-toggle="dropdown"
+                data-target="dropdown__languages"
+                ><span class="flag-wrapper">
+                  <!-- Insert flag link into data -->
+                  <object
+                    class="navbar-flag-selected"
+                    data="./img/flags/gb.svg"
+                    type="image/svg+xml"
+                  ></object>
+                </span>
+                English
+              </a>
+
+              <!-- Hidden box containing the rest of the available languages -->
+              <div
+                id="dropdown__languages"
+                class="dropdown-menu dropdown-menu-right"
+              >
+                <!-- Starting available languages (each anchor). Anchor should lead to language version -->
+                <a class="dropdown-item" href="#" id="1" data-country-code="no">
+                  <span class="flag-wrapper">
+                    <!-- Insert flag link into data -->
+                    <object
+                      class="navbar-flag-selected"
+                      data="./img/flags/no.svg"
+                      type="image/svg+xml"
+                    ></object>
+                  </span>
+                  Norwegian
+                </a>
+                <!-- Ending available languages (anchor) -->
+              </div>
+              <!-- Hidden box ending (for available languages) -->
+              <!-- LANGUAGE SELECTION BAR ENDING -->
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- BREADCRUMBS -->
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-sm-12">
+            <nav class="breadcrumbs" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="fas fa-home"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Exercise name
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!-- / BREADCRUMBS -->
+      <div class="container">
+        <!-- Heading -->
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-sm-12 page__intro--exercise">
+                <h1 class="text-center ">Exercise name</h1>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Category columns (1) -->
+              <div class="col-sm-6 exercise-column">
+                <hr />
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="exercise-column__header">
+                      <h4 class="text-center">Area heading 1</h4>
+                      <p class="text-center">Some description for this area</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <!-- Category button -->
+                    <a href="#" class="well-container">
+                      <div class="well text-center blue-well">
+                        Text phrases
+                      </div>
+                    </a>
+                    <!-- / Category button -->
+                    <!-- Category button -->
+                    <a href="#" class="well-container">
+                      <div class="well text-center blue-well">
+                        Exercise category
+                      </div>
+                    </a>
+                    <!-- / Category button -->
+                  </div>
+                </div>
+              </div>
+              <!-- Category columns (2) -->
+              <div class="col-sm-6 exercise-column">
+                <hr />
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="exercise-column__header">
+                      <h4 class="text-center">Area heading 2</h4>
+                      <p class="text-center">Some description for this area</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <!-- Category button -->
+                    <a href="#" class="well-container">
+                      <div class="well text-center blue-well">
+                        Exercise category
+                      </div>
+                    </a>
+                    <!-- / Category button -->
+                    <!-- Category button -->
+                    <a href="#" class="well-container">
+                      <div class="well text-center blue-well">
+                        Exercise category
+                      </div>
+                    </a>
+                    <!-- / Category button -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <a href="#" target="_blank">
+              <img
+                src="http://webrent.cz/elearning/www/upload/banners/73/thousands-narrow-plain.jpg"
+                alt="thousands narrow plain"
+                class="img-fluid"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- END CONTENT -->
+    </main>
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="/o-nas">O nás</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/kontakt">Kontakt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nabidnete-slevy">Nabídněte slevy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="/spoluprace">Spolupráce</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/podporte-nas">Podpořte nás</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pravidla">Pravidla použití webu</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a href="#" class="nav-link" target="_blank"
+                  ><i class="fab fa-facebook fa-2x"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" target="_blank"
+                  ><i class="fab fa-twitter-square fa-2x"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/"
+                  ><img
+                    src="img/ft-logo.png"
+                    alt="logo"
+                    class="img-fluid"
+                    width="120"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/#footer-->
+
+    <div id="small-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <p>
+              <a href="#">Copyright &copy; 2019 funtorial.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/#small-footer-->
+
+    <!-- JS -->
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
